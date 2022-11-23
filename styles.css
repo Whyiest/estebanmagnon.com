@@ -1,0 +1,422 @@
+@font-face {
+    font-family: Mulish;
+    src: url(fonts/Mulish-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: MulishItalic;
+    src: url(fonts/Mulish-Italic-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0e0e13;
+    color: white;
+    font-family: Mulish;
+}
+
+.inline-block {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.colored-text {
+    background-image: linear-gradient(to left, orange, deeppink, blueviolet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.colored-title {
+    background-image: linear-gradient(to left, orange, deeppink, blueviolet);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#home {
+    background-color: #0e0e13;
+    margin-bottom: 7%;
+
+}
+
+#about-me {
+    background-color: black ;
+}
+
+#projects {
+    background-color: #1a1a23;
+}
+.navbar-container {
+    background-color: #0e0e13;
+
+    margin-top: 2%;
+    margin-right: 4%;
+    height: 3em;
+    width: 100%;
+    top: 0;
+}
+
+.navbar {
+
+    float: right;
+}
+
+.logo-container {
+    height: 100%;
+
+
+}
+.logo-esteban {
+    float: left;
+    margin-left: 6%;
+    height: 100%;
+    resize: both;
+    scale: 150%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    margin-right: 4%;
+}
+
+
+.nav-element {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 3em;
+    line-height: 3em;
+
+}
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    color: #ff5e69;
+    transition: 0.3s ease
+}
+
+.actual {
+    color: #8e25d0;
+}
+
+
+
+
+.home-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+
+.home-text-container {
+    margin-top: 25%;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.home-main-text {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-left: 15%;
+}
+
+.home-second-text {
+    color: #c7c5c5;
+    margin-bottom: 2em;
+    margin-left: 15%;
+}
+
+.home-button-container {
+    width: 100%;
+    height: 3.7em;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    margin-left: 15%;
+
+}
+
+.home-button-contact {
+    width: 22%;
+    height: 100%;
+    position: relative;
+    margin-left: 2%;
+    display: inline-block;
+
+}
+
+.home-button-contact-up {
+    position: absolute;
+    z-index: 9;
+    height: 90%;
+    width: 95%;
+    top: 0;
+    left: 0;
+    right: 5%;
+    bottom: 10%;
+    background-color: black;
+}
+
+.home-button-contact-down{
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    left: 5%;
+    top : 10%;
+    z-index: 0;
+    background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
+}
+
+.home-button-contact-up:hover {
+    top: 10%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s ease;
+}
+
+.home-button-contact-link {
+    color: white;
+    text-decoration: none;
+    width: 50%;
+}
+
+.home-button-contact-text {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.home-button-download {
+    height: 100%;
+    width: 40%;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-button-download-text {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+#home-button-download-text:hover  + #home-button-download-white-arrow { display: none;
+}
+#home-button-download-text:hover  + #home-button-download-pink-arrow { display: inline-block;
+}
+
+#home-button-download-text:hover {
+    color: #ff5e69;
+    transition: 0.2s ease;
+}
+
+#home-button-download-pink-arrow {
+    display: none;
+}
+
+
+.home-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-esteban-head {
+    display: block;
+    margin: auto;
+}
+
+.about-title {
+    margin-left: 3%;
+    padding-top: 5%;
+    margin-bottom: 1em;
+}
+.about-subtitle {
+    margin-left: 3%;
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-bottom: 5%;
+}
+
+.about-paragraph {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #c7c5c5;
+}
+
+.projects-title {
+    margin-left: 3%;
+    padding-top:2em;
+    margin-bottom: 1em;
+}
+
+.projects-subtitle {
+    margin-left: 3%;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+.projects-grid-container {
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap:0.3%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+
+}
+
+.projects-grid-component {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+
+.projects-grid-card {
+    align-content: center;
+    height: auto;
+    width: 70%;
+    background: white;
+    position: relative;
+
+}
+
+
+
+.projects-grid-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+
+}
+
+
+
+.projects-grid-content-image {
+    height: 60%;
+    width: 100%;
+    object-fit: fill;
+    padding: 3%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+
+.projects-grid-content-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects-grid-content-tech {
+    font-weight: bold;
+}
+
+.projects-grid-content-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.projects-grid-content-view {
+    color: black;
+    opacity: 0.6;
+}
+
+.projects-grid-link {
+    text-decoration: none;
+
+}
+.projects-grid-content-view:hover {
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.projects-button-container {
+    width: 100%;
+}
+
+.projects-button-github {
+    width: 22%;
+    height: 100%;
+    margin-left: 2%;
+    display: inline-block;
+
+
+}
+
+/*
+.projects-button-github-up {
+    position: absolute;
+    z-index: 9;
+    height: 90%;
+    width: 95%;
+    top: 0;
+    left: 0;
+    right: 5%;
+    bottom: 10%;
+    background-color: black;
+}
+
+.projects-button-github-down{
+    position: relative;
+    width: 95%;
+    height: 90%;
+    left: 5%;
+    top : 10%;
+    z-index: 0;
+    background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
+}
+
+.projects-button-github-up:hover {
+    top: 10%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s ease;
+}
+
+.projects-button-github-link {
+    color: white;
+    text-decoration: none;
+    width: 50%;
+}
+
+.projects-button-github-text {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+*/
