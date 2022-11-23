@@ -30,6 +30,10 @@ body{
     font-family: Mulish;
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: white;
+}
 .appleLinks a {
     color: dimgrey;
     text-decoration: none;
@@ -356,22 +360,22 @@ h4 {
     margin-right: 15%;
 }
 
+
+#education-list {
+    height: 100%;
+    display: grid;
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-bottom: 8%;
+    grid-template-columns: 1fr;
+}
+
 .education-element-grid {
     margin-top: 3%;
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-
-#education-list {
-    height: 100%;
-    display: flex;
-    margin-left: 10%;
-    margin-right: 30%;
-    margin-bottom: 8%;
-    flex-direction: column;
-}
-
 
 .education-element-text-container {
     margin: 3%
@@ -394,8 +398,11 @@ h4 {
 }
 
 .education-element-image {
-    width: 70%;
-    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5em;
+    width: 5em;
     border-radius: 50%;
 }
 

@@ -83,6 +83,8 @@
 
     }
 
+
+
     #education-list {
         display: flex;
         flex-direction: column;
@@ -100,6 +102,9 @@
     .education-element-text-container {
         margin-left: 2em;
     }
+
+
+
 
     .experience-element-text-container {
         display: flex;
