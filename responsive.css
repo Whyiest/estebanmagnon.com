@@ -86,6 +86,7 @@
     #education-list {
         display: flex;
         flex-direction: column;
+        width: 90%;
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 5%;
@@ -93,7 +94,7 @@
 
     .education-element-grid {
         margin-top: 3%;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 1fr 4fr;
     }
 
     .education-element-text-container {

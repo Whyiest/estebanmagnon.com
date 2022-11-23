@@ -241,6 +241,21 @@ h4 {
     background-color: black;
 }
 
+.home-button-contact-up:hover {
+    top: 10%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s ease;
+}
+
+.home-button-contact-up:active {
+    top: 0;
+    left: 0;
+    right: 5%;
+    bottom: 10%;
+}
+
 .home-button-contact-down{
     position: absolute;
     width: 95%;
@@ -251,13 +266,6 @@ h4 {
     background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
 }
 
-.home-button-contact-up:hover {
-    top: 10%;
-    left: 5%;
-    right: 0;
-    bottom: 0;
-    transition: 0.2s ease;
-}
 
 .home-button-contact-link {
     color: white;
@@ -284,6 +292,8 @@ h4 {
 }
 
 #home-button-download-text {
+    text-decoration: none;
+    color: white;
     display: inline-block;
     font-weight: bold;
     margin-right: 1em;
@@ -411,6 +421,10 @@ h4 {
 }
 
 .experience-element-date {
+    color: #9f9d9d;
+}
+
+.experience-element-duration {
     color: dimgrey;
 }
 
@@ -439,6 +453,8 @@ h4 {
 .about-text-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
 }
 
 .about-link-to-education {
@@ -582,6 +598,21 @@ h4 {
     background-color: black;
 }
 
+.projects-button-github-up:hover {
+    top: 10%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s ease;
+}
+
+.projects-button-github-up:active {
+    top: 0;
+    left: 0;
+    right: 5%;
+    bottom: 10%;
+}
+
 .projects-button-github-down{
     position: absolute;
     width: 95%;
@@ -590,14 +621,6 @@ h4 {
     top : 10%;
     z-index: 0;
     background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
-}
-
-.projects-button-github-up:hover {
-    top: 10%;
-    left: 5%;
-    right: 0;
-    bottom: 0;
-    transition: 0.2s ease;
 }
 
 .projects-button-github-link {
