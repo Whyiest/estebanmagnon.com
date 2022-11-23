@@ -10,27 +10,28 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 
-    <script type="text/javascript">
-
-        function getCurrentLinkFrom(links) {
+    <script>
+            function getCurrentLinkFrom (links)  {
 
             var curPage = document.URL;
             curPage = curPage.substr(curPage.lastIndexOf("/"));
 
             links.each(function () {
-                var linkPage = $(this).attr("href");
-                linkPage = linkPage.substr(linkPage.lastIndexOf("/"));
-                if (curPage == linkPage) {
-                    return $(this);
+            var linkPage = $(this).attr("href");
+            linkPage = linkPage.substr(linkPage.lastIndexOf("/"));
+            if (curPage == linkPage) {
+            return $(this);
                 }
-            });
-        };
+             });
+           }
 
-        $(document).ready(function () {
+            $(document).ready(function () {
             var currentLink = getCurrentLinkFrom($("navbar a"));
             currentLink.classList.add('active');
-        });
+            })
+
     </script>
 
 </head>
@@ -42,7 +43,7 @@
     <div class="navbar-container">
 
         <div id="navbar-logo-container">
-            <img class="logo-esteban" src="images/logo-esteban-pink.svg">
+            <img class="logo-esteban" src="images/logo-esteban-pink.svg" alt="Logo of Esteban">
         </div>
 
         <div class="navbar">
@@ -52,7 +53,7 @@
                 <li class="nav-element"><a class="nav-button" href="#projects">Projects</a></li>
                 <li class="nav-element"><a class="nav-button" href="#experience">Experience</a></li>
                 <li class="nav-element"><a class="nav-button" href="#values">Values</a></li>
-                <li class="nav-element"><a class="nav-button" href="#contact">Contact</a>
+                <li class="nav-element"><a class="nav-button" href="#footer">Contact</a>
                 </li>
             </ul>
         </div>
@@ -111,7 +112,8 @@
 
             <div class="home-image-container">
                 <div class="home-head-container">
-                    <img class="home-esteban-head" src="images/esteban-transparent.png" width="500px" height="500px">
+                    <img class="home-esteban-head" src="images/esteban-transparent.png" width="500px" height="500px"
+                         alt="Head of Esteban">
                 </div>
             </div>
         </div>
@@ -128,7 +130,7 @@
         <div class="about-grid-container">
 
             <div class="about-image-container">
-                <img src=images/dev-illustration.svg>
+                <img src=images/dev-illustration.svg alt="Picture of a developer">
             </div>
 
             <div class="about-text-container">
@@ -163,7 +165,7 @@
 
                 <div class="education-element-grid">
                     <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-ece.png">
+                        <img class="education-element-image" src="images/education-ece.png" alt="Logo of ECE">
                     </div>
                     <div class="education-element-text-container">
                         <h4 class="education-element-title"><span class="colored-title">ECE Lyon</span></h4>
@@ -175,7 +177,7 @@
 
                 <div class="education-element-grid">
                     <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-mcgill.png">
+                        <img class="education-element-image" src="images/education-mcgill.png" alt="Logo of McGill">
                     </div>
                     <div class="education-element-text-container">
                         <h4 class="education-element-title"><span class="colored-title">McGill University</span></h4>
@@ -187,7 +189,7 @@
 
                 <div class="education-element-grid">
                     <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-ef.png">
+                        <img class="education-element-image" src="images/education-ef.png" alt="Logo of EF">
                     </div>
                     <div class="education-element-text-container">
                         <h4 class="education-element-title"><span class="colored-title">Education First</span></h4>
@@ -241,7 +243,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-whois.PNG">
+                            <img class="projects-grid-content-image" src="images/project-whois.PNG"
+                                 alt="Sample of WhoIs">
                         </div>
 
                         <a class="projects-grid-link" href="https://github.com/Whyiest/CluedoGame">
@@ -259,7 +262,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-aircore.png">
+                            <img class="projects-grid-content-image" src="images/project-aircore.png"
+                                 alt="Sample of AirCore">
                         </div>
 
                         <a class="projects-grid-link" href="https://github.com/Whyiest/AirControlSimulator">
@@ -277,7 +281,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/projet-fondation.png">
+                            <img class="projects-grid-content-image" src="images/projet-fondation.png"
+                                 alt="Sample of Robot Cup">
                         </div>
 
                         <a class="projects-grid-link" href="https://www.github.com/Whyiest/RobotController">
@@ -295,7 +300,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-saboteur.jpg">
+                            <img class="projects-grid-content-image" src="images/project-saboteur.jpg"
+                                 alt="Sample of Saboteur">
                         </div>
 
                         <a class="projects-grid-link" href="https://www.github.com/Whyiest/SaboteurGame">
@@ -313,7 +319,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-porfolio.PNG">
+                            <img class="projects-grid-content-image" src="images/project-porfolio.PNG"
+                                 alt="Sample of Portfolio">
                         </div>
 
                         <a class="projects-grid-link" href="https://www.github.com/Whyiest/estebanmagnon.me">
@@ -331,7 +338,8 @@
                     <div class="projects-grid-content">
 
                         <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-discover.svg">
+                            <img class="projects-grid-content-image" src="images/project-discover.svg"
+                                 alt="Purple background with interrogation mark">
                         </div>
 
                         <a class="projects-grid-link" href="https://www.github.com/Whyiest">
@@ -363,7 +371,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-ngtv.png">
+                        <img class="experience-element-image" src="images/experience-ngtv.png" alt="Logo of NGTV">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">NGTV Experience</span></h4>
@@ -376,7 +384,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-fiver.jpg">
+                        <img class="experience-element-image" src="images/experience-fiver.jpg" alt="Logo of Fiverr">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">Developer freelance</span></h4>
@@ -389,7 +397,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-purple.svg">
+                        <img class="experience-element-image" src="images/experience-purple.svg" alt="Logo of Purple">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">ECE Student Council</span></h4>
@@ -402,7 +410,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-ldlc.jpg">
+                        <img class="experience-element-image" src="images/experience-ldlc.jpg" alt="Logo of LDLC">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">LDLC</span></h4>
@@ -414,7 +422,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-insa.jpg">
+                        <img class="experience-element-image" src="images/experience-insa.jpg" alt="Logo of INSA">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">INSA Lyon</span></h4>
@@ -427,7 +435,7 @@
 
                 <div class="experience-element-grid">
                     <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-spie.jpg">
+                        <img class="experience-element-image" src="images/experience-spie.jpg" alt="Logo of SPIE ICS">
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">SPIE ICS</span></h4>

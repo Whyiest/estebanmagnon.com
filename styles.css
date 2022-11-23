@@ -380,11 +380,11 @@ h4 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .education-element-image {
-    width: 90%;
+    width: 70%;
     margin:auto;
     border-radius: 50%;
 }
