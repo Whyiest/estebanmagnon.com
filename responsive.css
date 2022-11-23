@@ -83,6 +83,30 @@
 
     }
 
+    .about-grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-image-container {
+        display: none;
+    }
+
+    #education-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #education-illustration {
+        display: none;
+    }
+    .education-element-title {
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        margin-bottom: 2%;
+    }
+
     #education-list {
         display: grid;
         grid-template-columns: 1fr;
@@ -94,23 +118,20 @@
 
     .education-element-grid {
         margin-top: 3%;
-        grid-template-columns: 2fr 4fr;
+        margin-bottom: 5%;
+        grid-template-columns: 1fr;
+        grid-template-row: 2fr 4fr;
     }
 
     .education-element-text-container {
-        margin-left: 2em;
+        text-align: center;
     }
 
     .education-element-image {
-        object-fit: cover;
-    }
-
-    .education-element-image {
+        margin-top: 2%;
         height: 5em;
         width: 5em;
     }
-
-
 
 
     .experience-element-text-container {

@@ -129,7 +129,7 @@
         <div class="about-grid-container">
 
             <div class="about-image-container">
-                <img src=images/dev-illustration.svg alt="Picture of a developer">
+                <img class="about-image" src=images/people-illustration.svg alt="Picture of a developer">
             </div>
 
             <div class="about-text-container">
@@ -156,8 +156,9 @@
 
     <section id="education">
 
-        <h2>Education</h2>
+        <h2 id="education-title">Education</h2>
         <h3>My educational background</h3>
+
         <div id="education-container">
 
             <div id="education-list">
@@ -167,7 +168,9 @@
                         <img class="education-element-image" src="images/education-ece.png" alt="Logo of ECE">
                     </div>
                     <div class="education-element-text-container">
-                        <h4 class="education-element-title"><span class="colored-title">ECE Lyon</span></h4>
+                        <div class="education-element-title">
+                            <h4><span class="colored-title">ECE Lyon</span></h4>
+                        </div>
                         <p class="education-element-date">2022 - 2025</p>
                         <p class="education-element-legend">Engineering school based in Lyon. Studying C, C++, SQL,
                             graphs...</p>
@@ -179,8 +182,9 @@
                         <img class="education-element-image" src="images/education-mcgill.png" alt="Logo of McGill">
                     </div>
                     <div class="education-element-text-container">
-                        <h4 class="education-element-title"><span class="colored-title">McGill University</span></h4>
-                        <p class="education-element-date">2022</p>
+                        <div class="education-element-title">
+                            <h4><span class="colored-title">McGill</span></h4>
+                        </div>                        <p class="education-element-date">2022</p>
                         <p class="education-element-legend">Engineering school in Montreal, Canada. Studying HTML, CSS,
                             JS, Bootstrap and Java. Also studying geopolitics and civic engagement</p>
                     </div>
@@ -191,15 +195,21 @@
                         <img class="education-element-image" src="images/education-ef.png" alt="Logo of EF">
                     </div>
                     <div class="education-element-text-container">
-                        <h4 class="education-element-title"><span class="colored-title">Education First</span></h4>
-                        <p class="education-element-date">2019</p>
+                        <div class="education-element-title">
+                            <h4><span class="colored-title">Education First</span></h4>
+                        </div>                        <p class="education-element-date">2019</p>
                         <p class="education-element-legend">Linguistic exchange in Los Angeles, in UCLA campus. Passing
                             an english certification (C1 level).</p>
                     </div>
                 </div>
             </div>
 
+            <div id="education-illustration-container">
+                <img id="education-illustration" src="images/education-illustration.svg" alt="People that learn">
+            </div>
         </div>
+
+
 
     </section>
 
@@ -459,7 +469,7 @@
         <div id="values-grid">
             <div class="values-container">
                 <div class="values-image-container">
-                    <img class="values-image" src="images/Circle.svg" alt="Circle">
+                    <img class="values-image" src="images/values-circle.svg" alt="Circle">
                 </div>
                 <p class="values-title">Adaptability</p>
                 <p class="values-legend">Because a project doesn't always go the way you plan, it's necessary to be able
@@ -469,7 +479,7 @@
 
             <div class="values-container">
                 <div class="values-image-container">
-                    <img class="values-image" src="images/Triangle.svg" alt="Triangle">
+                    <img class="values-image" src="images/values-triangle.svg" alt="Triangle">
                 </div>
                 <p class="values-title">Curiosity</p>
                 <p class="values-legend">Technologies evolve rapidly, and continually learning new things can allow you
@@ -478,7 +488,7 @@
 
             <div class="values-container">
                 <div class="values-image-container">
-                    <img class="values-image" src="images/People.svg" alt="People">
+                    <img class="values-image" src="images/values-people.svg" alt="People">
                 </div>
                 <p class="values-title">Team Working</p>
                 <p class="values-legend">It is not possible to do everything yourself, and even if it were the case,
