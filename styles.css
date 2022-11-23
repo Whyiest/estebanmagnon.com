@@ -362,12 +362,11 @@ h4 {
 
 
 #education-list {
-    height: 100%;
     display: grid;
+    grid-template-columns: 1fr;
     margin-left: 10%;
     margin-right: 30%;
     margin-bottom: 8%;
-    grid-template-columns: 1fr;
 }
 
 .education-element-grid {
@@ -398,9 +397,6 @@ h4 {
 }
 
 .education-element-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 5em;
     width: 5em;
     border-radius: 50%;

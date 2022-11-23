@@ -83,24 +83,31 @@
 
     }
 
-
-
     #education-list {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 5%;
+        margin-bottom: 8%;
     }
 
     .education-element-grid {
         margin-top: 3%;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 2fr 4fr;
     }
 
     .education-element-text-container {
         margin-left: 2em;
+    }
+
+    .education-element-image {
+        object-fit: cover;
+    }
+
+    .education-element-image {
+        height: 2em;
+        width: 2em;
     }
 
 
