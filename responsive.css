@@ -1,0 +1,168 @@
+@media (max-width: 700px) {
+
+
+    h1 {
+        font-size: 2.5em;
+
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-left: 3%;
+        padding-top: 3%;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    .navbar-container {
+        height: 4em;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .home-esteban-head {
+        display: none;
+    }
+
+    .home-text-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .home-second-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .home-button-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 6%;
+    }
+
+    .home-container {
+        margin-top: 20%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .home-button-contact {
+        width: 30%;
+    }
+
+
+    #navbar-logo-container {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-esteban {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #education-list {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+    .education-element-grid {
+        margin-top: 3%;
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .education-element-text-container {
+        margin-left: 2em;
+    }
+
+    .experience-element-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 3% 3% 3%;
+    }
+
+    #experience-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-grid-container {
+        margin-top: 10%;
+        padding-bottom: 20%;
+        grid-template-columns: 0.1fr 100fr;
+    }
+
+    .projects-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-element-image {
+        padding: 0.8em;
+    }
+    .projects-button-github {
+        width: 25%;
+
+    }
+
+    .projects-button-github-down {
+        justify-content: center;
+
+    }
+
+    #experience-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #values-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-button-container {
+        margin-top: 3%;
+    }
+
+    .footer-title {
+        font-size: 2.5em;
+        margin-bottom: 2%;
+    }
+
+    .footer-second-title {
+        font-size: 2.2em;
+    }
+
+    #footer-esteban-text {
+        font-size: 1.3em;
+    }
+
+    #footer-mail {
+        font-size: 1.4em;
+    }
+
+
+}
