@@ -30,6 +30,11 @@ body{
     font-family: Mulish;
 }
 
+.appleLinks a {
+    color: dimgrey;
+    text-decoration: none;
+}
+
 
 #home {
     height: 90vh;
@@ -349,6 +354,7 @@ h4 {
 }
 
 #education-list {
+    height: 100%;
     display: flex;
     margin-left: 10%;
     margin-right: 30%;
@@ -374,15 +380,12 @@ h4 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .education-element-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5em;
-    width: 5em;
+    width: 90%;
+    margin:auto;
     border-radius: 50%;
 }
 

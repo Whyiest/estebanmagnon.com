@@ -7,32 +7,29 @@
     <meta name="description" content="Hello, my name is Esteban, a french engineering student !">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 
 
-
     <script type="text/javascript">
 
-        function getCurrentLinkFrom(links){
+        function getCurrentLinkFrom(links) {
 
             var curPage = document.URL;
-            curPage = curPage.substr(curPage.lastIndexOf("/")) ;
+            curPage = curPage.substr(curPage.lastIndexOf("/"));
 
-            links.each(function(){
+            links.each(function () {
                 var linkPage = $(this).attr("href");
                 linkPage = linkPage.substr(linkPage.lastIndexOf("/"));
-                if (curPage == linkPage){
+                if (curPage == linkPage) {
                     return $(this);
                 }
             });
         };
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             var currentLink = getCurrentLinkFrom($("navbar a"));
-            currentLink.classList.add('active') ;
+            currentLink.classList.add('active');
         });
     </script>
 
@@ -370,8 +367,10 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">NGTV Experience</span></h4>
-                        <p class="experience-element-date">2022 / 2 months</p>
-                        <p class="experience-element-legend">Customer support, preparing computer hardware, optimization of Windows images, PowerShell scripts...</p>
+                        <p class="experience-element-date">2022 <span
+                                class="experience-element-duration"> | 2 months </span></p>
+                        <p class="experience-element-legend">Customer support, preparing computer hardware, optimization
+                            of Windows images, PowerShell scripts...</p>
                     </div>
                 </div>
 
@@ -381,8 +380,10 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">Developer freelance</span></h4>
-                        <p class="experience-element-date">2022 / 6 months</p>
-                        <p class="experience-element-legend"> Development of programs in C and C++. Design and implementatation of projects</p>
+                        <p class="experience-element-date">2022 <span
+                                class="experience-element-duration"> | 6 months</span></p>
+                        <p class="experience-element-legend"> Development of programs in C and C++. Design and
+                            implementatation of projects</p>
                     </div>
                 </div>
 
@@ -392,8 +393,10 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">ECE Student Council</span></h4>
-                        <p class="experience-element-date">2021-2022 / 1 year</p>
-                        <p class="experience-element-legend">Head of Marketing and Sales. Management of a team of 8 people and of a 20k euros budget.</p>
+                        <p class="experience-element-date">2021-2022 <span
+                                class="experience-element-duration">/ 1 year</span></p>
+                        <p class="experience-element-legend">Head of Marketing and Sales. Management of a team of 8
+                            people and of a 20k euros budget.</p>
                     </div>
                 </div>
 
@@ -403,7 +406,8 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">LDLC</span></h4>
-                        <p class="experience-element-date">2019 / 1 month</p>
+                        <p class="experience-element-date">2019 <span
+                                class="experience-element-duration">| 1 month</span></p>
                         <p class="experience-element-legend">Repair shop and sale of computer equipment.</p>
                     </div>
                 </div>
@@ -414,8 +418,10 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">INSA Lyon</span></h4>
-                        <p class="experience-element-date">2018 / 1 month</p>
-                        <p class="experience-element-legend">iOT research and development laboratory. Creation of an Arduino weather station (using C)</p>
+                        <p class="experience-element-date">2018 <span
+                                class="experience-element-duration">| 1 month</span></p>
+                        <p class="experience-element-legend">iOT research and development laboratory. Creation of an
+                            Arduino weather station (using C)</p>
                     </div>
                 </div>
 
@@ -425,8 +431,10 @@
                     </div>
                     <div class="experience-element-text-container">
                         <h4 class="experience-element-title"><span class="colored-title">SPIE ICS</span></h4>
-                        <p class="experience-element-date">2016 / 1 month</p>
-                        <p class="experience-element-legend">BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and network discovery. </p>
+                        <p class="experience-element-date">2016 <span
+                                class="experience-element-duration">| 1 month</span></p>
+                        <p class="experience-element-legend">BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and
+                            network discovery. </p>
                     </div>
                 </div>
 
@@ -447,7 +455,9 @@
                     <img class="values-image" src="images/Circle.svg" alt="Circle">
                 </div>
                 <p class="values-title">Adaptability</p>
-                <p class="values-legend">Because a project doesn't always go the way you plan, it's necessary to be able to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a different way.</p>
+                <p class="values-legend">Because a project doesn't always go the way you plan, it's necessary to be able
+                    to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a
+                    different way.</p>
             </div>
 
             <div class="values-container">
@@ -455,7 +465,8 @@
                     <img class="values-image" src="images/Triangle.svg" alt="Triangle">
                 </div>
                 <p class="values-title">Curiosity</p>
-                <p class="values-legend">Technologies evolve rapidly, and continually learning new things can allow you to approach a project from different perspectives than usual.</p>
+                <p class="values-legend">Technologies evolve rapidly, and continually learning new things can allow you
+                    to approach a project from different perspectives than usual.</p>
             </div>
 
             <div class="values-container">
@@ -463,7 +474,9 @@
                     <img class="values-image" src="images/People.svg" alt="People">
                 </div>
                 <p class="values-title">Team Working</p>
-                <p class="values-legend">It is not possible to do everything yourself, and even if it were the case, communicating always allows you to compare points of view and push a project forward. I strongly believe in the benefits of teamwork</p>
+                <p class="values-legend">It is not possible to do everything yourself, and even if it were the case,
+                    communicating always allows you to compare points of view and push a project forward. I strongly
+                    believe in the benefits of teamwork</p>
             </div>
         </div>
 
