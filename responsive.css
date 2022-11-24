@@ -1,41 +1,65 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 950px) {
 
-    body {
-        font-family: PlusJakarta;
+
+    .nav-element {
+        margin-right: 6%;
+    }
+    .home-container {
+        grid-template-columns: 60% 40%;
     }
 
-    h1 {
-        font-size: 2.5em;
-
+    .about-grid-container {
+        grid-template-columns: 1fr 2fr;
+        padding-bottom: 2%;
     }
 
-    h2 {
+
+    .about-image-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        margin:auto;
+    }
+
+    .projects-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-title {
+        font-size: 2.7em;
+        margin-bottom: 2%;
+    }
+    .footer-second-title {
+        font-size: 2.2em;
+    }
+
+    #footer-esteban-text {
+        font-size: 1.3em;
+    }
+
+    #footer-mail {
         font-size: 1.4em;
-        margin-left: 3%;
-        padding-top: 3%;
     }
+}
 
-    h3 {
-        font-size: 1.2em;
-        margin-top: 1%;
-        margin-left: 3%;
+
+@media screen and (max-width: 750px) {
+
+    h1{
+        text-align: center;
+        margin-left: 0;
     }
-
-    h4 {
-        font-size: 1em;
-    }
-
     .navbar-container {
         height: 4em;
     }
 
     .navbar {
         display: none;
-    }
-
-    h1 {
-        text-align: center;
-        margin-left: 0;
     }
 
     .home-esteban-head {
@@ -80,8 +104,96 @@
     .logo-esteban {
         display: flex;
         justify-content: center;
+    }
+    .about-grid-container {
+        grid-template-columns: 40% 60%;
+        padding-bottom: 2%;
+    }
+
+    .about-paragraph {
+        margin-left: 7%;
+    }
+
+
+    #education-illustration {
+        display: none;
+    }
+
+    #education-list {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 8%;
+    }
+
+    #education-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .projects-grid-container {
+        width: 70%;
+        grid-template-columns: 1fr;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .projects-button-container {
+        margin-top: 4%;
+    }
+
+    .projects-button-github {
+        width: 25%;
 
     }
+
+    .projects-button-github-down {
+        justify-content: center;
+    }
+
+
+    #experience-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #values-grid {
+        padding-bottom: 25%;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    body {
+        font-family: PlusJakarta;
+    }
+
+    h1 {
+        font-size: 2.5em;
+
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-left: 3%;
+        padding-top: 3%;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
 
     .about-grid-container {
         display: flex;
@@ -92,28 +204,22 @@
         display: none;
     }
 
+    .about-grid-container {
+        margin-top: 10%;
+        padding-bottom: 20%;
+        grid-template-columns: 0.1fr 100fr;
+    }
+
     #education-container {
         display: flex;
         flex-direction: column;
     }
 
-    #education-illustration {
-        display: none;
-    }
     .education-element-title {
         display: flex;
         justify-content: center;
         height: fit-content;
         margin-bottom: 2%;
-    }
-
-    #education-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 5%;
-        margin-bottom: 8%;
     }
 
     .education-element-grid {
@@ -133,6 +239,11 @@
         width: 5em;
     }
 
+    .projects-grid-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
     .experience-element-text-container {
         display: flex;
@@ -142,33 +253,11 @@
         margin: 3% 3% 3%;
     }
 
-    #experience-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-grid-container {
-        margin-top: 10%;
-        padding-bottom: 20%;
-        grid-template-columns: 0.1fr 100fr;
-    }
-
-    .projects-grid-container {
-        grid-template-columns: 1fr;
-    }
 
     .experience-element-image {
         padding: 0.8em;
     }
-    .projects-button-github {
-        width: 25%;
 
-    }
-
-    .projects-button-github-down {
-        justify-content: center;
-
-    }
 
     #experience-grid {
         display: flex;
@@ -201,3 +290,4 @@
         font-size: 1.4em;
     }
 }
+

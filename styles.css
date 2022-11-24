@@ -340,6 +340,7 @@ h4 {
 
 
 
+
 .about-grid-container {
     margin-top: 4%;
     display: grid;
@@ -371,6 +372,23 @@ h4 {
 
 .about-image {
     height: 100%;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.about-link-to-education {
+    text-decoration: none;
+    color: #ff5e69;
+    font-weight: bold;
+}
+
+.about-link-to-education:hover{
+    color: #7c3031;
 }
 
 
@@ -495,22 +513,6 @@ h4 {
 }
 
 
-.about-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.about-link-to-education {
-    text-decoration: none;
-    color: #ff5e69;
-    font-weight: bold;
-}
-
-.about-link-to-education:hover{
-    color: #7c3031;
-}
 
 
 .projects-grid-container {
