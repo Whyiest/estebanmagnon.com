@@ -1,4 +1,17 @@
+let pageState = [true];
 
+function switchLight(pageState) {
+
+    if (pageState[0]) {
+        changeToWhite();
+        pageState[0] = false;
+    }
+    else {
+        changeToNight();
+        pageState[0] = true;
+
+    }
+}
 
 function changeToWhite () {
 
