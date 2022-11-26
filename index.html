@@ -10,29 +10,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 
-    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/45280cb382.js" crossorigin="anonymous"></script>
 
-    <script>
-            function getCurrentLinkFrom (links)  {
-
-            var curPage = document.URL;
-            curPage = curPage.substr(curPage.lastIndexOf("/"));
-
-            links.each(function () {
-            var linkPage = $(this).attr("href");
-            linkPage = linkPage.substr(linkPage.lastIndexOf("/"));
-            if (curPage == linkPage) {
-            return $(this);
-                }
-             });
-           }
-
-            $(document).ready(function () {
-            var currentLink = getCurrentLinkFrom($("navbar a"));
-            currentLink.classList.add('active');
-            })
-
-    </script>
 
 </head>
 <body>
@@ -46,15 +25,14 @@
             <img class="logo-esteban" src="images/logo-esteban-pink.svg" alt="Logo of Esteban">
         </div>
 
-        <div class="navbar">
+        <div class="navbar-list-container">
             <ul class="nav-list">
                 <li class="nav-element"><a class="nav-button" href=#about-me>About</a></li>
                 <li class="nav-element"><a class="nav-button" href="#education">Education</a></li>
                 <li class="nav-element"><a class="nav-button" href="#projects">Projects</a></li>
                 <li class="nav-element"><a class="nav-button" href="#experience">Experience</a></li>
                 <li class="nav-element"><a class="nav-button" href="#values">Values</a></li>
-                <li class="nav-element"><a class="nav-button" href="#footer">Contact</a>
-                </li>
+                <li class="nav-element"><i class="fa-solid fa-moon" onclick=switchLight(pageState)></i></li>
             </ul>
         </div>
 
@@ -66,7 +44,7 @@
 <!--------------------- MAIN SECTION ------------------------->
 
 <main>
-    <section id="home">
+    <div id="home">
 
         <div class="home-container">
 
@@ -78,7 +56,7 @@
                     </h1>
                 </div>
                 <div>
-                    <p class="home-second-text">Hi ! I'm Esteban, a French engineering student passionate about
+                    <p id="home-second-text">Hi ! I'm Esteban, a French engineering student passionate about
                         cybersecurity, that want to make tomorrow digital world safer.</p>
                 </div>
 
@@ -117,7 +95,7 @@
             </div>
         </div>
 
-    </section>
+    </div>
 
     <!------------------------ ABOUT ME SECTION --------------------->
 
@@ -169,7 +147,7 @@
                     </div>
                     <div class="education-element-text-container">
                         <div class="education-element-title">
-                            <h4><span class="colored-title">ECE Lyon</span></h4>
+                            <h4><span class="colored-text">ECE Lyon</span></h4>
                         </div>
                         <p class="education-element-date">2022 - 2025</p>
                         <p class="education-element-legend">Engineering school based in Lyon. Studying C, C++, SQL,
@@ -183,7 +161,7 @@
                     </div>
                     <div class="education-element-text-container">
                         <div class="education-element-title">
-                            <h4><span class="colored-title">McGill</span></h4>
+                            <h4><span class="colored-text">McGill</span></h4>
                         </div>                        <p class="education-element-date">2022</p>
                         <p class="education-element-legend">Engineering school in Montreal, Canada. Studying HTML, CSS,
                             JS, Bootstrap and Java. Also studying geopolitics and civic engagement</p>
@@ -196,7 +174,7 @@
                     </div>
                     <div class="education-element-text-container">
                         <div class="education-element-title">
-                            <h4><span class="colored-title">Education First</span></h4>
+                            <h4><span class="colored-text">Education First</span></h4>
                         </div>                        <p class="education-element-date">2019</p>
                         <p class="education-element-legend">Linguistic exchange in Los Angeles, in UCLA campus. Passing
                             an english certification (C1 level).</p>
@@ -384,7 +362,7 @@
                         <img class="experience-element-image" src="images/experience-ngtv.png" alt="Logo of NGTV">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">NGTV Experience</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">NGTV Experience</span></h4>
                         <p class="experience-element-date">2022 <span
                                 class="experience-element-duration"> | 2 months </span></p>
                         <p class="experience-element-legend">Customer support, preparing computer hardware, optimization
@@ -397,7 +375,7 @@
                         <img class="experience-element-image" src="images/experience-fiver.jpg" alt="Logo of Fiverr">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">Developer freelance</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">Developer freelance</span></h4>
                         <p class="experience-element-date">2022 <span
                                 class="experience-element-duration"> | 6 months</span></p>
                         <p class="experience-element-legend"> Development of programs in C and C++. Design and
@@ -410,7 +388,7 @@
                         <img class="experience-element-image" src="images/experience-purple.svg" alt="Logo of Purple">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">ECE Student Council</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">ECE Student Council</span></h4>
                         <p class="experience-element-date">2021-2022 <span
                                 class="experience-element-duration">| 1 year</span></p>
                         <p class="experience-element-legend">Head of Marketing and Sales. Management of a team of 8
@@ -423,7 +401,7 @@
                         <img class="experience-element-image" src="images/experience-ldlc.jpg" alt="Logo of LDLC">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">LDLC</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">LDLC</span></h4>
                         <p class="experience-element-date">2019 <span
                                 class="experience-element-duration">| 1 month</span></p>
                         <p class="experience-element-legend">Sale and repair of computer equipment in a shop.</p>
@@ -435,7 +413,7 @@
                         <img class="experience-element-image" src="images/experience-insa.jpg" alt="Logo of INSA">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">INSA Lyon</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">INSA Lyon</span></h4>
                         <p class="experience-element-date">2018 <span
                                 class="experience-element-duration">| 1 month</span></p>
                         <p class="experience-element-legend">iOT research and development laboratory. Creation of an
@@ -448,7 +426,7 @@
                         <img class="experience-element-image" src="images/experience-spie.jpg" alt="Logo of SPIE ICS">
                     </div>
                     <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-title">SPIE ICS</span></h4>
+                        <h4 class="experience-element-title"><span class="colored-text">SPIE ICS</span></h4>
                         <p class="experience-element-date">2016 <span
                                 class="experience-element-duration">| 1 month</span></p>
                         <p class="experience-element-legend">BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and
@@ -506,14 +484,205 @@
 
 <footer id="footer">
 
-    <div class="footer-title-container">
-        <p class="footer-title">Ready to make something cool ?</p>
-        <a class="footer-second-title" href="mailto:esteban.magnon@outlook.fr"><span class="colored-text">Let's get on a call !</span></a>
+    <div id="footer-title-container">
+        <p id="footer-title">Ready to make something cool ?</p>
+        <a id="footer-second-title" href="mailto:esteban.magnon@outlook.fr"><span class="colored-text">Let's get on a call !</span></a>
 
         <p id="footer-esteban-text">Esteban<span id="footer-colored-text">.</span></p>
-        <a id="footer-mail" href="mailto:esteban.magnon@outlook.fr">esteban.magnon@outlook.fr</a>
+        <a id="footer-mail" href="tel:0660364514">esteban.magnon@outlook.fr</a>
     </div>
 </footer>
-
 </body>
+
+<script>
+    let pageState = [true];
+
+    function switchLight(pageState) {
+
+        if (pageState[0]) {
+            changeToWhite();
+            pageState[0] = false;
+        }
+        else {
+            changeToNight();
+            pageState[0] = true;
+
+        }
+    }
+
+    function changeToWhite () {
+
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+
+        document.getElementById('home').style.backgroundColor = "white";
+        document.getElementById('about-me').style.backgroundColor = "white";
+        document.getElementById('education').style.backgroundColor = "white";
+        document.getElementById('projects').style.backgroundColor = "white";
+        document.getElementById('experience').style.backgroundColor = "white";
+        document.getElementById('values').style.backgroundColor = "white";
+        document.getElementById('footer').style.backgroundColor = "black";
+
+        let elements = document.getElementsByTagName('h1');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "black";
+        }
+
+
+        document.getElementById('home-button-download-text').style.color = "black";
+
+        elements = document.getElementsByTagName('h3');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "black";
+        }
+
+        elements = document.getElementsByTagName('h4');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "black";
+        }
+
+        document.getElementById('home-second-text').style.color = "#252525";
+
+        elements = document.getElementsByClassName('about-paragraph');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "black";
+        }
+
+        elements = document.getElementsByClassName('education-element-grid');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.backgroundColor = "#252525";
+        }
+        elements = document.getElementsByClassName('projects-grid-card');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.backgroundColor = "black";
+        }
+
+        elements = document.getElementsByClassName('projects-grid-content-name');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "white";
+        }
+
+
+        elements = document.getElementsByClassName('experience-element-grid');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.backgroundColor = "#252525";
+            elements[i].style.borderRadius = "20px";
+        }
+
+        elements = document.getElementsByClassName('experience-element-legend');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "white";
+        }
+
+        document.getElementById('footer-title').style.color = "white";
+
+        elements = document.getElementsByClassName('values-legend');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "#252525";
+        }
+
+        elements = document.getElementsByClassName('values-title');
+
+        for (let i = 0; i < elements.length ; i ++) {
+            elements[i].style.color = "black";
+        }
+    }
+
+    function changeToNight () {
+
+        document.body.style.backgroundColor = "#0e0e13";
+        document.body.style.color = "white";
+
+        document.getElementById('home').style.backgroundColor = "#0e0e13";
+        document.getElementById('about-me').style.backgroundColor = "#1a1a23";
+        document.getElementById('education').style.backgroundColor = "#0e0e13";
+        document.getElementById('projects').style.backgroundColor = "#1a1a23";
+        document.getElementById('experience').style.backgroundColor = "#0e0e13";
+        document.getElementById('values').style.backgroundColor = "#1a1a23";
+        document.getElementById('footer').style.backgroundColor = "black";
+
+        let elements = document.getElementsByTagName('h1');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+        elements = document.getElementsByTagName('h3');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+        elements = document.getElementsByTagName('h4');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+        document.getElementById('home-second-text').style.color = "white";
+
+        elements = document.getElementsByClassName('about-paragraph');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+        elements = document.getElementsByClassName('education-element-grid');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "#0c0b0e";
+        }
+        elements = document.getElementsByClassName('projects-grid-card');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "white";
+        }
+
+        elements = document.getElementsByClassName('projects-grid-content-name');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "black";
+        }
+
+
+        elements = document.getElementsByClassName('experience-element-grid');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "transparent";
+            elements[i].style.borderRadius = "0";
+        }
+
+        elements = document.getElementsByClassName('experience-element-legend');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+        document.getElementById('footer-title').style.color = "white";
+
+        elements = document.getElementsByClassName('values-legend');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "lightgrey";
+        }
+
+        elements = document.getElementsByClassName('values-title');
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.color = "white";
+        }
+
+    }
+
+</script>
 </html>

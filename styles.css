@@ -86,6 +86,7 @@ a, a:hover {
 }
 
 h1 {
+    color: white;
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 1em;
@@ -94,6 +95,7 @@ h1 {
 }
 
 h2 {
+    color: white;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     -webkit-background-clip: text;
     color: transparent;
@@ -111,6 +113,7 @@ h3 {
 }
 
 h4 {
+    color: white;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     -webkit-background-clip: text;
     color: transparent;
@@ -120,55 +123,54 @@ h4 {
 }
 
 .navbar-container {
-    z-index: 10;
     position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
     background: rgba(14, 14, 19, .8);
-
+    z-index: 10;
     height: 4em;
     width: 100%;
     top: 0;
 }
 
-.navbar {
-    margin-top: 0.6em;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    float: right;
-}
-
 #navbar-logo-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    float: left;
-    object-fit: cover;
+    position: relative;
     height: 100%;
+    text-align: center;
     margin-left: 6%;
 
 }
-
 .logo-esteban {
-    margin: auto;
-    height: 70%;
+    padding : 5%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin:auto;
+}
+
+.navbar-list-container {
+    width: 100%;
+    height: 100%;
 }
 
 
 .nav-list {
-    margin: auto;
+    float: right;
+    width: fit-content;
+    height: 100%;
     list-style: none;
-    display: flex;
-    justify-content: end;
-    align-content: center;
+    line-height: 4em;
 
 }
+
 .nav-element {
-    vertical-align: top;
+    vertical-align: middle;
+    height: 100%;
     display: inline-block;
-    margin-right: 3em;
-    line-height: 3em;
-
+    margin: auto 3em auto auto;
 }
+
 
 .nav-button {
     color: white;
@@ -191,7 +193,19 @@ h4 {
 
 }
 
+.nav-nightmode {
+    color: white;
+}
+
 .active {
+    color: #ff5e69;
+}
+.fa-moon {
+    color: white;
+}
+.fa-moon:hover {
+    transition: ease 0.3s;
+    scale: 120%;
     color: #ff5e69;
 }
 
@@ -209,7 +223,7 @@ h4 {
     width: 100%;
 }
 
-.home-second-text {
+#home-second-text {
     color: #c7c5c5;
     margin-bottom: 2em;
     margin-left: 15%;
@@ -478,6 +492,7 @@ h4 {
     height: 8em;
     display: grid;
     grid-template-columns: 1fr 4fr;
+
 }
 
 .experience-element-text-container {
@@ -538,7 +553,7 @@ h4 {
     align-content: center;
     height: auto;
     width: 70%;
-    background: white;
+    background-color: white;
     position: relative;
 }
 
@@ -593,8 +608,7 @@ h4 {
 }
 
 .projects-grid-content-view {
-    color: black;
-    opacity: 0.6;
+    color: grey;
     text-align: center;
 }
 
@@ -603,8 +617,6 @@ h4 {
     justify-content: center;
     flex-direction: column;
     text-decoration: none;
-    opacity: 1;
-
 }
 
 .projects-grid-link:hover {
@@ -730,12 +742,12 @@ h4 {
 }
 
 
-.footer-title {
+#footer-title {
     font-size: 3.5em;
     font-weight: bold;
 }
 
-.footer-second-title {
+#footer-second-title {
     text-decoration: none;
     font-size: 2.5em;
     font-weight: bold;
@@ -743,7 +755,7 @@ h4 {
     background-size: 0 0.1em, 100% 0.1em;
 }
 
-.footer-second-title:hover {
+#footer-second-title:hover {
     width: fit-content;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     background-size: 100% 0.1em, 0 0.1em;
@@ -752,7 +764,7 @@ h4 {
     transition: background-size 400ms;
 }
 
-.footer-title-container {
+#footer-title-container {
     padding-top: 10%;
     width: 70%;
     margin-right: 20%;
@@ -778,4 +790,3 @@ h4 {
 #footer-mail:hover {
     color: #ff5e69;
 }
-
