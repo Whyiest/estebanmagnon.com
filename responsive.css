@@ -168,10 +168,6 @@
         justify-content: center;
     }
 
-    .experience-element-grid {
-        padding-bottom: 2%;
-        height: fit-content;
-    }
 
     #experience-grid {
         display: flex;
