@@ -193,14 +193,12 @@ h4 {
 
 }
 
-.nav-nightmode {
-    color: white;
-}
-
 .active {
     color: #ff5e69;
 }
+
 .fa-moon {
+    z-index: 20;
     color: white;
 }
 .fa-moon:hover {

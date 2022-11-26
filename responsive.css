@@ -65,6 +65,7 @@
 
 
     #navbar-logo-container {
+        z-index: 15;
         position: absolute;
         width: 100%;
         float: none;
@@ -72,11 +73,17 @@
     }
 
     .logo-esteban {
+        z-index: 15;
         padding: 2%;
     }
 
     .nav-list li a {
         display: none;
+    }
+
+    .nav-list li i  {
+        position: relative;
+        z-index: 20;
     }
 
 
