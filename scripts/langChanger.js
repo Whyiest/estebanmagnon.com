@@ -1,8 +1,5 @@
 let langState = [false];
 
-changeToFrench();
-changeToEnglish();
-
 function switchLang(langState) {
 
     if (langState[0]) {
@@ -11,7 +8,6 @@ function switchLang(langState) {
     } else {
         changeToFrench();
         langState[0] = true;
-
     }
 }
 
