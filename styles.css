@@ -207,6 +207,12 @@ h4 {
     color: #ff5e69;
 }
 
+.fa-earth-americas:hover {
+    transition: ease 0.3s;
+    scale: 120%;
+    color: #ff5e69;
+}
+
 .home-container {
     margin-top: 3%;
     display: grid;
@@ -289,8 +295,7 @@ h4 {
     text-decoration: none;
     width: 50%;
 }
-
-.home-button-contact-text {
+#home-button-contact-text {
     font-weight: bold;
     display: flex;
     justify-content: center;

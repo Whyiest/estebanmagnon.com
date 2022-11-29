@@ -33,6 +33,8 @@
                 <li class="nav-element"><a class="nav-button" href="#experience">Experience</a></li>
                 <li class="nav-element"><a class="nav-button" href="#values">Values</a></li>
                 <li class="nav-element"><i class="fa-solid fa-moon" onclick=switchLight(pageState)></i></li>
+                <li class="nav-element"><i class="fa-sharp fa-solid fa-earth-americas"
+                                           onclick=switchLang(langState)></i></li>
             </ul>
         </div>
 
@@ -68,7 +70,7 @@
 
                         <a class="home-button-contact-link" href="mailto:esteban.magnon@outlook.fr">
                             <div class="home-button-contact-up">
-                                <p class="home-button-contact-text">Let's talk
+                                <p id="home-button-contact-text">Let's talk
                                 </p>
                             </div>
                             <div class="home-button-contact-down">
@@ -78,7 +80,8 @@
                     </div>
 
                     <div class="home-button-download">
-                        <a id="home-button-download-text" href="CV/myCV.pdf" download="CV d'Esteban MAGNON">Download CV</a>
+                        <a id="home-button-download-text" href="CV/myCV.pdf" download="CV d'Esteban MAGNON">Download CV
+                            <i class="fa-sharp fa-solid fa-circle-down"></i></a>
                         <div id="home-right-arrow">
 
                         </div>
@@ -101,8 +104,8 @@
 
     <section id="about-me">
 
-        <h2>About me</h2>
-        <h3>Let me introduce myself !</h3>
+        <h2 id="about-me-title">About me</h2>
+        <h3 id="about-me-subtitle">Let me introduce myself !</h3>
 
         <div class="about-grid-container">
 
@@ -111,21 +114,11 @@
             </div>
 
             <div class="about-text-container">
-                <p class="about-paragraph">My name is Esteban, I'm 20 years old, and I'm currently looking for and
-                    internship in development or/and cybersecurity. I'm student at <a class="about-link-to-education"
-                                                                                      href="https://ece.fr">ECE</a>
-                    Lyon, an engineering school, but currently I'm
-                    in <a class="about-link-to-education" href="https://mcgill.ca">Mcgill</a> at Montreal (Canada) for
-                    an exchange program. </p>
+                <p class="about-paragraph">My name is Esteban, I'm 20 years old, and I'm currently studying cybersecurity engineering and software development. I'm student at <a class="about-link-to-education" href="https://ece.fr">ECE</a>Lyon, an engineering school, but currently I'm in <a class="about-link-to-education" href="https://mcgill.ca">Mcgill</a> at Montreal (Canada) for an exchange program. </p>
 
-                <p class="about-paragraph">I'm passionate about new technologies, and I'm always happy to learn
-                    something new ! Side of my courses, I started to multiply <a class="about-link-to-education"
-                                                                                 href="#education">professionals
-                        experiences</a> to discover more about the world of engineering.</p>
+                <p class="about-paragraph">I'm passionate about new technologies, and I'm always happy to learn something new ! Side of my courses, I started to multiply <a class="about-link-to-education" href="#education">professionals experiences</a> to discover more about the world of engineering.</p>
 
-                <p class="about-paragraph">I'm very motivated to develop my currents skills and acquiring new one by
-                    making
-                    a cool project with you !</p>
+                <p class="about-paragraph">I'm very motivated to develop my currents skills and acquiring new one by making a cool project with you !</p>
             </div>
         </div>
     </section>
@@ -135,7 +128,7 @@
     <section id="education">
 
         <h2 id="education-title">Education</h2>
-        <h3>My educational background</h3>
+        <h3 id="education-subtitle">My educational background</h3>
 
         <div id="education-container">
 
@@ -150,8 +143,7 @@
                             <h4><span class="colored-text">ECE Lyon</span></h4>
                         </div>
                         <p class="education-element-date">2022 - 2025</p>
-                        <p class="education-element-legend">Engineering school based in Lyon. Studying C, C++, SQL,
-                            graphs...</p>
+                        <p class="education-element-legend">Engineering school based in Lyon. Studying C, C++, SQL, graphs...</p>
                     </div>
                 </div>
 
@@ -162,9 +154,9 @@
                     <div class="education-element-text-container">
                         <div class="education-element-title">
                             <h4><span class="colored-text">McGill</span></h4>
-                        </div>                        <p class="education-element-date">2022</p>
-                        <p class="education-element-legend">Engineering school in Montreal, Canada. Studying HTML, CSS,
-                            JS, Bootstrap and Java. Also studying geopolitics and civic engagement</p>
+                        </div>
+                        <p class="education-element-date">2022</p>
+                        <p class="education-element-legend">Engineering school in Montreal, Canada. Studying HTML, CSS, JS, Bootstrap and Java. Also studying geopolitics and civic engagement.</p>
                     </div>
                 </div>
 
@@ -175,9 +167,9 @@
                     <div class="education-element-text-container">
                         <div class="education-element-title">
                             <h4><span class="colored-text">Education First</span></h4>
-                        </div>                        <p class="education-element-date">2019</p>
-                        <p class="education-element-legend">Linguistic exchange in Los Angeles, in UCLA campus. Passing
-                            an english certification (C1 level).</p>
+                        </div>
+                        <p class="education-element-date">2019</p>
+                        <p class="education-element-legend">Linguistic exchange in Los Angeles, in UCLA campus. Passing an english certification (C1 level).</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +181,6 @@
         </div>
 
 
-
     </section>
 
 
@@ -198,8 +189,8 @@
     <section id="projects">
 
         <div class="projects-text-container">
-            <h2>My Projects</h2>
-            <h3>Because theories need to be practiced !</h3>
+            <h2 id="projects-title">My Projects</h2>
+            <h3 id="projects-subtitle">Because theories need to be practiced !</h3>
         </div>
 
 
@@ -346,138 +337,6 @@
     </section>
 
 
-    <!----------------------------- EXPERIENCE SECTION --------------->
-
-
-    <section id="experience">
-
-        <h2>Experiences</h2>
-        <h3>My professional background</h3>
-        <div id="experience-container">
-
-            <div id="experience-grid">
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-ngtv.png" alt="Logo of NGTV">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">NGTV Experience</span></h4>
-                        <p class="experience-element-date">2022 <span
-                                class="experience-element-duration"> | 2 months </span></p>
-                        <p class="experience-element-legend">Customer support, preparing computer hardware, optimization
-                            of Windows images, PowerShell scripts...</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-fiver.jpg" alt="Logo of Fiverr">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Developer freelance</span></h4>
-                        <p class="experience-element-date">2022 <span
-                                class="experience-element-duration"> | 6 months</span></p>
-                        <p class="experience-element-legend"> Development of programs in C and C++. Design and
-                            implementation of projects</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-purple.svg" alt="Logo of Purple">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">ECE Student Council</span></h4>
-                        <p class="experience-element-date">2021-2022 <span
-                                class="experience-element-duration">| 1 year</span></p>
-                        <p class="experience-element-legend">Head of Marketing and Sales. Management of a team of 8
-                            people and of a 20k euros budget.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-ldlc.jpg" alt="Logo of LDLC">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">LDLC</span></h4>
-                        <p class="experience-element-date">2019 <span
-                                class="experience-element-duration">| 1 month</span></p>
-                        <p class="experience-element-legend">Sale and repair of computer equipment in a shop.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-insa.jpg" alt="Logo of INSA">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">INSA Lyon</span></h4>
-                        <p class="experience-element-date">2018 <span
-                                class="experience-element-duration">| 1 month</span></p>
-                        <p class="experience-element-legend">iOT research and development laboratory. Creation of an
-                            Arduino weather station (using C)</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-spie.jpg" alt="Logo of SPIE ICS">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">SPIE ICS</span></h4>
-                        <p class="experience-element-date">2016 <span
-                                class="experience-element-duration">| 1 month</span></p>
-                        <p class="experience-element-legend">BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and
-                            network discovery. </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-    <section id="values">
-
-
-        <h2>Values</h2>
-        <h3>What to expect about me</h3>
-
-        <div id="values-grid">
-            <div class="values-container">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-circle.svg" alt="Circle">
-                </div>
-                <p class="values-title">Adaptability</p>
-                <p class="values-legend">Because a project doesn't always go the way you plan, it's necessary to be able
-                    to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a
-                    different way.</p>
-            </div>
-
-            <div class="values-container">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-triangle.svg" alt="Triangle">
-                </div>
-                <p class="values-title">Curiosity</p>
-                <p class="values-legend">Technologies evolve rapidly, and continually learning new things can allow you
-                    to approach a project from different perspectives than usual.</p>
-            </div>
-
-            <div class="values-container">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-people.svg" alt="People">
-                </div>
-                <p class="values-title">Team Working</p>
-                <p class="values-legend">It is not possible to do everything yourself, and even if it were the case,
-                    communicating always allows you to compare points of view and push a project forward. I strongly
-                    believe in the benefits of teamwork</p>
-            </div>
-        </div>
-
-
-    </section>
 
 </main>
 
@@ -494,8 +353,6 @@
 </footer>
 </body>
 
-<script src="scripts/nightmode.js">
-
-
-</script>
+<script src="scripts/nightMode.js"></script>
+<script src="scripts/langChanger.js"></script>
 </html>

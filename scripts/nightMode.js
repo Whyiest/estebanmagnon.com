@@ -114,6 +114,8 @@ function changeToNight () {
     document.getElementById('values').style.backgroundColor = "#1a1a23";
     document.getElementById('footer').style.backgroundColor = "black";
 
+    document.getElementById('home-button-download-text').style.color = "white";
+
     let elements = document.getElementsByTagName('h1');
 
     for (let i = 0; i < elements.length; i++) {
