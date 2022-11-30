@@ -9,6 +9,7 @@
     }
 
     .about-grid-container {
+        margin-top: 10%;
         grid-template-columns: 1fr 2fr;
         padding-bottom: 2%;
     }
@@ -151,6 +152,7 @@
     .projects-grid-container {
         width: 70%;
         grid-template-columns: 1fr;
+        margin-bottom: 10%;
         margin-left: 15%;
         margin-right: 15%;
     }
@@ -274,7 +276,7 @@
 
 
     .experience-element-image {
-        padding: 0.8em;
+        padding: 0.4em;
     }
 
 
@@ -288,6 +290,8 @@
 
     .experience-element-grid {
         height: fit-content;
+        margin-bottom: 10%;
+
     }
 
     #values-grid {

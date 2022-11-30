@@ -43,9 +43,9 @@ function changeToFrench() {
     document.getElementById("about-me-subtitle").innerHTML = "Ravi de vous rencontrer  !";
 
     elements = document.getElementsByClassName("about-paragraph");
-    elements [0].innerHTML = "Je m'apelle Esteban, j'ai 20 ans, je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> de Lyon et de Paris, et je suis en ce moment en échange universitaire à l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada.";
-    elements [1].innerHTML = "Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de dévouvrir un peu plus le monde de l'ingénierie"
-    elements [2].innerHTML = "Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
+    elements [0].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je m'apelle Esteban, j'ai 20 ans, je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> de Lyon et de Paris, et je suis en ce moment en échange universitaire à l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada.";
+    elements [1].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de dévouvrir un peu plus le monde de l'ingénierie"
+    elements [2].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
 
 
     document.getElementById("education-title").innerHTML = "FORMATIONS";
@@ -234,8 +234,8 @@ function changeToNight () {
     document.getElementById('home').style.backgroundColor = "#0e0e13";
     document.getElementById('about-me').style.backgroundColor = "#1a1a23";
     document.getElementById('education').style.backgroundColor = "#0e0e13";
-    document.getElementById('projects').style.backgroundColor = "#1a1a23";
     document.getElementById('experience').style.backgroundColor = "#0e0e13";
+    document.getElementById('projects').style.backgroundColor = "#1a1a23";
     document.getElementById('values').style.backgroundColor = "#1a1a23";
     document.getElementById('footer').style.backgroundColor = "black";
 
