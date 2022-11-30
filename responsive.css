@@ -279,8 +279,15 @@
 
 
     #experience-grid {
+        height: 100%;
+        margin-bottom: 20%;
+        margin-top: 15%;
         display: flex;
         flex-direction: column;
+    }
+
+    .experience-element-grid {
+        height: fit-content;
     }
 
     #values-grid {

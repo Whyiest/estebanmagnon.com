@@ -17,12 +17,10 @@
 }@font-face {
     font-family: ThicccboiEtraBold;
     src: url("fonts/THICCCBOI-ExtraBold.ttf");
-}@font-face {
-    font-family: ThicccboiRegular;
-    src: url("fonts/THICCCBOI-Regular.ttf");
-}@font-face {
+}
+@font-face {
     font-family: ThicccboiThin;
-    src: url("fonts/THICCCBOI-Thin.ttf");
+    src: url("fonts/THICCCBOI-Light.ttf");
 }
 * {
     padding: 0;
@@ -39,12 +37,13 @@ html, body {
 body{
     background-color: #0e0e13;
     color: white;
-    font-family: ThicccboiBold;
+    font-family: Mulish;
 }
 
 a, a:hover {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .appleLinks a {
     color: dimgrey;
@@ -107,8 +106,9 @@ h1 {
 }
 
 h2 {
+    color: white;
     letter-spacing: 2px;
-    font-family: ThicccboiEtraBold;
+    font-family: ThicccboiBold;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     -webkit-background-clip: text;
     color: transparent;
@@ -198,7 +198,8 @@ h4 {
 
 .nav-button:hover {
     color: #ff5e69;
-    transition: 0.3s ease
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-button:active {
@@ -218,6 +219,7 @@ h4 {
     transition: ease 0.3s;
     scale: 120%;
     color: #ff5e69;
+    cursor: pointer;
 }
 
 
@@ -228,6 +230,7 @@ h4 {
     transition: ease 0.3s;
     scale: 120%;
     color: #ff5e69;
+    cursor: pointer;
 }
 
 .home-container {
@@ -287,6 +290,7 @@ h4 {
     right: 0;
     bottom: 0;
     transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .home-button-contact-up:active {
@@ -348,6 +352,7 @@ h4 {
 
 #home-button-download-text:hover  + #home-right-arrow{
     background-image: url("images/pink-right-arrow.svg");
+    cursor: pointer;
 }
 
 #home-button-download-text:hover {
@@ -456,8 +461,8 @@ h4 {
 }
 
 .education-element-grid {
-    border: solid white 0.5px;
-    background-color: #0c0b0e;
+    border: solid white 1px;
+    background-color: black;
     border-radius: 20px;
     margin-top: 3%;
     height: fit-content;
@@ -512,7 +517,8 @@ h4 {
     height: 8em;
     display: grid;
     grid-template-columns: 1fr 4fr;
-
+    background-color: black;
+    border-radius: 50px;
 }
 
 .experience-element-text-container {
@@ -582,7 +588,7 @@ h4 {
     padding-right: 3%;
     padding-top: 3%;
     transform: scale(120%);
-
+    cursor: pointer;
 }
 
 
@@ -641,11 +647,13 @@ h4 {
 
 .projects-grid-link:hover {
     opacity: 70%;
+    cursor: pointer;
 }
 
 .projects-grid-content-view:hover {
     opacity: 1;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 
@@ -684,6 +692,7 @@ h4 {
     right: 0;
     bottom: 0;
     transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .projects-button-github-up:active {
@@ -782,6 +791,7 @@ h4 {
     background-position: 0 100%, 100% 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
+    cursor: pointer;
 }
 
 #footer-title-container {
@@ -809,4 +819,5 @@ h4 {
 
 #footer-mail:hover {
     color: #ff5e69;
+    cursor: pointer;
 }

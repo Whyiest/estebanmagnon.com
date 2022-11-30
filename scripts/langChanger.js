@@ -1,9 +1,16 @@
 let langState = [false];
+// false = original (EN).
+// true = modified (FR)
 
-function switchLang(langState) {
+let nightState = [true];
+// false = nightmode disabled.
+// true = nightmode enabled (original)
+
+// ------------------- LANG MODIFIER -------------------------
+function switchLang(langState, nightState) {
 
     if (langState[0]) {
-        changeToEnglish();
+        changeToEnglish(nightState);
         langState[0] = false;
     } else {
         changeToFrench();
@@ -22,7 +29,7 @@ function changeToFrench() {
     elements [3].innerHTML = "Experiences";
     elements [4].innerHTML = "Valeurs";
 
-    document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">étudie </span>les technologies d\'<span\n" +
+    document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">&#233;tudie </span>les technologies d\'<span\n" +
         "class=\"colored-text\">aujourdhui</span> pour préparer <span class=\"colored-text\">demain"
 
     document.getElementById("home-second-text").innerHTML = "Salut ! Je suis Esteban, un étudiant ingénieur passionné par la cybersécurité, qui veux rendre le monde digital de demain plus sécurisé. "
@@ -31,7 +38,7 @@ function changeToFrench() {
 
     document.getElementById("home-button-download-text").innerHTML = "Téléchargez mon CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
 
-    document.getElementById("about-me-title").innerHTML = "A propos";
+    document.getElementById("about-me-title").innerHTML = "A PROPOS";
 
     document.getElementById("about-me-subtitle").innerHTML = "Ravi de vous rencontrer  !";
 
@@ -41,18 +48,18 @@ function changeToFrench() {
     elements [2].innerHTML = "Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
 
 
-    document.getElementById("education-title").innerHTML = "Formations";
+    document.getElementById("education-title").innerHTML = "FORMATIONS";
 
-    document.getElementById("education-subtitle").innerHTML = "Mon parcours scolaire";
+    document.getElementById("education-subtitle").innerHTML = "Mon parcours scolaire.";
 
     elements = document.getElementsByClassName("education-element-legend");
     elements [0].innerHTML = "Ecole d'ingénieur basée à Lyon et Paris. Formation : C, C++, SQL, Java, HTML, CSS, JS, graphes, méthode agile...";
     elements [1].innerHTML = "Ecole d'ingénieur basée à Montreal au Canada. Formation : Java, HTML, CSS, JS, API, géopolitique et engagement civique.";
     elements [2].innerHTML = "Echange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certfication d'anglais d'un niveau C1.";
 
-    document.getElementById("projects-title").innerHTML = "Mes projets";
+    document.getElementById("projects-title").innerHTML = "PROJETS";
 
-    document.getElementById("projects-subtitle").innerHTML = "Que serait la théorie sans pratique ?";
+    document.getElementById("projects-subtitle").innerHTML = "Découvrez mes projets.";
 
     elements = document.getElementsByClassName("projects-grid-content-view");
 
@@ -64,9 +71,9 @@ function changeToFrench() {
     elements = document.getElementsByClassName("projects-grid-content-name");
     elements[5].innerHTML = "Voir plus";
 
-    document.getElementById("experience-title").innerHTML = "Experiences";
+    document.getElementById("experience-title").innerHTML = "EXPERIENCE";
 
-    document.getElementById("experience-subtitle").innerHTML = "Mes expériences professionnelles";
+    document.getElementById("experience-subtitle").innerHTML = "Mes expériences professionnelles.";
 
     elements = document.getElementsByClassName("experience-element-duration");
     elements [0].innerHTML = "| 2 mois";
@@ -88,8 +95,8 @@ function changeToFrench() {
     elements [4].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
     elements [5].innerHTML = "BigData, CLoud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
 
-    document.getElementById("values-title").innerHTML = "Valeurs";
-    document.getElementById("values-subtitle").innerHTML = "Ce que vous pouvez attendre de moi";
+    document.getElementById("values-title").innerHTML = "VALEURS";
+    document.getElementById("values-subtitle").innerHTML = "Ce que vous pouvez attendre de moi.";
 
 
     elements = document.getElementsByClassName("values-title");
@@ -102,9 +109,19 @@ function changeToFrench() {
     elements [1].innerHTML = "La technologie évolue rapidemment, et continuer à apprendr continuellement des nouvelles choses peu permettre d'aborder un projet depuis des perspectives novatrices.";
     elements [2].innerHTML = "Il n'est pas possible de tout faire soi-même, et même si c'était le cas, communiqué avec son équipe permet de comparé les points de vues et de poussé un projet vers l'avant.";
 
-    document.getElementById("footer-title").innerHTML = "Prêt à collaborer ensemble ?"
+    document.getElementById("footer-title").innerHTML = "Vous avez un projet en tête ?"
     document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text\">Discutons ensemble !</span>"
 }
+
+/*
+function changeToEnglish(nightState) {
+    window.location.reload();
+    if (!nightState) {
+        changeToDay();
+    }
+}
+*/
+
 
 
 function changeToEnglish() {
@@ -112,11 +129,11 @@ function changeToEnglish() {
     let elements;
 
     elements = document.getElementsByClassName("nav-button");
-    elements [0].innerHTML = "About";
-    elements [1].innerHTML = "Education";
-    elements [2].innerHTML = "Projects";
-    elements [3].innerHTML = "Experience";
-    elements [4].innerHTML = "Values";
+    elements [0].reset();
+    elements [1].reset();
+    elements [2].reset();
+    elements [3].reset();
+    elements [4].reset();
 
     document.getElementsByTagName("h1")[0].innerHTML = "I'm<span class='colored-text'> studying </span>technologies of <span class='colored-text'>today</span> to prepare <span class='colored-text'>tomorrow</span>."
 
@@ -126,7 +143,7 @@ function changeToEnglish() {
 
     document.getElementById("home-button-download-text").innerHTML = "Download my CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
 
-    document.getElementById("about-me-title").innerHTML = "About me";
+    document.getElementById("about-me-title").innerHTML = "ABOUT ME";
 
     document.getElementById("about-me-subtitle").innerHTML = "Let me introduce myself !";
 
@@ -136,7 +153,7 @@ function changeToEnglish() {
     elements [2].innerHTML = "I'm very motivated to develop my currents skills and acquiring new one by making a cool project with you !";
 
 
-    document.getElementById("education-title").innerHTML = "Education";
+    document.getElementById("education-title").innerHTML = "EDUCATION";
 
     document.getElementById("education-subtitle").innerHTML = "My educational background";
 
@@ -145,7 +162,7 @@ function changeToEnglish() {
     elements [1].innerHTML = "Engineering school in Montreal, Canada. Studying HTML, CSS, JS, Bootstrap and Java. Also studying geopolitics and civic engagement.";
     elements [2].innerHTML = "Linguistic exchange in Los Angeles, in UCLA campus. Passing an english certification (C1 level).";
 
-    document.getElementById("projects-title").innerHTML = "My projects";
+    document.getElementById("projects-title").innerHTML = "PROJECTS";
 
     document.getElementById("projects-subtitle").innerHTML = "Because theories need to be practiced !";
 
@@ -158,7 +175,7 @@ function changeToEnglish() {
     elements = document.getElementsByClassName("projects-grid-content-name");
     elements[5].innerHTML = "View more";
 
-    document.getElementById("experience-title").innerHTML = "Experiences";
+    document.getElementById("experience-title").innerHTML = "EXPERIENCES";
 
     document.getElementById("experience-subtitle").innerHTML = "My professional background";
 
@@ -182,7 +199,7 @@ function changeToEnglish() {
     elements [4].innerHTML = "iOT research and development laboratory. Creation of an Arduino weather station (using C).";
     elements [5].innerHTML = "BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and network discovery.";
 
-    document.getElementById("values-title").innerHTML = "Values";
+    document.getElementById("values-title").innerHTML = "VALUES";
     document.getElementById("values-subtitle").innerHTML = "What to expect about me";
 
 
@@ -198,4 +215,196 @@ function changeToEnglish() {
 
     document.getElementById("footer-title").innerHTML = "Ready to make something cool ?"
     document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text\">Let's get on a call !</span>"
+}
+
+
+
+// ---------------------------------- NIGHT MODE MODIFIER --------------------
+
+function switchLight(pageState) {
+
+    if (pageState[0]) {
+        changeToDay();
+        pageState[0] = false;
+    }
+    else {
+        changeToNight();
+        pageState[0] = true;
+
+    }
+}
+
+function changeToDay () {
+
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+
+    document.getElementById('home').style.backgroundColor = "white";
+    document.getElementById('about-me').style.backgroundColor = "white";
+    document.getElementById('education').style.backgroundColor = "white";
+    document.getElementById('projects').style.backgroundColor = "white";
+    document.getElementById('experience').style.backgroundColor = "white";
+    document.getElementById('values').style.backgroundColor = "white";
+    document.getElementById('footer').style.backgroundColor = "black";
+
+    let elements = document.getElementsByTagName('h1');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "black";
+    }
+
+
+    document.getElementById('home-button-download-text').style.color = "black";
+
+    elements = document.getElementsByTagName('h3');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "black";
+    }
+
+    elements = document.getElementsByTagName('h4');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "black";
+    }
+
+    document.getElementById('home-second-text').style.color = "#252525";
+
+    elements = document.getElementsByClassName('about-paragraph');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "black";
+    }
+
+    elements = document.getElementsByClassName('education-element-grid');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.backgroundColor = "#111111";
+    }
+    elements = document.getElementsByClassName('projects-grid-card');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.backgroundColor = "black";
+    }
+
+    elements = document.getElementsByClassName('projects-grid-content-name');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "white";
+    }
+
+
+    elements = document.getElementsByClassName('experience-element-grid');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.backgroundColor = "#111111";
+        elements[i].style.borderRadius = "20px";
+    }
+
+    elements = document.getElementsByClassName('experience-element-legend');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "white";
+    }
+
+    document.getElementById('footer-title').style.color = "white";
+
+    elements = document.getElementsByClassName('values-legend');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "#252525";
+    }
+
+    elements = document.getElementsByClassName('values-title');
+
+    for (let i = 0; i < elements.length ; i ++) {
+        elements[i].style.color = "black";
+    }
+}
+
+function changeToNight () {
+
+    document.body.style.backgroundColor = "#0e0e13";
+    document.body.style.color = "white";
+
+    document.getElementById('home').style.backgroundColor = "#0e0e13";
+    document.getElementById('about-me').style.backgroundColor = "#1a1a23";
+    document.getElementById('education').style.backgroundColor = "#0e0e13";
+    document.getElementById('projects').style.backgroundColor = "#1a1a23";
+    document.getElementById('experience').style.backgroundColor = "#0e0e13";
+    document.getElementById('values').style.backgroundColor = "#1a1a23";
+    document.getElementById('footer').style.backgroundColor = "black";
+
+    document.getElementById('home-button-download-text').style.color = "white";
+
+    let elements = document.getElementsByTagName('h1');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
+
+    elements = document.getElementsByTagName('h3');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
+
+    elements = document.getElementsByTagName('h4');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
+
+    document.getElementById('home-second-text').style.color = "white";
+
+    elements = document.getElementsByClassName('about-paragraph');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
+
+    elements = document.getElementsByClassName('education-element-grid');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor = "#0c0b0e";
+    }
+    elements = document.getElementsByClassName('projects-grid-card');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor = "white";
+    }
+
+    elements = document.getElementsByClassName('projects-grid-content-name');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "black";
+    }
+
+
+    elements = document.getElementsByClassName('experience-element-grid');
+
+    for (let i = 0; i < elements.length; i++) {
+        //elements[i].style.backgroundColor = "transparent";
+        //elements[i].style.borderRadius = "0";
+    }
+
+    elements = document.getElementsByClassName('experience-element-legend');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
+
+    document.getElementById('footer-title').style.color = "white";
+
+    elements = document.getElementsByClassName('values-legend');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "lightgrey";
+    }
+
+    elements = document.getElementsByClassName('values-title');
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.color = "white";
+    }
 }
