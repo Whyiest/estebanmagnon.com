@@ -113,108 +113,12 @@ function changeToFrench() {
     document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text\">Discutons ensemble !</span>"
 }
 
-/*
+
 function changeToEnglish(nightState) {
     window.location.reload();
     if (!nightState) {
         changeToDay();
     }
-}
-*/
-
-
-
-function changeToEnglish() {
-
-    let elements;
-
-    elements = document.getElementsByClassName("nav-button");
-    elements [0].reset();
-    elements [1].reset();
-    elements [2].reset();
-    elements [3].reset();
-    elements [4].reset();
-
-    document.getElementsByTagName("h1")[0].innerHTML = "I'm<span class='colored-text'> studying </span>technologies of <span class='colored-text'>today</span> to prepare <span class='colored-text'>tomorrow</span>."
-
-    document.getElementById("home-second-text").innerHTML = "Hi ! I'm Esteban, a French engineering student passionate about cybersecurity, that want to make tomorrow digital world safer."
-
-    document.getElementById("home-button-contact-text").innerHTML = "Let's talk";
-
-    document.getElementById("home-button-download-text").innerHTML = "Download my CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
-
-    document.getElementById("about-me-title").innerHTML = "ABOUT ME";
-
-    document.getElementById("about-me-subtitle").innerHTML = "Let me introduce myself !";
-
-    elements = document.getElementsByClassName("about-paragraph");
-    elements [0].innerHTML = "My name is Esteban, I'm 20 years old, and I'm currently studying cybersecurity engineering and software development. I'm student at <a class=\"about-link-to-education\" href=\"https://ece.fr\">ECE</a> Lyon, an engineering school, but currently I'm in <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a> at Montreal (Canada) for an exchange program. ";
-    elements [1].innerHTML = "I'm passionate about new technologies, and I'm always happy to learn something new ! Side of my courses, I started to multiply <a class=\"about-link-to-education\" href=\"#education\">professionals experiences</a> to discover more about the world of engineering.";
-    elements [2].innerHTML = "I'm very motivated to develop my currents skills and acquiring new one by making a cool project with you !";
-
-
-    document.getElementById("education-title").innerHTML = "EDUCATION";
-
-    document.getElementById("education-subtitle").innerHTML = "My educational background";
-
-    elements = document.getElementsByClassName("education-element-legend");
-    elements [0].innerHTML = "Engineering school based in Lyon and Paris. Studying C, C++, SQL, graphs, agil method...";
-    elements [1].innerHTML = "Engineering school in Montreal, Canada. Studying HTML, CSS, JS, Bootstrap and Java. Also studying geopolitics and civic engagement.";
-    elements [2].innerHTML = "Linguistic exchange in Los Angeles, in UCLA campus. Passing an english certification (C1 level).";
-
-    document.getElementById("projects-title").innerHTML = "PROJECTS";
-
-    document.getElementById("projects-subtitle").innerHTML = "Because theories need to be practiced !";
-
-    elements = document.getElementsByClassName("projects-grid-content-view");
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].innerHTML = "View project"
-    }
-    elements[5].innerHTML = "Discover";
-
-    elements = document.getElementsByClassName("projects-grid-content-name");
-    elements[5].innerHTML = "View more";
-
-    document.getElementById("experience-title").innerHTML = "EXPERIENCES";
-
-    document.getElementById("experience-subtitle").innerHTML = "My professional background";
-
-    elements = document.getElementsByClassName("experience-element-duration");
-    elements [0].innerHTML = "| 2 months";
-    elements [1].innerHTML = "| 6 months";
-    elements [2].innerHTML = "| 1 year";
-    elements [3].innerHTML = "| 1 month";
-    elements [4].innerHTML = "| 1 month";
-    elements [5].innerHTML = "| 1 month";
-
-    elements = document.getElementsByClassName("experience-element-title");
-    elements [1].innerHTML = "Fiverr Freelance";
-    elements [2].innerHTML = "Student council ECE";
-
-    elements = document.getElementsByClassName("experience-element-legend");
-    elements [0].innerHTML = "Customer support, preparing computer hardware, optimization of Windows images, PowerShell scripts.";
-    elements [1].innerHTML = "Development of programs in C and C++. Design and implementation of projects.";
-    elements [2].innerHTML = "Head of Marketing and Sales. Management of a team of 8 people and of a 20k euros budget.";
-    elements [3].innerHTML = "Sale and repair of computer equipment in a shop.";
-    elements [4].innerHTML = "iOT research and development laboratory. Creation of an Arduino weather station (using C).";
-    elements [5].innerHTML = "BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and network discovery.";
-
-    document.getElementById("values-title").innerHTML = "VALUES";
-    document.getElementById("values-subtitle").innerHTML = "What to expect about me";
-
-
-    elements = document.getElementsByClassName("values-title");
-    elements [0].innerHTML = "Adaptability";
-    elements [1].innerHTML = "Curiosity";
-    elements [2].innerHTML = "Team working";
-
-    elements = document.getElementsByClassName("values-legend");
-    elements [0].innerHTML = "Because a project doesn't always go the way you plan, it's necessary to be able to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a different way.";
-    elements [1].innerHTML = "Technologies evolve rapidly, and continually learning new things can allow you to approach a project from different perspectives than usual.";
-    elements [2].innerHTML = "It is not possible to do everything yourself, and even if it were the case, communicating always allows you to compare points of view and push a project forward. I strongly believe in the benefits of teamwork.";
-
-    document.getElementById("footer-title").innerHTML = "Ready to make something cool ?"
-    document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text\">Let's get on a call !</span>"
 }
 
 
