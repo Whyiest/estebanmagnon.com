@@ -91,9 +91,11 @@ a, a:hover {
 }
 
 .colored-text {
+    color: white;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     -webkit-background-clip: text;
     color: transparent;
+
 }
 
 h1 {
