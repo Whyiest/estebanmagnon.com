@@ -2,10 +2,12 @@
     font-family: Mulish;
     src: url(fonts/Mulish-VariableFont_wght.ttf);
 }
+
 @font-face {
     font-family: MulishItalic;
     src: url(fonts/Mulish-Italic-VariableFont_wght.ttf);
 }
+
 @font-face {
     font-family: PlusJakarta;
     src: url(fonts/PlusJakartaSans-VariableFont_wght.ttf);
@@ -14,14 +16,18 @@
 @font-face {
     font-family: ThicccboiBold;
     src: url("fonts/THICCCBOI-Bold.ttf");
-}@font-face {
+}
+
+@font-face {
     font-family: ThicccboiEtraBold;
     src: url("fonts/THICCCBOI-ExtraBold.ttf");
 }
+
 @font-face {
     font-family: ThicccboiThin;
     src: url("fonts/THICCCBOI-Light.ttf");
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -34,7 +40,7 @@ html, body {
     overflow-x: hidden;
 }
 
-body{
+body {
     background-color: #0e0e13;
     color: white;
     font-family: Mulish;
@@ -45,6 +51,7 @@ a, a:hover {
     color: white;
     cursor: pointer;
 }
+
 .appleLinks a {
     color: dimgrey;
     text-decoration: none;
@@ -79,6 +86,7 @@ a, a:hover {
 #values {
     background-color: #1a1a23;
 }
+
 #footer {
 
     background-color: #000000;
@@ -92,10 +100,23 @@ a, a:hover {
 
 .colored-text {
     color: white;
+    background-image: linear-gradient(to right, #c003b0, #6600ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.colored-text-title {
+    color: white;
+    background-image: linear-gradient(to right, #373742, #7303c0, #ec38bc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.colored-text-footer {
+    color: white;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
     -webkit-background-clip: text;
     color: transparent;
-
 }
 
 h1 {
@@ -111,7 +132,7 @@ h2 {
     color: white;
     letter-spacing: 2px;
     font-family: ThicccboiBold;
-    background-image: linear-gradient(to left, orange, deeppink, blueviolet);
+    background-image: linear-gradient(to left, #8056ff, #9703fd, #ec38bc);
     -webkit-background-clip: text;
     color: transparent;
     width: fit-content;
@@ -128,15 +149,6 @@ h3 {
     margin-left: 3%;
 }
 
-h4 {
-    color: white;
-    background-image: linear-gradient(to left, orange, deeppink, blueviolet);
-    -webkit-background-clip: text;
-    color: transparent;
-    width: fit-content;
-    font-size: 1em;
-    font-weight: bold;
-}
 
 .navbar-container {
     position: fixed;
@@ -157,12 +169,13 @@ h4 {
     margin-left: 6%;
 
 }
+
 .logo-esteban {
-    padding : 5%;
+    padding: 5%;
     height: 100%;
     object-fit: contain;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 
 .navbar-list-container {
@@ -200,7 +213,7 @@ h4 {
 }
 
 .nav-button:hover {
-    color: #ff5e69;
+    color: #7d3df8;
     transition: 0.3s ease;
     cursor: pointer;
 }
@@ -212,16 +225,18 @@ h4 {
 
 
 .active {
-    color: #ff5e69;
+    color: #7d3df8;
 }
+
 .fa-moon {
     z-index: 20;
     color: white;
 }
+
 .fa-moon:hover {
     transition: ease 0.3s;
     scale: 120%;
-    color: #ff5e69;
+    color: #7d3df8;
     cursor: pointer;
 }
 
@@ -229,10 +244,11 @@ h4 {
 .fa-earth-americas {
     color: white;
 }
+
 .fa-earth-americas:hover {
     transition: ease 0.3s;
     scale: 120%;
-    color: #ff5e69;
+    color: #7d3df8;
     cursor: pointer;
 }
 
@@ -244,7 +260,7 @@ h4 {
 }
 
 .home-text-container {
-    margin-top: 25%;
+    margin-top: 20%;
     flex: 1;
     height: 100%;
     width: 100%;
@@ -303,22 +319,22 @@ h4 {
     bottom: 10%;
 }
 
-.home-button-contact-down{
+.home-button-contact-down {
     position: absolute;
     width: 95%;
     height: 90%;
     left: 5%;
-    top : 10%;
+    top: 10%;
     z-index: 0;
-    background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
+    background-image: linear-gradient(to right, #21113b, #7303c0, #ec38bc);
 }
-
 
 .home-button-contact-link {
     color: white;
     text-decoration: none;
     width: 50%;
 }
+
 #home-button-contact-text {
     font-weight: bold;
     display: flex;
@@ -347,19 +363,19 @@ h4 {
 
 #home-right-arrow {
     z-index: 9;
-    width :20px;
+    width: 20px;
     height: 20px;
     background-image: url("images/white-right-arrow.svg");
     object-fit: contain;
 }
 
-#home-button-download-text:hover  + #home-right-arrow{
+#home-button-download-text:hover + #home-right-arrow {
     background-image: url("images/pink-right-arrow.svg");
     cursor: pointer;
 }
 
 #home-button-download-text:hover {
-    color: #ff5e69;
+    color: #7d3df8;
     transition: 0.2s ease;
 }
 
@@ -380,9 +396,9 @@ h4 {
     margin: auto;
 }
 
-
-
-
+.fa-terminal {
+    font-size: 0.7em;
+}
 
 .about-grid-container {
     display: grid;
@@ -397,12 +413,30 @@ h4 {
     flex-direction: column;
     align-content: start;
 }
-.about-paragraph {
 
-    margin-left: 15%;
-    margin-right: 15%;
+#about-text-wrapper {
+    width: 80%;
+    border-radius: 10%;
+    padding-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #0e0e13;
+}
+
+.about-paragraph {
+    width: 90%;
     color: white;
+    background-color: #151518;
+    border-radius: 25px;
+    border: solid 1px #000000;
+
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 6%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: justify;
 }
 
@@ -426,12 +460,12 @@ h4 {
 
 .about-link-to-education {
     text-decoration: none;
-    color: #ff5e69;
+    color: #9828f3;
     font-weight: bold;
 }
 
-.about-link-to-education:hover{
-    color: #7c3031;
+.about-link-to-education:hover {
+    color: #a654ff;
 }
 
 
@@ -461,7 +495,7 @@ h4 {
 
 .education-element-grid {
     border-radius: 25px;
-    border: solid 1px white;
+
 
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -565,7 +599,7 @@ h4 {
     position: relative;
     display: flex;
     justify-content: center;
-    aspect-ratio : 1 / 1;
+    aspect-ratio: 1 / 1;
     width: 100%;
     margin: auto;
 }
@@ -581,14 +615,12 @@ h4 {
 }
 
 
-
-
 .projects-grid-container {
     width: 100%;
     height: 20%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    gap:0.3%;
+    gap: 0.3%;
     padding-top: 5%;
     padding-bottom: 8%;
 }
@@ -609,7 +641,7 @@ h4 {
     position: relative;
 }
 
-.projects-grid-card:hover  .projects-grid-content-image {
+.projects-grid-card:hover .projects-grid-content-image {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 3%;
@@ -683,7 +715,6 @@ h4 {
 }
 
 
-
 .projects-button-container {
     position: relative;
     width: 100%;
@@ -694,7 +725,7 @@ h4 {
     position: relative;
     float: right;
     margin-right: 4%;
-    width:15%;
+    width: 15%;
     height: 100%;
     display: inline-block;
 }
@@ -728,14 +759,14 @@ h4 {
     bottom: 10%;
 }
 
-.projects-button-github-down{
+.projects-button-github-down {
     position: absolute;
     width: 95%;
     height: 90%;
     left: 5%;
-    top : 10%;
+    top: 10%;
     z-index: 0;
-    background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
+    background-image: linear-gradient(to right, #21113b, #7303c0, #ec38bc);
 }
 
 .projects-button-github-link {
@@ -751,7 +782,6 @@ h4 {
     align-items: center;
     height: 100%;
 }
-
 
 
 #values-grid {
@@ -776,6 +806,7 @@ h4 {
     height: 4em;
     object-fit: contain;
 }
+
 .values-image {
 
     height: 100%;
@@ -833,10 +864,12 @@ h4 {
     font-weight: bold;
     margin-top: 5%;
 }
-#footer-colored-text  {
+
+#footer-colored-text {
     color: #ff5e69;
     font-weight: bold;
 }
+
 #footer-mail {
     font-size: 1.4em;
     text-decoration: none;

@@ -6,6 +6,7 @@ let nightState = [true];
 // false = nightmode disabled.
 // true = nightmode enabled (original)
 
+
 // ------------------- LANG MODIFIER -------------------------
 function switchLang(langState, nightState) {
 
@@ -30,7 +31,7 @@ function changeToFrench() {
     elements [4].innerHTML = "Valeurs";
 
     document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">&#233;tudie </span>les technologies d\'<span\n" +
-        "class=\"colored-text\">aujourdhui</span> pour préparer <span class=\"colored-text\">demain"
+        "class=\"colored-text\">aujourdhui</span> pour préparer <span class=\"colored-text\">demain</span>. <br><i class=\"fa-solid fa-terminal\"></i>"
 
     document.getElementById("home-second-text").innerHTML = "Salut ! Je suis Esteban, un étudiant ingénieur passionné par la cybersécurité, qui veux rendre le monde digital de demain plus sécurisé. "
 
@@ -43,9 +44,9 @@ function changeToFrench() {
     document.getElementById("about-me-subtitle").innerHTML = "Ravi de vous rencontrer  !";
 
     elements = document.getElementsByClassName("about-paragraph");
-    elements [0].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je m'apelle Esteban, j'ai 20 ans, je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> de Lyon et de Paris, et je suis en ce moment en échange universitaire à l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada.";
-    elements [1].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de dévouvrir un peu plus le monde de l'ingénierie"
-    elements [2].innerHTML = "&emsp;&emsp;&emsp;&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
+    elements [0].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-user\"></i>&emsp;Je m'apelle Esteban, j'ai 20 ans, je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> de Lyon et de Paris, et je suis en ce moment en échange universitaire à l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada.";
+    elements [1].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-graduation-cap\"></i>&emsp;Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de dévouvrir un peu plus le monde de l'ingénierie"
+    elements [2].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-brands fa-connectdevelop\"></i>&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
 
 
     document.getElementById("education-title").innerHTML = "FORMATIONS";
@@ -174,10 +175,11 @@ function changeToDay () {
 
     document.getElementById('home-second-text').style.color = "#252525";
 
+    document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
     elements = document.getElementsByClassName('about-paragraph');
 
     for (let i = 0; i < elements.length ; i ++) {
-        elements[i].style.color = "black";
+        elements[i].style.color = "white";
     }
 
     elements = document.getElementsByClassName('education-element-grid');
@@ -185,6 +187,7 @@ function changeToDay () {
     for (let i = 0; i < elements.length ; i ++) {
         elements[i].style.backgroundColor = "#111111";
     }
+
     elements = document.getElementsByClassName('projects-grid-card');
 
     for (let i = 0; i < elements.length ; i ++) {
@@ -260,6 +263,8 @@ function changeToNight () {
     }
 
     document.getElementById('home-second-text').style.color = "white";
+
+    document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
 
     elements = document.getElementsByClassName('about-paragraph');
 
