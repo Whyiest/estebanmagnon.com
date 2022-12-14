@@ -223,8 +223,8 @@
     .about-grid-container {
         display: flex;
         flex-direction: column;
-        padding-top: 20%;
-        padding-bottom: 20%;
+        padding-top: 50%;
+        padding-bottom: 50%;
         margin-bottom: 10%;
         grid-template-columns: 0.1fr 100fr;
     }
