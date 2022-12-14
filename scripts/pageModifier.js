@@ -85,8 +85,8 @@ function changeToFrench() {
     elements [5].innerHTML = "| 1 mois";
 
     elements = document.getElementsByClassName("experience-element-title");
-    elements [1].innerHTML = "Fiverr Freelance";
-    elements [2].innerHTML = "Bureau des élèves ECE";
+    elements [1].innerHTML = "<span class=\"colored-text\">Fiverr Freelance</span>";
+    elements [2].innerHTML = "<span class=\"colored-text\">Bureau des élèves ECE</span>";
 
     elements = document.getElementsByClassName("experience-element-legend");
     elements [0].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";

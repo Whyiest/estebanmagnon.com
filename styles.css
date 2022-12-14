@@ -107,7 +107,7 @@ a, a:hover {
 
 .colored-text-title {
     color: white;
-    background-image: linear-gradient(to right, #49354f, #7303c0, #ec38bc);
+    background-image: linear-gradient(to right, #6339a2, #7303c0, #ec38bc);
     -webkit-background-clip: text;
     color: transparent;
 }
