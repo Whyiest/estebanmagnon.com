@@ -111,7 +111,7 @@ function changeToFrench() {
     elements [2].innerHTML = "Il n'est pas possible de tout faire soi-même, et même si c'était le cas, communiqué avec son équipe permet de comparé les points de vues et de poussé un projet vers l'avant.";
 
     document.getElementById("footer-title").innerHTML = "Vous avez un projet en tête ?"
-    document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text\">Discutons ensemble !</span>"
+    document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text-footer\">Discutons ensemble !</span>"
 }
 
 
