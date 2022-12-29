@@ -44,9 +44,9 @@ function changeToFrench() {
     document.getElementById("about-me-subtitle").innerHTML = "Ravi de vous rencontrer  !";
 
     elements = document.getElementsByClassName("about-paragraph");
-    elements [0].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-user\"></i>&emsp;Je m'apelle Esteban, j'ai 20 ans, je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> de Lyon et de Paris, et je suis en ce moment en échange universitaire à l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada.";
-    elements [1].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-graduation-cap\"></i>&emsp;Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de dévouvrir un peu plus le monde de l'ingénierie"
-    elements [2].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-brands fa-connectdevelop\"></i>&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles, pourquoi ne pas collaborer ensemble sur un projet ?"
+    elements [0].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-user\"></i>&emsp;Je m'apelle Esteban, j'ai 20 ans et je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> (Lyon / Paris). J'ai également étudier au sein de l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada dans le cadre d'un échange universitaire.";
+    elements [1].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-solid fa-graduation-cap\"></i>&emsp;Je suis passioné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! A côté de mes cours, j'ai commencé à multiplier les <a class='about-link-to-education' href='#education'> expériences professionelles</a> afin de découvrir un peu plus le monde de l'ingénierie."
+    elements [2].innerHTML = "&emsp;&emsp;&emsp;&emsp;<i class=\"fa-brands fa-connectdevelop\"></i>&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles. Pourquoi ne pas collaborer ensemble sur un projet ?"
 
 
     document.getElementById("education-title").innerHTML = "FORMATIONS";
@@ -56,7 +56,7 @@ function changeToFrench() {
     elements = document.getElementsByClassName("education-element-legend");
     elements [0].innerHTML = "Ecole d'ingénieur basée à Lyon et Paris. Formation : C, C++, SQL, Java, HTML, CSS, JS, graphes, méthode agile...";
     elements [1].innerHTML = "Ecole d'ingénieur basée à Montreal au Canada. Formation : Java, HTML, CSS, JS, API, géopolitique et engagement civique.";
-    elements [2].innerHTML = "Echange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certfication d'anglais d'un niveau C1.";
+    elements [2].innerHTML = "Echange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
 
     document.getElementById("projects-title").innerHTML = "PROJETS";
 
@@ -92,7 +92,7 @@ function changeToFrench() {
     elements [0].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";
     elements [1].innerHTML = "Développement de projets en C et C++, de la conception à la réalisation.";
     elements [2].innerHTML = "Responsable marketing & commercial. Gestion d'une équipe de 8 personnes et d'un budget de 20k euros.";
-    elements [3].innerHTML = "Vente et répération d'équipement informatique dans un magasin.";
+    elements [3].innerHTML = "Vente et réparation d'équipement informatique dans un magasin.";
     elements [4].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
     elements [5].innerHTML = "BigData, CLoud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
 
@@ -107,8 +107,8 @@ function changeToFrench() {
 
     elements = document.getElementsByClassName("values-legend");
     elements [0].innerHTML = "Parce qu'un projet ne se déroule pas nécessairement comme prévu, il est nécessaire d'être capable de s'adapter à n'importe quelle étape de ce dernier. Je n'ai pas peur de questionner mes choix pour reprendre un projet d'une manière différente.";
-    elements [1].innerHTML = "La technologie évolue rapidemment, et continuer à apprendr continuellement des nouvelles choses peu permettre d'aborder un projet depuis des perspectives novatrices.";
-    elements [2].innerHTML = "Il n'est pas possible de tout faire soi-même, et même si c'était le cas, communiqué avec son équipe permet de comparé les points de vues et de poussé un projet vers l'avant.";
+    elements [1].innerHTML = "La technologie évolue rapidemment, et continuer à apprendre continuellement des nouvelles choses peut permettre d'aborder un projet avec des perspectives novatrices.";
+    elements [2].innerHTML = "Il n'est pas possible de tout faire soi-même et même si c'était le cas, communiquer avec son équipe permet de comparer les points de vues et de pousser un projet vers l'avant.";
 
     document.getElementById("footer-title").innerHTML = "Vous avez un projet en tête ?"
     document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text-footer\">Discutons ensemble !</span>"

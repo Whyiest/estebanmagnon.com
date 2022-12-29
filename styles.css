@@ -112,6 +112,12 @@ a, a:hover {
     color: transparent;
 }
 
+.title-container {
+    width: 100%;
+    display: flex;
+    align-content: center;
+
+}
 .colored-text-footer {
     color: white;
     background-image: linear-gradient(to left, orange, deeppink, blueviolet);
