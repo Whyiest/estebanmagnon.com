@@ -183,7 +183,7 @@
 @media screen and (max-width: 550px) {
 
     body {
-        font-family: PlusJakarta;
+        font-family: PlusJakarta, serif;
     }
 
     h1 {
@@ -193,14 +193,10 @@
 
     h2 {
         font-size: 1.4em;
-        margin-left: 3%;
-        padding-top: 3%;
     }
 
     h3 {
         font-size: 1.2em;
-        margin-top: 1%;
-        margin-left: 3%;
     }
 
     h4 {
@@ -210,6 +206,11 @@
     .home-container {
         margin-top: 20%;
     }
+
+    #home-second-text {
+        font-size: 1em;
+    }
+
     .about-image-container {
         display: none;
     }
