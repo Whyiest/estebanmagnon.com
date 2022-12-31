@@ -176,6 +176,9 @@ function changeToDay () {
     document.getElementById('home-second-text').style.color = "#252525";
 
     document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
+
+    document.getElementById('about-text-container').style.borderColor = "black";
+
     elements = document.getElementsByClassName('about-paragraph');
 
     for (let i = 0; i < elements.length ; i ++) {
@@ -264,7 +267,10 @@ function changeToNight () {
 
     document.getElementById('home-second-text').style.color = "white";
 
-    document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
+    document.getElementById('about-text-wrapper').style.backgroundColor = "rgba(14,14,19,0.4)";
+
+    document.getElementById('about-text-container').style.borderColor = "white";
+
 
     elements = document.getElementsByClassName('about-paragraph');
 
