@@ -148,7 +148,7 @@ a, a:hover {
 }
 
 h1 {
-    animation: 1s ease-out 0s 1 slideLeft;
+    animation: 1s pop;
     color: white;
     font-size: 4.0em;
     font-weight: bold;
@@ -298,7 +298,7 @@ h3 {
 }
 
 .home-second-text {
-    animation: 2s slideLeft;
+    animation: 1s pop;
     color: #c7c5c5;
     margin-bottom: 2em;
     font-size: 1.5em;
@@ -389,7 +389,7 @@ h3 {
 }
 
 #home-button-download-text {
-    animation: 2s pulse;
+    animation: 2s opacity;
     text-decoration: none;
     color: white;
     display: inline-block;
@@ -446,6 +446,14 @@ h3 {
     font-size: 0.7em;
 }
 
+.about-me-title {
+    animation: 1s pop;
+}
+
+.about-me-subtitle {
+    animation: 1s pop;
+}
+
 .about-grid-container {
     margin-top: 3%;
     display: grid;
@@ -453,7 +461,8 @@ h3 {
     padding-bottom: 3%;
 }
 
-#about-text-container {
+.about-text-container {
+    animation: 1s slideRight;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -515,6 +524,7 @@ h3 {
 }
 
 .about-image-container {
+    animation: 1s slideLeft;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -529,12 +539,7 @@ h3 {
     max-height: 100%;
 }
 
-.about-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-}
 
 .about-link-to-education {
     text-decoration: none;
@@ -546,7 +551,12 @@ h3 {
     color: #a654ff;
 }
 
-
+.education-title {
+    animation: 1s pop;
+}
+.education-subtitle {
+    animation: 1s pop;
+}
 #education-container {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -556,12 +566,13 @@ h3 {
     margin-bottom: 7%;
 }
 
-#education-list {
+.education-list {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-#education-illustration-container {
+.education-illustration-container {
+    animation: 1s slideRight;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -572,6 +583,7 @@ h3 {
 }
 
 .education-element-grid {
+    animation: 1s popRotate;
     border: 2px solid #c4abff;
     border-radius: 25px;
     display: grid;
@@ -617,6 +629,15 @@ h3 {
     border-radius: 50%;
 }
 
+.experience-title {
+    animation: 1s pop;
+}
+
+.experience-subtitle {
+    animation: 1s pop;
+}
+
+
 #experience-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -627,6 +648,7 @@ h3 {
 }
 
 .experience-element-grid {
+    animation: 1s opacity;
     border: 2px solid #c4abff;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -694,6 +716,14 @@ h3 {
 }
 
 
+.projects-title {
+    animation: 1s pop;
+}
+
+.projects-subtitle {
+    animation: 1s pop;
+}
+
 .projects-grid-container {
     width: 100%;
     display: grid;
@@ -704,6 +734,7 @@ h3 {
 }
 
 .projects-grid-component {
+    animation: 1s pop;
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
@@ -861,6 +892,13 @@ h3 {
     height: 100%;
 }
 
+.values-title {
+    animation: 1s pop;
+}
+
+.values-subtitle {
+    animation: 1s pop;
+}
 
 #values-grid {
     margin-top: 5%;
@@ -873,6 +911,7 @@ h3 {
 }
 
 .values-container {
+    animation: 1s pop;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -890,7 +929,7 @@ h3 {
     height: 100%;
 }
 
-.values-title {
+.values-element-title {
     text-align: center;
     font-size: 1.4em;
     font-weight: bold;
@@ -898,7 +937,7 @@ h3 {
     color: white;
 }
 
-.values-legend {
+.values-element-legend {
     text-align: center;
     color: lightgrey;
 
@@ -928,7 +967,8 @@ h3 {
     cursor: pointer;
 }
 
-#footer-title-container {
+.footer-container {
+    animation: 1s opacity;
     padding-top: 10%;
     width: 70%;
     margin-right: 20%;
@@ -947,13 +987,14 @@ h3 {
     font-weight: bold;
 }
 
-#footer-mail {
+.footer-mail {
+    animation: 1.5s changeRed;
     font-size: 1.4em;
     text-decoration: none;
     color: dimgrey;
 }
 
-#footer-mail:hover {
+.footer-mail:hover {
     color: #ff5e69;
     cursor: pointer;
 }

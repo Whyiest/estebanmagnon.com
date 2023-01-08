@@ -39,9 +39,9 @@ function changeToFrench() {
 
     document.getElementById("home-button-download-text").innerHTML = "Téléchargez mon CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
 
-    document.getElementById("about-me-title").innerHTML = "A PROPOS";
+    document.getElementsByClassName("about-me-title")[0].innerHTML = "A PROPOS";
 
-    document.getElementById("about-me-subtitle").innerHTML = "Ravi de vous rencontrer  !";
+    document.getElementsByClassName("about-me-subtitle")[0].innerHTML = "Ravi de vous rencontrer  !";
 
     elements = document.getElementsByClassName("about-paragraph");
     elements [0].innerHTML = "<i class=\"fa-solid fa-user\"></i>&emsp;Je m'apelle Esteban, j'ai 20 ans et je suis actuellement étudiant en école d'ingénieur dans le domaine de la cybersécurité. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> (Lyon / Paris). J'ai également étudier au sein de l'université de <a class=\"about-link-to-education\" href=\"https://mcgill.ca\">Mcgill</a>  au Canada dans le cadre d'un échange universitaire.";
@@ -49,18 +49,18 @@ function changeToFrench() {
     elements [2].innerHTML = "<i class=\"fa-brands fa-connectdevelop\"></i>&emsp;Je suis trés motivé par toute opportunité qui me permettrais de développer mes compétences actuelles et d'en acquérir de nouvelles. Pourquoi ne pas collaborer ensemble sur un projet ?"
 
 
-    document.getElementById("education-title").innerHTML = "FORMATIONS";
+    document.getElementsByClassName("education-title")[0].innerHTML = "FORMATIONS";
 
-    document.getElementById("education-subtitle").innerHTML = "Mon parcours scolaire.";
+    document.getElementsByClassName("education-subtitle")[0].innerHTML = "Mon parcours scolaire.";
 
     elements = document.getElementsByClassName("education-element-legend");
     elements [0].innerHTML = "Ecole d'ingénieur basée à Lyon et Paris. Formation : C, C++, SQL, Java, HTML, CSS, JS, graphes, méthode agile...";
     elements [1].innerHTML = "Ecole d'ingénieur basée à Montreal au Canada. Formation : Java, HTML, CSS, JS, API, géopolitique et engagement civique.";
     elements [2].innerHTML = "Echange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
 
-    document.getElementById("projects-title").innerHTML = "PROJETS";
+    document.getElementsByClassName("projects-title")[0].innerHTML = "PROJETS";
 
-    document.getElementById("projects-subtitle").innerHTML = "Découvrez mes projets.";
+    document.getElementsByClassName("projects-subtitle")[0].innerHTML = "Découvrez mes projets.";
 
     elements = document.getElementsByClassName("projects-grid-content-view");
 
@@ -72,9 +72,9 @@ function changeToFrench() {
     elements = document.getElementsByClassName("projects-grid-content-name");
     elements[5].innerHTML = "Voir plus";
 
-    document.getElementById("experience-title").innerHTML = "EXPERIENCE";
+    document.getElementsByClassName("experience-title")[0].innerHTML = "EXPERIENCE";
 
-    document.getElementById("experience-subtitle").innerHTML = "Mes expériences professionnelles.";
+    document.getElementsByClassName("experience-subtitle")[0].innerHTML = "Mes expériences professionnelles.";
 
     elements = document.getElementsByClassName("experience-element-duration");
     elements [0].innerHTML = "| 2 mois";
@@ -96,16 +96,16 @@ function changeToFrench() {
     elements [4].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
     elements [5].innerHTML = "BigData, CLoud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
 
-    document.getElementById("values-title").innerHTML = "VALEURS";
-    document.getElementById("values-subtitle").innerHTML = "Ce que vous pouvez attendre de moi.";
+    document.getElementsByClassName("values-title")[0].innerHTML = "VALEURS";
+    document.getElementsByClassName("values-subtitle")[0].innerHTML = "Ce que vous pouvez attendre de moi.";
 
 
-    elements = document.getElementsByClassName("values-title");
+    elements = document.getElementsByClassName("values-element-title");
     elements [0].innerHTML = "Adaptabilité";
     elements [1].innerHTML = "Curiosité";
     elements [2].innerHTML = "Esprit d'équipe";
 
-    elements = document.getElementsByClassName("values-legend");
+    elements = document.getElementsByClassName("values-element-legend");
     elements [0].innerHTML = "Parce qu'un projet ne se déroule pas nécessairement comme prévu, il est nécessaire d'être capable de s'adapter à n'importe quelle étape de ce dernier. Je n'ai pas peur de questionner mes choix pour reprendre un projet d'une manière différente.";
     elements [1].innerHTML = "La technologie évolue rapidemment, et continuer à apprendre continuellement des nouvelles choses peut permettre d'aborder un projet avec des perspectives novatrices.";
     elements [2].innerHTML = "Il n'est pas possible de tout faire soi-même et même si c'était le cas, communiquer avec son équipe permet de comparer les points de vues et de pousser un projet vers l'avant.";
@@ -177,7 +177,7 @@ function changeToDay () {
 
     document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
 
-    document.getElementById('about-text-container').style.borderColor = "black";
+    document.getElementsByClassName('about-text-container')[0].style.borderColor = "black";
 
     elements = document.getElementsByClassName('about-paragraph');
 
@@ -219,13 +219,13 @@ function changeToDay () {
 
     document.getElementById('footer-title').style.color = "white";
 
-    elements = document.getElementsByClassName('values-legend');
+    elements = document.getElementsByClassName('values-element-legend');
 
     for (let i = 0; i < elements.length ; i ++) {
         elements[i].style.color = "#252525";
     }
 
-    elements = document.getElementsByClassName('values-title');
+    elements = document.getElementsByClassName('values-element-title');
 
     for (let i = 0; i < elements.length ; i ++) {
         elements[i].style.color = "black";
@@ -269,7 +269,7 @@ function changeToNight () {
 
     document.getElementById('about-text-wrapper').style.backgroundColor = "rgba(14,14,19,0.4)";
 
-    document.getElementById('about-text-container').style.borderColor = "white";
+    document.getElementsByClassName('about-text-container')[0].style.borderColor = "white";
 
 
     elements = document.getElementsByClassName('about-paragraph');
@@ -311,13 +311,13 @@ function changeToNight () {
 
     document.getElementById('footer-title').style.color = "white";
 
-    elements = document.getElementsByClassName('values-legend');
+    elements = document.getElementsByClassName('values-element-legend');
 
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.color = "lightgrey";
     }
 
-    elements = document.getElementsByClassName('values-title');
+    elements = document.getElementsByClassName('values-element-title');
 
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.color = "white";

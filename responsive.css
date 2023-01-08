@@ -43,7 +43,7 @@
         font-size: 1.3em;
     }
 
-    #footer-mail {
+    .footer-mail {
         font-size: 1.4em;
     }
 }
@@ -131,7 +131,7 @@
         display: none;
     }
 
-    #education-list {
+    .education-list {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -291,7 +291,7 @@
 
     }
 
-    .values-title {
+    .values-element-title {
         font-size: 1.1em;
     }
     #values-grid {
@@ -317,7 +317,7 @@
         font-size: 1.3em;
     }
 
-    #footer-mail {
+    .footer-mail {
         font-size: 1.4em;
     }
 }
