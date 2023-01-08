@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+
     <link rel='icon' href="/favicon.ico">
 
     <script src="https://kit.fontawesome.com/45280cb382.js" crossorigin="anonymous"></script>
@@ -54,13 +56,14 @@
             <div class="home-text-container">
 
                 <div>
-                    <h1>I'm<span class="colored-text-title"> studying </span>technologies of <span
+                    <h1 class="animated-element">I'm<span class="colored-text-title"> studying </span>technologies of <span
                             class="colored-text-title">today</span> to prepare <span
                             class="colored-text-title">tomorrow</span><br><i class="fa-solid fa-terminal"></i>
                     </h1>
                 </div>
+
                 <div>
-                    <p id="home-second-text">Hi ! I'm Esteban, a French engineering student passionate about
+                    <p class="home-second-text animated-element">Hi ! I'm Esteban, a French engineering student passionate about
                         cybersecurity, who want to make tomorrow digital world safer. </p>
                 </div>
 
@@ -68,7 +71,7 @@
                 <!-- Button -->
                 <div class="home-button-container">
 
-                    <div class="home-button-contact">
+                    <div class="home-button-contact animated-element">
 
                         <a class="home-button-contact-link" href="mailto:esteban.magnon@outlook.fr">
                             <div class="home-button-contact-up">
@@ -81,7 +84,7 @@
                         </a>
                     </div>
 
-                    <div class="home-button-download">
+                    <div class="home-button-download animated-element">
                         <a id="home-button-download-text" href="CV/myCV.pdf" download="CV d'Esteban MAGNON">Download CV
                             <i class="fa-sharp fa-solid fa-circle-down"></i></a>
                         <div id="home-right-arrow">
@@ -94,7 +97,7 @@
 
             <div class="home-image-container">
                 <div class="home-head-container">
-                    <img class="home-esteban-head" src="images/esteban-transparent.png"
+                    <img class="home-esteban-head animated-element" src="images/esteban-transparent.png"
                          alt="Head of Esteban">
                 </div>
             </div>
@@ -213,6 +216,8 @@
 
 
     </section>
+
+
 
 
     <!----------------------------- PROJECT SECTION ------------------>
@@ -521,5 +526,9 @@
 </footer>
 </body>
 
+<!-- Script -->
+
+<script src="scripts/animation.js"></script>
 <script src="scripts/pageModifier.js"></script>
+
 </html>

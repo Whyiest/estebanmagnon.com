@@ -33,7 +33,7 @@ function changeToFrench() {
     document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">&#233;tudie </span>les technologies d\'<span\n" +
         "class=\"colored-text\">aujourdhui</span> pour préparer <span class=\"colored-text\">demain</span>. <br><i class=\"fa-solid fa-terminal\"></i>"
 
-    document.getElementById("home-second-text").innerHTML = "Salut ! Je suis Esteban, un étudiant ingénieur passionné par la cybersécurité, qui veux rendre le monde digital de demain plus sécurisé. "
+    document.getElementsByClassName("home-second-text")[0].innerHTML = "Salut ! Je suis Esteban, un étudiant ingénieur passionné par la cybersécurité, qui veux rendre le monde digital de demain plus sécurisé. "
 
     document.getElementById("home-button-contact-text").innerHTML = "Discutons";
 
@@ -173,7 +173,7 @@ function changeToDay () {
         elements[i].style.color = "black";
     }
 
-    document.getElementById('home-second-text').style.color = "#252525";
+    document.getElementsByClassName('home-second-text')[0].style.color = "#252525";
 
     document.getElementById("about-text-wrapper").style.backgroundColor = "rgba(14,14,19,0.4)";
 
@@ -265,7 +265,7 @@ function changeToNight () {
         elements[i].style.color = "white";
     }
 
-    document.getElementById('home-second-text').style.color = "white";
+    document.getElementsByClassName('home-second-text')[0].style.color = "white";
 
     document.getElementById('about-text-wrapper').style.backgroundColor = "rgba(14,14,19,0.4)";
 
