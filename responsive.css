@@ -95,7 +95,7 @@
         margin-right: 5%;
     }
 
-    #home-second-text {
+    .home-second-text {
         margin-left: 0;
         text-align: center;
     }
@@ -207,7 +207,7 @@
         margin-top: 20%;
     }
 
-    #home-second-text {
+    .home-second-text {
         font-size: 1em;
     }
 
