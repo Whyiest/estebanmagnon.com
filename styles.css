@@ -186,7 +186,7 @@ h3 {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-    background: rgba(14, 14, 19, .8);
+    background: rgb(14, 14, 19);
 
     position: fixed;
     width: 100%;
@@ -310,6 +310,9 @@ h3 {
     color: #7d3df8;
 }
 
+.loader-container {
+    top: 0%;
+}
 .fa-moon {
     z-index: 20;
     color: white;
