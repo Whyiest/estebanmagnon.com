@@ -17,7 +17,18 @@
 
 
 </head>
-<body>
+<body onload="hideLoader(), scrollTrigger('.animated-element')">
+
+<!---------------------- LOADER ----------------------------->
+
+<div class="loader-container">
+    <div class="loader-box-container">
+        <i class="fa-solid fa-mug-hot"></i>
+        <p class="loader-box-title">Please wait, I'm just finish my coffee...</p>
+        <p class="loader-box-subtitle">I will not be long I promise !</p>
+    </div>
+</div>
+
 
 <!----------------------- NAVBAR ------------------------>
 
@@ -45,7 +56,6 @@
     </div>
 </nav>
 
-
 <!--------------------- MAIN SECTION ------------------------->
 
 <main>
@@ -56,14 +66,16 @@
             <div class="home-text-container">
 
                 <div>
-                    <h1 class="animated-element">I'm<span class="colored-text-title"> studying </span>technologies of <span
-                            class="colored-text-title">today</span> to prepare <span
-                            class="colored-text-title">tomorrow</span><br><i class="fa-solid fa-terminal"></i>
+                    <h1 class="animated-element">I'm<span class="colored-text-title"> studying </span>technologies of
+                        <span
+                                class="colored-text-title">today</span> to prepare <span
+                                class="colored-text-title">tomorrow</span><br><i class="fa-solid fa-terminal"></i>
                     </h1>
                 </div>
 
                 <div>
-                    <p class="home-second-text animated-element">Hi ! I'm Esteban, a French engineering student passionate about
+                    <p class="home-second-text animated-element">Hi ! I'm Esteban, a French engineering student
+                        passionate about
                         cybersecurity, who want to make tomorrow digital world safer. </p>
                 </div>
 
@@ -216,8 +228,6 @@
 
 
     </section>
-
-
 
 
     <!----------------------------- PROJECT SECTION ------------------>
@@ -482,7 +492,8 @@
                     <img class="values-image" src="images/values-circle.svg" alt="Circle">
                 </div>
                 <p class="values-element-title">Adaptability</p>
-                <p class="values-element-legend">Because a project doesn't always go the way you plan, it's necessary to be able
+                <p class="values-element-legend">Because a project doesn't always go the way you plan, it's necessary to
+                    be able
                     to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a
                     different way.</p>
             </div>
@@ -492,7 +503,8 @@
                     <img class="values-image" src="images/values-triangle.svg" alt="Triangle">
                 </div>
                 <p class="values-element-title">Curiosity</p>
-                <p class="values-element-legend">Technologies evolve rapidly, and continually learning new things can allow you
+                <p class="values-element-legend">Technologies evolve rapidly, and continually learning new things can
+                    allow you
                     to approach a project from different perspectives than usual.</p>
             </div>
 
@@ -501,7 +513,8 @@
                     <img class="values-image" src="images/values-people.svg" alt="People">
                 </div>
                 <p class="values-element-title">Team Working</p>
-                <p class="values-element-legend">It is not possible to do everything yourself, and even if it were the case,
+                <p class="values-element-legend">It is not possible to do everything yourself, and even if it were the
+                    case,
                     communicating always allows you to compare points of view and push a project forward. I strongly
                     believe in the benefits of teamwork.</p>
             </div>
@@ -531,5 +544,6 @@
 <script src="scripts/animation.js"></script>
 <script src="scripts/pageModifier.js"></script>
 <script src="scripts/IntersectionObserver.js"></script>
+<script src="scripts/loader.js"></script>
 
 </html>
