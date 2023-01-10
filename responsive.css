@@ -57,6 +57,9 @@
     }
 
 
+    .loader-box-container {
+        width: 30%;
+    }
 
     .nav-element a {
         display: none;
@@ -182,6 +185,7 @@
 
 @media screen and (max-width: 550px) {
 
+
     body {
         font-family: PlusJakarta, serif;
     }
@@ -201,6 +205,12 @@
 
     h4 {
         font-size: 1em;
+    }
+
+    .loader-box-container {
+        width: 40%;
+        min-height: fit-content;
+        font-size: 0.8em;
     }
 
     .home-container {
