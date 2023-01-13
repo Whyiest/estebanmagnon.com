@@ -119,14 +119,29 @@
         width: 30%;
     }
 
+    .about-image-container {
+        display: none;
+    }
+
+    .about-paragraph {
+        width: 80%;
+        margin-right: 10%;
+        text-align: center;
+        margin-left: 7%;
+    }
+
+    .about-grid-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30%;
+        padding-bottom: 40%;
+        grid-template-columns: 1fr;
+    }
+
     .about-grid-container {
         grid-template-columns: 40% 60%;
         padding-top: 11%;
         padding-bottom: 16%;
-    }
-
-    .about-paragraph {
-        margin-left: 7%;
     }
 
 
@@ -221,25 +236,19 @@
         font-size: 1em;
     }
 
-    .about-image-container {
-        display: none;
-    }
+
 
     .about-paragraph {
         width: 80%;
         margin-right: 10%;
         margin-left: 10%;
-        text-align: center;
     }
 
     .about-grid-container {
-        display: flex;
-        flex-direction: column;
-        padding-top: 40%;
-        padding-bottom: 50%;
-        margin-bottom: 10%;
-        grid-template-columns: 0.1fr 100fr;
+        padding-top: 30%;
+        padding-bottom: 40%;
     }
+
     .education-element-title {
         display: flex;
         justify-content: center;

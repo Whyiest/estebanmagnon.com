@@ -235,6 +235,9 @@ h3 {
     color: grey;
 }
 .navbar-container {
+
+    background: rgb(14, 14, 19, 60%);
+
     position: fixed;
     display: flex;
     justify-content: flex-end;
