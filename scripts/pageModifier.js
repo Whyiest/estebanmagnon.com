@@ -78,9 +78,9 @@ function changeToFrench() {
 
     elements = document.getElementsByClassName("experience-element-duration");
     elements [0].innerHTML = "| 2 mois";
-    elements [1].innerHTML = "| 6 mois";
-    elements [2].innerHTML = "| 1 an";
-    elements [3].innerHTML = "| 1 mois";
+    elements [1].innerHTML = "| 2 mois";
+    elements [2].innerHTML = "| 6 mois";
+    elements [3].innerHTML = "| 1 an";
     elements [4].innerHTML = "| 1 mois";
     elements [5].innerHTML = "| 1 mois";
 
@@ -89,10 +89,10 @@ function changeToFrench() {
     elements [2].innerHTML = "<span class=\"colored-text\">Bureau des élèves ECE</span>";
 
     elements = document.getElementsByClassName("experience-element-legend");
-    elements [0].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";
-    elements [1].innerHTML = "Développement de projets en C et C++, de la conception à la réalisation.";
-    elements [2].innerHTML = "Responsable marketing & commercial. Gestion d'une équipe de 8 personnes et d'un budget de 20k euros.";
-    elements [3].innerHTML = "Vente et réparation d'équipement informatique dans un magasin.";
+    elements [0].innerHTML = "Au sein de l'équipe CloudSecOps du campus Cyber de la Défense, sécurisation d'infrastructures Cloud publiques (AWS & Azure).";
+    elements [1].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";
+    elements [2].innerHTML = "Développement de projets en C et C++, de la conception à la réalisation.";
+    elements [3].innerHTML = "Responsable marketing & commercial. Gestion d'une équipe de 8 personnes et d'un budget de 20k euros.";
     elements [4].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
     elements [5].innerHTML = "BigData, CLoud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
 
