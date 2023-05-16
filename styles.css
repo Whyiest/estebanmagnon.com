@@ -219,7 +219,10 @@ h3 {
 }
 
 .loader-box-title {
-    width: 100%;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
@@ -228,7 +231,10 @@ h3 {
 }
 
 .loader-box-subtitle {
-    width: 100%;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+
     text-align: center;
     font-size: 1em;
     font-family: Arial;
