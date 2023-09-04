@@ -54,9 +54,9 @@ function changeToFrench() {
     document.getElementsByClassName("education-subtitle")[0].innerHTML = "Mon parcours scolaire.";
 
     elements = document.getElementsByClassName("education-element-legend");
-    elements [0].innerHTML = "Ecole d'ingénieur basée à Lyon et Paris. Formation : C, C++, SQL, Java, HTML, CSS, JS, graphes, méthode agile...";
-    elements [1].innerHTML = "Ecole d'ingénieur basée à Montreal au Canada. Formation : Java, HTML, CSS, JS, API, géopolitique et engagement civique.";
-    elements [2].innerHTML = "Echange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
+    elements [0].innerHTML = "École d'ingénieur basée à Lyon et Paris. Master en cybersécurité. Ecole labélisée EduSecnum par l'ANSSI.";
+    elements [1].innerHTML = "École d'ingénieur basée à Montreal au Canada. Formation : programmation avancée, géopolitique et engagement civique.";
+    elements [2].innerHTML = "Échange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
 
     document.getElementsByClassName("projects-title")[0].innerHTML = "PROJETS";
 
@@ -91,8 +91,8 @@ function changeToFrench() {
 
     elements = document.getElementsByClassName("experience-element-title");
     elements [0].innerHTML = "<span class=\"colored-text\">Vous</span>";
-    elements [3].innerHTML = "<span class=\"colored-text\">Fiverr Freelance</span>";
-    elements [4].innerHTML = "<span class=\"colored-text\">Bureau des élèves ECE</span>";
+    elements [4].innerHTML = "<span class=\"colored-text\">Fiverr Freelance</span>";
+    elements [5].innerHTML = "<span class=\"colored-text\">Bureau des élèves ECE</span>";
 
     elements = document.getElementsByClassName("experience-element-legend");
     elements [0].innerHTML = "Vous avez un projet intéressant en tête ? Votre entreprise pourrait être la prochaine sur cette liste !";
