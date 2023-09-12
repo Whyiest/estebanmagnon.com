@@ -96,13 +96,13 @@ function changeToFrench() {
 
     elements = document.getElementsByClassName("experience-element-legend");
     elements [0].innerHTML = "Vous avez un projet intéressant en tête ? Votre entreprise pourrait être la prochaine sur cette liste !";
-    elements [1].innerHTML = "Au sein du centre distant de service, prise de contact avec les client afin d'identifier et de résoudre les soucis liés à leur installation.";
+    elements [1].innerHTML = "Au sein du centre distant de services (CDS), prise de contact avec les client afin d'identifier et de résoudre les soucis liés à leur installation.";
     elements [2].innerHTML = "Au sein de l'équipe CloudSecOps du campus Cyber de la Défense, sécurisation d'infrastructures Cloud publiques (AWS & Azure).";
     elements [3].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";
     elements [4].innerHTML = "Développement de projets en C et C++, de la conception à la réalisation.";
     elements [5].innerHTML = "Responsable marketing & commercial. Gestion d'une équipe de 8 personnes et d'un budget de 20k euros.";
     elements [6].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
-    elements [7].innerHTML = "BigData, CLoud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
+    elements [7].innerHTML = "BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
 
     document.getElementsByClassName("values-title")[0].innerHTML = "VALEURS";
     document.getElementsByClassName("values-subtitle")[0].innerHTML = "Ce que vous pouvez attendre de moi.";
