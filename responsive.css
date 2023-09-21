@@ -9,22 +9,8 @@
     }
 
     .about-grid-container {
-        margin-top: 4%;
         grid-template-columns: 1fr 2fr;
         padding-bottom: 5%;
-    }
-
-
-    .about-illustration-container {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .about-illustration {
-        width: 100%;
-        height: auto;
-        margin:auto;
     }
 
     .projects-grid-container {
@@ -119,8 +105,24 @@
         width: 30%;
     }
 
+    .about-grid-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16%;
+    }
+
     .about-illustration-container {
-        display: none;
+        order: 1;
+    }
+
+    .about-illustration {
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 60%;
+    }
+
+    .about-text-container {
+        order: 2;
     }
 
     .about-paragraph {
@@ -130,26 +132,19 @@
         margin-left: 7%;
     }
 
-    .about-grid-container {
+
+
+    #education-container {
         display: flex;
         flex-direction: column;
-        padding-top: 30%;
-        padding-bottom: 40%;
-        grid-template-columns: 1fr;
     }
-
-    .about-grid-container {
-        grid-template-columns: 40% 60%;
-        padding-top: 11%;
-        padding-bottom: 16%;
-    }
-
 
     #education-illustration {
-        display: none;
+        order: 2; /* Inversez l'ordre de l'image avec .education-list */
     }
 
     .education-list {
+        order: 1; /* Placez .education-list avant #education-illustration */
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -159,10 +154,8 @@
         margin-bottom: 8%;
     }
 
-    #education-container {
-        display: flex;
-        flex-direction: column;
-    }
+
+
 
     .projects-grid-container {
         width: 70%;
@@ -245,9 +238,10 @@
     }
 
     .about-grid-container {
-        padding-top: 30%;
         padding-bottom: 40%;
     }
+
+
 
     .education-element-title {
         display: flex;
