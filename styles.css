@@ -589,11 +589,11 @@ h3 {
     text-align: justify;
 }
 
-.about-image-container {
+.about-illustration-container {
     animation: 1s slideLeft;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center; /* Change 'align-content' to 'align-items' */
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
@@ -601,9 +601,11 @@ h3 {
     overflow: hidden;
 }
 
-.about-image {
-    max-height: 100%;
+.about-illustration {
+    max-width: 100%; /* Ensure the image doesn't exceed its original width */
+    max-height: 100%; /* Ensure the image doesn't exceed its original height */
 }
+
 
 
 
@@ -639,14 +641,19 @@ h3 {
 
 .education-illustration-container {
     animation: 1s slideRight;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     margin-left: 15%;
     margin-right: 10%;
     height: 100%;
-    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#education-illustration {
+    max-width: 100%; /* Ensure the image doesn't exceed its original width */
+    max-height: 100%; /* Ensure the image doesn't exceed its original height */
+}
+
 
 .education-element-grid {
     animation: 1s popRotate;
@@ -657,10 +664,6 @@ h3 {
     height: fit-content;
     background-color: black;
     margin-top: 3%;
-}
-
-#education-illustration {
-    width: 100%;
 }
 
 .education-element-text-container {

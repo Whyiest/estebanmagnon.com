@@ -15,13 +15,13 @@
     }
 
 
-    .about-image-container {
+    .about-illustration-container {
         display: flex;
         justify-content: center;
         align-content: center;
     }
 
-    .about-image {
+    .about-illustration {
         width: 100%;
         height: auto;
         margin:auto;
@@ -119,7 +119,7 @@
         width: 30%;
     }
 
-    .about-image-container {
+    .about-illustration-container {
         display: none;
     }
 
@@ -312,7 +312,13 @@
 
     .values-element-title {
         font-size: 1.1em;
+        margin-bottom: 5%;
     }
+
+    .values-element-legend {
+        margin-bottom: 10%;
+    }
+
     #values-grid {
         margin-top: 4em;
         display: flex;
