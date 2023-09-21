@@ -22,11 +22,11 @@ function changeToDay () {
     document.body.style.color = "black";
 
     document.getElementById('home').style.backgroundColor = "white";
-    document.getElementById('about-me').style.backgroundColor = "white";
+    document.getElementById('about-me').style.backgroundColor = "#E7E7E7";
     document.getElementById('education').style.backgroundColor = "white";
-    document.getElementById('projects').style.backgroundColor = "white";
+    document.getElementById('projects').style.backgroundColor = "#E7E7E7";
     document.getElementById('experience').style.backgroundColor = "white";
-    document.getElementById('values').style.backgroundColor = "white";
+    document.getElementById('values').style.backgroundColor = "#E7E7E7";
     document.getElementById('footer').style.backgroundColor = "black";
 
     let elements = document.getElementsByTagName('h1');
