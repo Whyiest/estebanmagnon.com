@@ -68,6 +68,7 @@ function changeToDay () {
         elements[i].style.backgroundColor = "#111111";
     }
 
+    /*
     elements = document.getElementsByClassName('projects-grid-card');
 
     for (let i = 0; i < elements.length ; i ++) {
@@ -79,7 +80,7 @@ function changeToDay () {
     for (let i = 0; i < elements.length ; i ++) {
         elements[i].style.color = "white";
     }
-
+     */
 
     elements = document.getElementsByClassName('experience-element-grid');
 
@@ -160,16 +161,20 @@ function changeToNight () {
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.backgroundColor = "#0c0b0e";
     }
+
+    /*
     elements = document.getElementsByClassName('projects-grid-card');
 
     for (let i = 0; i < elements.length; i++) {
         elements[i].style.backgroundColor = "white";
     }
 
+     */
+
     elements = document.getElementsByClassName('projects-grid-content-name');
 
     for (let i = 0; i < elements.length; i++) {
-        elements[i].style.color = "black";
+        elements[i].style.color = "white";
     }
 
 
