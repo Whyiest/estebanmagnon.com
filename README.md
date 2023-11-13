@@ -1,4 +1,3 @@
-Absolutely, I'll revise the technology stack section to reflect your focus on using native JavaScript, CSS, and HTML for learning purposes.
 # estebanmagnon.com
 
 ## Overview
