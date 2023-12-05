@@ -27,7 +27,7 @@ function changeToFrench() {
     document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">&#233;tudie </span>les technologies d\'<span\n" +
         "class=\"colored-text\">aujourd'hui</span> pour préparer <span class=\"colored-text\">demain</span>. <br><i class=\"fa-solid fa-terminal\"></i>"
 
-    document.getElementsByClassName("home-second-text")[0].innerHTML = "Salut ! Je suis Esteban, un étudiant ingénieur passionné par la cybersécurité, qui veux rendre le monde digital de demain plus sécurisé."
+    document.getElementsByClassName("home-second-text")[0].innerHTML = "Salut ! Je suis Esteban, étudiant ingénieur passionné par le monde de l'ingénierie, ayant pour vocation d'améliorer le monde digital de demain."
 
     document.getElementById("home-button-contact-text").innerHTML = "Discutons";
 
@@ -48,7 +48,7 @@ function changeToFrench() {
     document.getElementsByClassName("education-subtitle")[0].innerHTML = "Mon parcours scolaire.";
 
     elements = document.getElementsByClassName("education-element-legend");
-    elements [0].innerHTML = "École d'ingénieur basée à Lyon et Paris. Master en cybersécurité. École labélisée EduSecnum par l'ANSSI.";
+    elements [0].innerHTML = "École d'ingénieur basée à Lyon et Paris. Diplôme d'ingénieur généraliste spécialisé en systèmes d'informations.";
     elements [1].innerHTML = "École d'ingénieur basée à Montreal au Canada. Formation : programmation avancée, géopolitique et engagement civique.";
     elements [2].innerHTML = "Échange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
 
