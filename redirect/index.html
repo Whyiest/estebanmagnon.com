@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection</title>
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var redirectTo = urlParams.get('to');
+            console.log('Paramètre "to":', redirectTo);
+            if (redirectTo) {
+                console.log('Redirection vers:', redirectTo);
+                window.location.href = redirectTo;
+            } else {
+                console.error('Paramètre "to" manquant ou vide.');
+            }
+        };
+    </script>
+</head>
+<body>
+<p>Redirection en cours...</p>
+</body>
+</html>
