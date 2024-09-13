@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+
     <title>Esteban MAGNON</title>
 
+
+    <meta charset="UTF-8">
     <meta name="description" content="Hello, my name is Esteban, I'm a french engineering student !">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="z6rs5Wcd2U5ffB1K-jQIi-n7cysyy7fiwWNpzBXy1Vo" />
@@ -11,567 +13,169 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="animation.css">
-
     <link rel='icon' href="/favicon.ico">
-
     <script src="https://kit.fontawesome.com/45280cb382.js" crossorigin="anonymous"></script>
-
-
 </head>
 <body onload="hideLoader(), scrollTrigger('.animated-element')">
 
-<!---------------------- LOADER ----------------------------->
-
+<!-- LOADER -->
 <div class="loader-container">
     <div class="loader-box-container">
         <i class="fa-solid fa-hourglass-start"></i>
-        <p class="loader-box-title">Please wait, I'm just finishing my coffee...</p>
-        <p class="loader-box-subtitle">Website is loading, it will not be long I promise !</p>
+        <p class="loader-box-title"></p>
+        <p class="loader-box-subtitle"></p>
     </div>
 </div>
 
-
-<!----------------------- NAVBAR ------------------------>
-
+<!-- NAVBAR -->
 <nav>
     <div class="navbar-container">
 
         <div id="navbar-logo-container">
-            <img class="logo-esteban" src="images/logo-esteban-lightpurple.png" alt="Logo of Esteban">
+            <img class="logo-esteban" src="assets/images/logo-esteban-lightpurple.png" alt="Logo of Esteban">
         </div>
 
         <div class="navbar-list-container">
             <ul class="nav-list">
-                <li class="nav-element"><a class="nav-button" href=#about-me>About</a></li>
-                <li class="nav-element"><a class="nav-button" href="#education">Education</a></li>
-                <li class="nav-element"><a class="nav-button" href="#projects">Projects</a></li>
-                <li class="nav-element"><a class="nav-button" href="#experience">Experience</a></li>
-                <li class="nav-element"><a class="nav-button" href="#values">Values</a></li>
+                <li class="nav-element"><a class="nav-button" href="#about-me"></a></li>
+                <li class="nav-element"><a class="nav-button" href="#education"></a></li>
+                <li class="nav-element"><a class="nav-button" href="#projects"></a></li>
+                <li class="nav-element"><a class="nav-button" href="#experience"></a></li>
+                <li class="nav-element"><a class="nav-button" href="#values"></a></li>
                 <li class="nav-element"><i class="fa-brands fa-linkedin" onclick="window.location.href='https://www.linkedin.com/in/esteban-magnon/'"></i></li>
-                <li class="nav-element"><i class="fa-solid fa-moon" onclick=switchLight(nightState)></i></li>
-                <li class="nav-element"><i class="fa-sharp fa-solid fa-earth-americas"
-                                           onclick=switchLang(langState)></i></li>
+                <li class="nav-element"><i class="fa-solid fa-moon" onclick="switchLight(nightState)"></i></li>
+                <li class="nav-element"><i class="fa-sharp fa-solid fa-earth-americas" onclick="switchLang()"></i></li>
             </ul>
         </div>
-
-
     </div>
 </nav>
 
-<!--------------------- MAIN SECTION ------------------------->
-
+<!-- MAIN SECTION -->
 <main>
-
     <div id="home">
-
         <div class="home-container">
             <div class="home-text-container">
-
-                <div>
-                    <h1 class="animated-element">I'm<span class="colored-text-title"> studying </span>technologies of
-                        <span
-                                class="colored-text-title">today</span> to prepare <span
-                                class="colored-text-title">tomorrow</span><br><i class="fa-solid fa-terminal"></i>
-                    </h1>
-                </div>
-
-                <div>
-                    <p class="home-second-text animated-element">Hi ! I'm Esteban, a French engineering student
-                        passionate about
-                        computers science, who wants to make tomorrow digital world better. </p>
-                </div>
-
-
-                <!-- Button -->
+                <h1 class="animated-element"></h1>
+                <p class="home-second-text animated-element"></p>
                 <div class="home-button-container">
-
                     <div class="home-button-contact animated-element">
-
                         <a class="home-button-contact-link" href="mailto:esteban.magnon@outlook.fr">
                             <div class="home-button-contact-up">
-                                <p id="home-button-contact-text">Let's talk
-                                </p>
+                                <p id="home-button-contact-text"></p>
                             </div>
                             <div class="home-button-contact-down">
-                                <div>Let's Talk !</div>
+                                <div></div>
                             </div>
                         </a>
                     </div>
-
                     <div class="home-button-download animated-element">
-                        <a id="home-button-download-text" href="CV/myCV.pdf" download="CV d'Esteban MAGNON">Download CV
-                            <i class="fa-sharp fa-solid fa-circle-down"></i></a>
-                        <div id="home-right-arrow">
-
-                        </div>
-
+                        <a id="home-button-download-text" href="CV/myCV.pdf" download="CV d'Esteban MAGNON"></a>
                     </div>
                 </div>
             </div>
 
             <div class="home-image-container">
                 <div class="home-head-container">
-                    <img class="home-esteban-head animated-element" src="images/esteban-transparent.png"
-                         alt="Head of Esteban">
+                    <img class="home-esteban-head animated-element" src="assets/images/esteban-transparent.png" alt="Head of Esteban">
                 </div>
             </div>
         </div>
-
     </div>
 
-
-    <!------------------------ ABOUT ME SECTION --------------------->
-
+    <!-- ABOUT SECTION -->
     <section id="about-me">
-
         <div class="title-container">
-            <h2 class="about-me-title animated-element">ABOUT</h2>
-            <h3 class="about-me-subtitle animated-element">Let me introduce myself !</h3>
+            <h2 class="about-me-title animated-element"></h2>
+            <h3 class="about-me-subtitle animated-element"></h3>
         </div>
 
         <div class="about-grid-container">
-
             <div class="about-illustration-container animated-element">
-                <img class="about-illustration" src="images/about-illustration.png" alt="3D liquid in background with someone in front view">
+                <img class="about-illustration" src="assets/images/about-illustration.png" alt="3D liquid in background with someone in front view">
             </div>
-
             <div class="about-text-container animated-element">
                 <div id="about-terminal-navbar">
                     <div id="about-terminal-title-container">
                         <p id="about-terminal-title">esteban.exe</p>
-
                     </div>
                     <div id="about-terminal-icon-container">
-                        <img class="about-terminal-icon" src="images/about-minimize-icon.svg" alt="Icon minimize0">
-                        <img class="about-terminal-icon" src="images/about-close-icon.svg" alt="Icon close">
+                        <img class="about-terminal-icon" src="assets/images/about-minimize-icon.svg" alt="Icon minimize0">
+                        <img class="about-terminal-icon" src="assets/images/about-close-icon.svg" alt="Icon close">
                     </div>
                 </div>
-                <div id="about-text-wrapper">
-                    <p class="about-paragraph"><i class="fa-solid fa-user"></i>&emsp;My name is Esteban, I'm 21 years
-                        old, and I'm currently studying computer science and engineering. I'm student
-                        at <a class="about-link-to-education" href="https://ece.fr">ECE</a> Lyon-Paris, an engineering school that have more than 100 years ! </p>
-
-                    <p class="about-paragraph"><i class="fa-solid fa-graduation-cap"></i>&emsp;I'm passionate about new
-                        technologies,
-                        and I'm always happy to learn something new ! Side of my courses, I started to
-                        multiply <a class="about-link-to-education" href="#education">professional's experiences</a> to
-                        discover more about the world of engineering.</p>
-
-                    <p class="about-paragraph"><i class="fa-brands fa-connectdevelop"></i>&emsp;I'm very motivated to
-                        develop my currents skills and acquiring new one by making a cool project with you !</p>
-                </div>
-
+                <div id="about-text-wrapper"></div>
             </div>
         </div>
     </section>
 
-    <!---------------------------- EDUCATION SECTION ----------------->
-
+    <!-- EDUCATION SECTION -->
     <section id="education">
-
         <div class="title-container">
-            <h2 class="education-title animated-element">EDUCATION</h2>
-            <h3 class="education-subtitle animated-element">My educational background</h3>
+            <h2 class="education-title animated-element"></h2>
+            <h3 class="education-subtitle animated-element"></h3>
         </div>
 
         <div id="education-container">
-
             <div class="education-list animated-element">
-
-                <div class="education-element-grid animated-element">
-                    <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-ece.png" alt="Logo of ECE">
-                    </div>
-                    <div class="education-element-text-container">
-                        <div class="education-element-title">
-                            <h4><span class="colored-text">ECE Paris</span></h4>
-                        </div>
-                        <p class="education-element-date">2022 - 2025</p>
-                        <p class="education-element-legend">Engineering school based in Lyon and Paris. I'm preparing an engineering degree in computer science. School labeled EduSecnum by ANSSI.</p>
-                    </div>
-                </div>
-
-                <div class="education-element-grid animated-element">
-                    <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-mcgill.png" alt="Logo of McGill">
-                    </div>
-                    <div class="education-element-text-container">
-                        <div class="education-element-title">
-                            <h4><span class="colored-text">McGill</span></h4>
-                        </div>
-                        <p class="education-element-date">2022</p>
-                        <p class="education-element-legend">Engineering school in Montreal, Canada. Studying advanced programming, geopolitics and civic engagement.</p>
-                    </div>
-                </div>
-
-                <div class="education-element-grid animated-element">
-                    <div class="education-element-image-container">
-                        <img class="education-element-image" src="images/education-ef.png" alt="Logo of EF">
-                    </div>
-                    <div class="education-element-text-container">
-                        <div class="education-element-title">
-                            <h4><span class="colored-text">Education First</span></h4>
-                        </div>
-                        <p class="education-element-date">2019</p>
-                        <p class="education-element-legend">Linguistic exchange in Los Angeles, in UCLA campus. Passing
-                            an english certification (C1 level).</p>
-                    </div>
-                </div>
+                <!-- Education items will be dynamically populated here -->
             </div>
 
             <div class="education-illustration-container animated-element">
-                <img id="education-illustration" src="images/education-illustration.png" alt="3D liquid in background with 3D calculator icon in front view.">
+                <img id="education-illustration" src="assets/images/education-illustration.png" alt="3D liquid in background with 3D calculator icon in front view.">
             </div>
         </div>
-
     </section>
 
-
-    <!----------------------------- PROJECT SECTION ------------------>
-
+    <!-- PROJECT SECTION -->
     <section id="projects">
-
         <div class="title-container">
-            <h2 class="projects-title animated-element">PROJECTS</h2>
-            <h3 class="projects-subtitle animated-element">Some of my projects</h3>
+            <h2 class="projects-title animated-element"></h2>
+            <h3 class="projects-subtitle animated-element"></h3>
         </div>
-
-
-        <!-- Button view more -->
-
-        <div class="projects-button-container">
-            <div class="projects-button-github">
-                <a class="projects-button-github-link" href="https://www.github.com/Whyiest" target="_blank">
-                    <div class="projects-button-github-up">
-                        <p class="projects-button-github-text">GitHub</p>
-                    </div>
-                    <div class="projects-button-github-down">
-                        <div>More</div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- End button -->
-
-        <!-- Grid -->
 
         <div class="projects-grid-container">
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-arece.png"
-                                 alt="Sample of ARECE">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://arece.eu/">
-                            <p class="projects-grid-content-tech"><span class="colored-text">Web, Docker, Bash</span></p>
-                            <p class="projects-grid-content-name">ARECE</p>
-                            <span class="projects-grid-content-view">View project</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-swiftchat.png"
-                                 alt="Sample of SwiftChat">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://github.com/Whyiest/SwiftChat">
-                            <p class="projects-grid-content-tech"><span class="colored-text">Java</span></p>
-                            <p class="projects-grid-content-name">SwiftChat</p>
-                            <span class="projects-grid-content-view">View project</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-whois.png"
-                                 alt="Sample of WhoIs">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://github.com/Whyiest/CluedoGame">
-                            <p class="projects-grid-content-tech"><span class="colored-text">C++</span></p>
-                            <p class="projects-grid-content-name">Cluedo Game</p>
-                            <span class="projects-grid-content-view">View project</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-aircore.png"
-                                 alt="Sample of AirCore">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://github.com/Whyiest/AirControlSimulator">
-                            <p class="projects-grid-content-tech"><span class="colored-text">C++</span></p>
-                            <p class="projects-grid-content-name">AirCore</p>
-                            <span class="projects-grid-content-view">View project</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-saboteur.png"
-                                 alt="Sample of Saboteur">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://www.github.com/Whyiest/SaboteurGame">
-                            <p class="projects-grid-content-tech"><span class="colored-text">C</span></p>
-                            <p class="projects-grid-content-name">Saboteur</p>
-                            <span class="projects-grid-content-view">View project</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid-component animated-element">
-                <div class="projects-grid-card">
-                    <div class="projects-grid-content">
-
-                        <div class="projects-grid-content-image-container">
-                            <img class="projects-grid-content-image" src="images/project-github.png"
-                                 alt="Purple background with interrogation mark">
-                        </div>
-
-                        <a class="projects-grid-link" href="https://www.github.com/Whyiest">
-                            <p class="projects-grid-content-tech"><span class="colored-text">GitHub</span></p>
-                            <p class="projects-grid-content-name">View more</p>
-                            <span class="projects-grid-content-view">Discover</span>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+            <!-- Projects grid will be dynamically populated here -->
         </div>
-
-        <!-- End Grid -->
-
     </section>
 
-    <!----------------------------- EXPERIENCE SECTION --------------->
-
-
+    <!-- EXPERIENCE SECTION -->
     <section id="experience">
-
         <div class="title-container">
-            <h2 class="experience-title animated-element">EXPERIENCES</h2>
-            <h3 class="experience-subtitle animated-element">My professional background</h3>
+            <h2 class="experience-title animated-element"></h2>
+            <h3 class="experience-subtitle animated-element"></h3>
         </div>
 
         <div id="experience-container">
-
             <div id="experience-grid">
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-you.png" alt="Your logo">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Your company</span></h4>
-                        <p class="experience-element-date"><span class="experience-element-date-year">Now </span><span
-                                class="experience-element-duration">| ∞</span></p>
-                        <p class="experience-element-legend">Have an interesting project ? You can be the next on this list ! Contact me using button below.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-capgemini.png" alt="Logo of Capgemini">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Capgemini</span></h4>
-                        <p class="experience-element-date">2024 <span
-                                class="experience-element-duration">| 4 month</span></p>
-                        <p class="experience-element-legend">Internal and external pentesting, vulnerability assessments and training by completion of GOAD and Juice-Shop.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-anaveo.png" alt="Logo of Anaveo">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Anaveo</span></h4>
-                        <p class="experience-element-date">2023 <span
-                                class="experience-element-duration">| 2 month</span></p>
-                        <p class="experience-element-legend">Within the CDS team, identifying issues with client infrastructure and fixed them.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-capgemini.png" alt="Logo of Capgemini">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Capgemini</span></h4>
-                        <p class="experience-element-date">2023 <span
-                                class="experience-element-duration">| 2 month</span></p>
-                        <p class="experience-element-legend">Within the CloudSecOps team of the Defense Cyber campus, securing public Cloud infrastructures (AWS & Azure).</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-ngtv.png" alt="Logo of NGTV">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">NGTV Experience</span></h4>
-                        <p class="experience-element-date">2022 <span
-                                class="experience-element-duration"> | 2 months </span></p>
-                        <p class="experience-element-legend">Customer support, preparing computer hardware, optimization
-                            of Windows images, PowerShell scripts...</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-fiver.jpg" alt="Logo of Fiverr">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">Developer freelance</span></h4>
-                        <p class="experience-element-date">2022 <span
-                                class="experience-element-duration"> | 6 months</span></p>
-                        <p class="experience-element-legend"> Development of programs in C and C++. Design and
-                            implementation of projects.</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-purple.svg" alt="Logo of Purple">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">ECE Student Council</span></h4>
-                        <p class="experience-element-date">2021-2022 <span
-                                class="experience-element-duration">| 1 year</span></p>
-                        <p class="experience-element-legend">Head of Marketing and Sales. Management of a team of 8
-                            people and of a 20k euros budget.</p>
-                    </div>
-                </div>
-
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-insa.jpg" alt="Logo of INSA">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">INSA Lyon</span></h4>
-                        <p class="experience-element-date">2018 <span
-                                class="experience-element-duration">| 1 month</span></p>
-                        <p class="experience-element-legend">iOT research and development laboratory. Creation of an
-                            Arduino weather station (using C).</p>
-                    </div>
-                </div>
-
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="images/experience-spie.jpg" alt="Logo of SPIE ICS">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">SPIE ICS</span></h4>
-                        <p class="experience-element-date">2016 <span
-                                class="experience-element-duration">| 1 month</span></p>
-                        <p class="experience-element-legend">BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) and
-                            network discovery.</p>
-                    </div>
-                </div>
-
+                <!-- Experience grid will be dynamically populated here -->
             </div>
         </div>
-
     </section>
 
+    <!-- VALUES SECTION -->
     <section id="values">
-
         <div class="title-container">
-            <h2 class="values-title animated-element">VALUES</h2>
-            <h3 class="values-subtitle animated-element">What to expect about me</h3>
+            <h2 class="values-title animated-element"></h2>
+            <h3 class="values-subtitle animated-element"></h3>
         </div>
 
         <div id="values-grid">
-            <div class="values-container animated-element">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-circle.svg" alt="Circle">
-                </div>
-                <p class="values-element-title">Adaptability</p>
-                <p class="values-element-legend">Because a project doesn't always go the way you plan, it's necessary to
-                    be able to adapt to any stage of it, so I'm not afraid to question my choices nor to resume a project in a
-                    different way.</p>
-            </div>
-
-            <div class="values-container animated-element">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-triangle.svg" alt="Triangle">
-                </div>
-                <p class="values-element-title">Curiosity</p>
-                <p class="values-element-legend">Technologies evolve rapidly, and continually learning new things can
-                    allow you
-                    to approach a project from different perspectives than usual.</p>
-            </div>
-
-            <div class="values-container animated-element">
-                <div class="values-image-container">
-                    <img class="values-image" src="images/values-people.svg" alt="People">
-                </div>
-                <p class="values-element-title">Team Working</p>
-                <p class="values-element-legend">It is not possible to do everything yourself, and even if it were the
-                    case,
-                    communicating always allows you to compare points of view and push a project forward. I strongly
-                    believe in the benefits of teamwork.</p>
-            </div>
+            <!-- Values grid will be dynamically populated here -->
         </div>
-
     </section>
-
-
 </main>
 
-
+<!-- Footer -->
 <footer id="footer">
-
     <div class="footer-container animated-element">
-        <p id="footer-title">Ready to make something cool ?</p>
-        <a id="footer-second-title" href="mailto:esteban.magnon@outlook.fr"><span class="colored-text-footer">Let's get on a call !</span></a>
-
+        <p id="footer-title"></p>
+        <a id="footer-second-title" href="mailto:esteban.magnon@outlook.fr"></a>
         <p id="footer-esteban-text">Esteban<span id="footer-colored-text">.</span></p>
-        <a class="footer-mail animated-element" href="mailto:esteban.magnon@outlook.fr">esteban.magnon@outlook.fr</a>
+        <a class="footer-mail animated-element" href="mailto:esteban.magnon@outlook.fr"></a>
     </div>
 </footer>
-</body>
 
-<!-- Script -->
-
+<!-- Scripts -->
 <script src="scripts/animation.js"></script>
 <script src="scripts/langModifier.js"></script>
 <script src="scripts/colorModifier.js"></script>
@@ -579,4 +183,5 @@
 <script src="scripts/loader.js"></script>
 
 
+</body>
 </html>

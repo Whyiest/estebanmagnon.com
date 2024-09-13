@@ -1,31 +1,31 @@
 @font-face {
     font-family: Mulish;
-    src: url(fonts/Mulish-VariableFont_wght.ttf);
+    src: url(assets/fonts/Mulish-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: MulishItalic;
-    src: url(fonts/Mulish-Italic-VariableFont_wght.ttf);
+    src: url(assets/fonts/Mulish-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: PlusJakarta;
-    src: url(fonts/PlusJakartaSans-VariableFont_wght.ttf);
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: ThicccboiBold;
-    src: url("fonts/THICCCBOI-Bold.ttf");
+    src: url("assets/fonts/THICCCBOI-Bold.ttf");
 }
 
 @font-face {
     font-family: ThicccboiEtraBold;
-    src: url("fonts/THICCCBOI-ExtraBold.ttf");
+    src: url("assets/fonts/THICCCBOI-ExtraBold.ttf");
 }
 
 @font-face {
     font-family: ThicccboiThin;
-    src: url("fonts/THICCCBOI-Light.ttf");
+    src: url("assets/fonts/THICCCBOI-Light.ttf");
 }
 
 * {
@@ -483,12 +483,12 @@ h3 {
     z-index: 9;
     width: 20px;
     height: 20px;
-    background-image: url("images/white-right-arrow.svg");
+    background-image: url("assets/images/white-right-arrow.svg");
     object-fit: contain;
 }
 
 #home-button-download-text:hover + #home-right-arrow {
-    background-image: url("images/pink-right-arrow.svg");
+    background-image: url("assets/images/pink-right-arrow.svg");
     cursor: pointer;
 }
 

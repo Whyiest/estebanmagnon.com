@@ -1,126 +1,188 @@
-let langState = [false];
-// false = original (EN).
-// true = modified (FR)
+// Dictionnaire des chemins vers les fichiers de langues
+const languages = {
+    en: './assets/langs/lang_en.json',
+    fr: './assets/langs/lang_fr.json'
+};
 
-function switchLang(langState, nightState) {
+// Langue par défaut
+let currentLang = 'en';  // Default language
 
-    if (langState[0]) {
-        changeToEnglish(nightState);
-        langState[0] = false;
-    } else {
-        changeToFrench();
-        langState[0] = true;
+//
+document.addEventListener('DOMContentLoaded', function () {
+    switchLang();  // Appelle la fonction quand le DOM est complètement chargé
+});
+
+
+// Fonction pour changer de langue
+function switchLang() {
+    const langFile = languages[currentLang]; // Récupère le chemin du fichier JSON de la langue actuelle
+    console.log(`Attempting to load language file from: ${langFile}`); // Debugging log
+
+    // Récupération du fichier JSON correspondant à la langue actuelle
+    fetch(langFile)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Language file loaded successfully:', data); // Log the data for debugging
+
+            // Vérifie si les données JSON contiennent les éléments attendus
+            if (!data.head || !data.loader || !data.navbar || !data.home) {
+                throw new Error('Invalid JSON structure');
+            }
+
+            updateContent(data); // Met à jour le contenu de la page avec les données du JSON
+        })
+        .catch(error => {
+            console.error("Error loading language file:", error);
+        });
+
+    // Bascule entre 'en' et 'fr'
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+}
+
+// Fonction pour mettre à jour le contenu de la page avec les données du JSON
+function updateContent(data) {
+    // Vérifie que chaque partie des données est présente avant de la manipuler
+    if (data.head && data.head.title && data.head.description) {
+        document.title = data.head.title;
+        document.querySelector('meta[name="description"]').setAttribute("content", data.head.description);
+        console.log('Document head updated');
+    }
+
+    if (data.loader && data.loader.title && data.loader.subtitle) {
+        document.querySelector('.loader-box-title').innerHTML = data.loader.title;
+        document.querySelector('.loader-box-subtitle').innerHTML = data.loader.subtitle;
+        console.log('Loader updated');
+    }
+
+    if (data.navbar) {
+        document.querySelector('.nav-list a[href="#about-me"]').innerHTML = data.navbar.about || '';
+        document.querySelector('.nav-list a[href="#education"]').innerHTML = data.navbar.education || '';
+        document.querySelector('.nav-list a[href="#projects"]').innerHTML = data.navbar.projects || '';
+        document.querySelector('.nav-list a[href="#experience"]').innerHTML = data.navbar.experience || '';
+        document.querySelector('.nav-list a[href="#values"]').innerHTML = data.navbar.values || '';
+        console.log('Navbar updated');
+    }
+
+    if (data.home) {
+        document.querySelector('.home-text-container h1').innerHTML = data.home.title || '';
+        document.querySelector('.home-second-text').innerHTML = data.home.subtitle || '';
+        document.getElementById('home-button-contact-text').innerHTML = data.home.contact_button || '';
+        document.getElementById('home-button-download-text').innerHTML = data.home.download_cv || '';
+        console.log('Home section updated');
+    }
+
+    // Vérifie si "about" est présent avant d'accéder aux propriétés
+    if (data.about) {
+        document.querySelector('.about-me-title').innerHTML = data.about.title || '';
+        document.querySelector('.about-me-subtitle').innerHTML = data.about.subtitle || '';
+        document.querySelector('#about-text-wrapper').innerHTML = `
+            <p class="about-paragraph">${data.about.text1 || ''}</p>
+            <p class="about-paragraph">${data.about.text2 || ''}</p>
+            <p class="about-paragraph">${data.about.text3 || ''}</p>
+        `;
+        console.log('About section updated');
+    }
+
+    if (data.education && data.education.schools) {
+        document.querySelector('.education-title').innerHTML = data.education.title || '';
+        document.querySelector('.education-subtitle').innerHTML = data.education.subtitle || '';
+        const educationList = document.querySelector('.education-list');
+        educationList.innerHTML = ''; // Clear previous content
+        data.education.schools.forEach(school => {
+            educationList.innerHTML += `
+                <div class="education-element-grid animated-element">
+                    <div class="education-element-image-container">
+                        <img class="education-element-image" src="assets/images/education-${school.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="Logo of ${school.name}">
+                    </div>
+                    <div class="education-element-text-container">
+                        <div class="education-element-title">
+                            <h4><span class="colored-text">${school.name}</span></h4>
+                        </div>
+                        <p class="education-element-date">${school.date}</p>
+                        <p class="education-element-legend">${school.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+        console.log('Education section updated');
+    }
+
+    if (data.projects && data.projects.items) {
+        document.querySelector('.projects-title').innerHTML = data.projects.title || '';
+        document.querySelector('.projects-subtitle').innerHTML = data.projects.subtitle || '';
+        const projectsGrid = document.querySelector('.projects-grid-container');
+        projectsGrid.innerHTML = ''; // Clear previous content
+        data.projects.items.forEach(project => {
+            projectsGrid.innerHTML += `
+                <div class="projects-grid-component animated-element">
+                    <div class="projects-grid-card">
+                        <div class="projects-grid-content">
+                            <div class="projects-grid-content-image-container">
+                                <img class="projects-grid-content-image" src="assets/images/project-${project.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="Sample of ${project.name}">
+                            </div>
+                            <a class="projects-grid-link" href="${project.link}" target="_blank">
+                                <p class="projects-grid-content-tech"><span class="colored-text">${project.tech}</span></p>
+                                <p class="projects-grid-content-name">${project.name}</p>
+                                <span class="projects-grid-content-view">${project.description}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        console.log('Projects section updated');
+    }
+
+    if (data.experience && data.experience.items) {
+        document.querySelector('.experience-title').innerHTML = data.experience.title || '';
+        document.querySelector('.experience-subtitle').innerHTML = data.experience.subtitle || '';
+        const experienceGrid = document.querySelector('#experience-grid');
+        experienceGrid.innerHTML = ''; // Clear previous content
+        data.experience.items.forEach(experience => {
+            experienceGrid.innerHTML += `
+                <div class="experience-element-grid animated-element">
+                    <div class="experience-element-image-container">
+                        <img class="experience-element-image" src="assets/images/experience-${experience.company.toLowerCase().replace(/\s+/g, '-')}.png" alt="Logo of ${experience.company}">
+                    </div>
+                    <div class="experience-element-text-container">
+                        <h4 class="experience-element-title"><span class="colored-text">${experience.company}</span></h4>
+                        <p class="experience-element-date">${experience.date}</p>
+                        <p class="experience-element-legend">${experience.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+        console.log('Experience section updated');
+    }
+
+    if (data.values && data.values.items) {
+        document.querySelector('.values-title').innerHTML = data.values.title || '';
+        document.querySelector('.values-subtitle').innerHTML = data.values.subtitle || '';
+        const valuesGrid = document.querySelector('#values-grid');
+        valuesGrid.innerHTML = ''; // Clear previous content
+        data.values.items.forEach(value => {
+            valuesGrid.innerHTML += `
+                <div class="values-container animated-element">
+                    <div class="values-image-container">
+                        <img class="values-image" src="assets/images/values-${value.name.toLowerCase().replace(/\s+/g, '-')}.svg" alt="${value.name}">
+                    </div>
+                    <p class="values-element-title">${value.name}</p>
+                    <p class="values-element-legend">${value.description}</p>
+                </div>
+            `;
+        });
+        console.log('Values section updated');
+    }
+
+    if (data.footer) {
+        document.getElementById('footer-title').innerHTML = data.footer.title || '';
+        document.getElementById('footer-second-title').innerHTML = data.footer.subtitle || '';
+        document.querySelector('.footer-mail').innerHTML = data.footer.email || '';
+        console.log('Footer updated');
     }
 }
-
-function changeToFrench() {
-
-    let elements;
-
-    elements = document.getElementsByClassName("nav-button");
-    elements [0].innerHTML = "À propos";
-    elements [1].innerHTML = "Formation";
-    elements [2].innerHTML = "Projets";
-    elements [3].innerHTML = "Expériences";
-    elements [4].innerHTML = "Valeurs";
-
-    document.getElementsByTagName("h1")[0].innerHTML = "J'<span class=\"colored-text\">&#233;tudie </span>les technologies d\'<span\n" +
-        "class=\"colored-text\">aujourd'hui</span> pour préparer <span class=\"colored-text\">demain</span>. <br><i class=\"fa-solid fa-terminal\"></i>"
-
-    document.getElementsByClassName("home-second-text")[0].innerHTML = "Salut ! Je suis Esteban, étudiant ingénieur passionné par le monde de l'ingénierie, ayant pour vocation d'améliorer le monde digital de demain."
-
-    document.getElementById("home-button-contact-text").innerHTML = "Discutons";
-
-    document.getElementById("home-button-download-text").innerHTML = "Téléchargez mon CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
-
-    document.getElementsByClassName("about-me-title")[0].innerHTML = "A PROPOS";
-
-    document.getElementsByClassName("about-me-subtitle")[0].innerHTML = "Ravi de vous rencontrer  !";
-
-    elements = document.getElementsByClassName("about-paragraph");
-    elements [0].innerHTML = "<i class=\"fa-solid fa-user\"></i>&emsp;Je m'appelle Esteban, j'ai 21 ans, je suis actuellement étudiant et je prépare un diplôme d'ingénieur généraliste, avec une majeure orientée sur les systèmes d'informations. J'étudie à l'<a class=\"about-link-to-education\" href=\"https://ece.fr\">Ecole Centrale d'Electronique</a> (Lyon / Paris).";
-    elements [1].innerHTML = "<i class=\"fa-solid fa-graduation-cap\"></i>&emsp;Je suis passionné par les nouvelles technologies et je suis toujours ravi d'apprendre quelque chose de nouveau ! À côté de mes cours, j'ai commencé à multiplier les <a class=\'about-link-to-education\' href=\'#education\'> expériences professionnelles</a> afin de découvrir un peu plus le monde de l'ingénierie."
-    elements [2].innerHTML = "<i class=\"fa-brands fa-connectdevelop\"></i>&emsp;Je suis très motivé par toute opportunité qui me permettrait de développer mes compétences actuelles et d'en acquérir de nouvelles. Pourquoi ne pas collaborer ensemble sur un projet ?"
-
-
-    document.getElementsByClassName("education-title")[0].innerHTML = "FORMATIONS";
-
-    document.getElementsByClassName("education-subtitle")[0].innerHTML = "Mon parcours scolaire.";
-
-    elements = document.getElementsByClassName("education-element-legend");
-    elements [0].innerHTML = "École d'ingénieur basée à Lyon et Paris. Diplôme d'ingénieur généraliste spécialisé en systèmes d'informations.";
-    elements [1].innerHTML = "École d'ingénieur basée à Montreal au Canada. Formation : programmation avancée, géopolitique et engagement civique.";
-    elements [2].innerHTML = "Échange linguistique à Los Angeles, au sein du campus de l'école UCLA. Passage d'une certification d'anglais d'un niveau C1.";
-
-    document.getElementsByClassName("projects-title")[0].innerHTML = "PROJETS";
-
-    document.getElementsByClassName("projects-subtitle")[0].innerHTML = "Découvrez mes projets.";
-
-    elements = document.getElementsByClassName("projects-grid-content-view");
-
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].innerHTML = "Voir le projet"
-    }
-    elements[5].innerHTML = "Découvrir";
-
-    elements = document.getElementsByClassName("projects-grid-content-name");
-    elements[5].innerHTML = "Voir plus";
-
-    document.getElementsByClassName("experience-title")[0].innerHTML = "EXPERIENCE";
-
-    document.getElementsByClassName("experience-subtitle")[0].innerHTML = "Mes expériences professionnelles.";
-
-    elements = document.getElementsByClassName("experience-element-date-year");
-    elements [0].innerHTML = "Aujourd'hui ";
-
-    elements = document.getElementsByClassName("experience-element-duration");
-    elements [0].innerHTML = "| ∞";
-    elements [1].innerHTML = "| 4 mois";
-    elements [2].innerHTML = "| 2 mois";
-    elements [3].innerHTML = "| 2 mois";
-    elements [4].innerHTML = "| 2 mois";
-    elements [5].innerHTML = "| 6 mois";
-    elements [6].innerHTML = "| 1 an";
-    elements [7].innerHTML = "| 1 mois";
-    elements [8].innerHTML = "| 1 mois";
-
-    elements = document.getElementsByClassName("experience-element-title");
-    elements [0].innerHTML = "<span class=\"colored-text\">Vous</span>";
-    elements [4].innerHTML = "<span class=\"colored-text\">Fiverr Freelance</span>";
-    elements [5].innerHTML = "<span class=\"colored-text\">Bureau des élèves ECE</span>";
-
-    elements = document.getElementsByClassName("experience-element-legend");
-    elements [0].innerHTML = "Vous avez un projet intéressant en tête ? Votre entreprise pourrait être la prochaine sur cette liste !";
-    elements [1].innerHTML = "Réalisation de tests d'intrusion internes et externes, rédaction de rapports de sécurité et audits de vulnérabilités.";
-    elements [2].innerHTML = "Au sein du centre distant de services (CDS), prise de contact avec les clients afin d'identifier et de résoudre les soucis liés à leur installation.";
-    elements [3].innerHTML = "Au sein de l'équipe CloudSecOps du campus Cyber de la Défense, sécurisation d'infrastructures Cloud publiques (AWS & Azure).";
-    elements [4].innerHTML = "Support client, préparation de matériel informatique, optimisation d'image Windows, PowerShells.";
-    elements [5].innerHTML = "Développement de projets en C et C++, de la conception à la réalisation.";
-    elements [6].innerHTML = "Responsable marketing & commercial. Gestion d'une équipe de 8 personnes et d'un budget.";
-    elements [7].innerHTML = "Laboratoire de recherche et développement iOT. Création d'une station météo (langage C).";
-    elements [8].innerHTML = "BigData, Cloud (AWS, Terraform, Kubernetes, Docker...) et découverte réseau.";
-
-    document.getElementsByClassName("values-title")[0].innerHTML = "VALEURS";
-    document.getElementsByClassName("values-subtitle")[0].innerHTML = "Ce que vous pouvez attendre de moi.";
-
-
-    elements = document.getElementsByClassName("values-element-title");
-    elements [0].innerHTML = "Adaptabilité";
-    elements [1].innerHTML = "Curiosité";
-    elements [2].innerHTML = "Esprit d'équipe";
-
-    elements = document.getElementsByClassName("values-element-legend");
-    elements [0].innerHTML = "Parce qu'un projet ne se déroule pas nécessairement comme prévu, il est primordial d'être capable de s'adapter à n'importe quelle étape de ce dernier. Je n'ai pas peur de questionner mes choix pour reprendre un projet d'une manière différente.";
-    elements [1].innerHTML = "La technologie évolue rapidement, et continuer à apprendre continuellement de nouvelles choses peut permettre d'aborder un projet depuis des perspectives innovantes.";
-    elements [2].innerHTML = "Un projet n'rien sans une bonne équipe, communiquer permet de comparer les points de vues et de pousser un projet vers l'avant.";
-
-    document.getElementById("footer-title").innerHTML = "Vous avez un projet en tête ?"
-    document.getElementById("footer-second-title").innerHTML = "<span class=\"colored-text-footer\">Discutons ensemble !</span>"
-}
-
-
-function changeToEnglish(nightState) {
-    window.location.reload();
-}
-
-

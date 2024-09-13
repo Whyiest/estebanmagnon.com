@@ -1,56 +1,25 @@
-function scrollTrigger(selector) {
-
-    /**
-     * Récupère tous les éléments de la class demandée et leur ajoute un observeur
-     * @type {NodeListOf<*>}
-     */
-
-        // On récupère les éléments :
-    let elementToObserve = document.querySelectorAll(selector)
-
-    // On les mets dans un array pour pouvoir passer par valeur:
-    elementToObserve = Array.from(elementToObserve)
-
-    // Pour chacun on attache un observeur:
-    elementToObserve.forEach(el => {
-        addObserver(el)
-    })
+// Fonction pour vérifier si un élément est visible dans la fenêtre de défilement
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
 }
 
+// Fonction pour déclencher l'animation en supprimant la classe animated-element
+function scrollTrigger() {
+    const elements = document.querySelectorAll('.animated-element');
 
-function addObserver(elementToObserve) {
-
-    /**
-     * Cette fonction ajoute l'observeur à la liste des éléments en paramètre
-     * @type {IntersectionObserver}
-     */
-
-    if (localStorage.getItem('loadComplete') === 'true') {
-
-        // On vérifie que le docuement à bien chargé en utilisant le loader.js
-        // On créé un IntersectionObserver en nouvelle instance
-
-        let observer = new IntersectionObserver((entries, observer) => { // This takes a callback function that receives two arguments: the elements list and the observer instance.
-
-
-            entries.forEach(entry => {
-                // entry.isIntersecting sera true si visible
-
-                if (entry.isIntersecting) {
-
-                    // On retire la pause si on le voit
-                    entry.target.classList.remove('animated-element')
-
-                    // We are removing the observer from the element after adding the active class
-                    observer.unobserve(entry.target)
-                }
-            })
-        })
-        // Adding the observer to the element
-        observer.observe(elementToObserve)
-
-    }
-
+    elements.forEach((el) => {
+        if (isElementInViewport(el)) {
+            el.classList.remove('animated-element'); // Supprime la classe pour lancer l'animation
+        }
+    });
 }
 
+// Écoute l'événement de défilement
+window.addEventListener('scroll', scrollTrigger);
 
+// Exécute la fonction immédiatement au chargement pour les éléments déjà visibles
+document.addEventListener('DOMContentLoaded', scrollTrigger);
