@@ -131,7 +131,6 @@
     }
 
 
-
     #education-container {
         display: flex;
         flex-direction: column;
@@ -170,6 +169,7 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+
 
     .projects-button-container {
         margin-top: 4%;

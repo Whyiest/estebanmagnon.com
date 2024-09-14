@@ -123,7 +123,7 @@ function updateContent(data) {
                     <div class="projects-grid-card">
                         <div class="projects-grid-content">
                             <div class="projects-grid-content-image-container">
-                                <img class="projects-grid-content-image" src="assets/images/project-${project.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="Sample of ${project.name}">
+                                <img class="projects-grid-content-image" src="assets/images/project-${project.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="Image of ${project.name} project">
                             </div>
                             <a class="projects-grid-link" href="${project.link}" target="_blank">
                                 <p class="projects-grid-content-tech"><span class="colored-text">${project.tech}</span></p>

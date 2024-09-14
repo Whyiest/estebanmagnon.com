@@ -81,6 +81,12 @@
         "tech": "C",
         "link": "https://www.github.com/Whyiest/SaboteurGame",
         "description": "Voir projet"
+      },
+      {
+        "name": "Github",
+        "tech": "Voir plus",
+        "link": "https://www.github.com/Whyiest/",
+        "description": "Découvrir"
       }
     ]
   },
