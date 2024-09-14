@@ -3,10 +3,6 @@
         "title": "Esteban MAGNON",
         "description": "Hello, my name is Esteban, I'm a French engineering student!"
     },
-    "loader": {
-        "title": "Please wait, I'm just finishing my coffee...",
-        "subtitle": "Website is loading, it will not be long, I promise!"
-    },
     "navbar": {
         "about": "About",
         "education": "Education",

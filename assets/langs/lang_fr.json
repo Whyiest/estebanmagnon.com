@@ -3,10 +3,6 @@
     "title": "Esteban MAGNON",
     "description": "Bonjour, je m'appelle Esteban, je suis un étudiant en ingénierie français !"
   },
-  "loader": {
-    "title": "Veuillez patienter, je termine juste mon café...",
-    "subtitle": "Le site se charge, cela ne sera pas long, je vous le promets !"
-  },
   "navbar": {
     "about": "À propos",
     "education": "Éducation",

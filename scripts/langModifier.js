@@ -30,7 +30,7 @@ function switchLang() {
             console.log('Language file loaded successfully:', data); // Log the data for debugging
 
             // Vérifie si les données JSON contiennent les éléments attendus
-            if (!data.head || !data.loader || !data.navbar || !data.home) {
+            if (!data.head || !data.navbar || !data.home) {
                 throw new Error('Invalid JSON structure');
             }
 
@@ -51,12 +51,6 @@ function updateContent(data) {
         document.title = data.head.title;
         document.querySelector('meta[name="description"]').setAttribute("content", data.head.description);
         console.log('Document head updated');
-    }
-
-    if (data.loader && data.loader.title && data.loader.subtitle) {
-        document.querySelector('.loader-box-title').innerHTML = data.loader.title;
-        document.querySelector('.loader-box-subtitle').innerHTML = data.loader.subtitle;
-        console.log('Loader updated');
     }
 
     if (data.navbar) {
