@@ -18,7 +18,7 @@
         "title": "I'm<span class='colored-text-title'> studying </span>technologies of <span class='colored-text-title'>today</span> to prepare <span class='colored-text-title'>tomorrow</span><br><i class='fa-solid fa-terminal'></i>",
         "subtitle": "Hi! I'm Esteban, a French engineering student passionate about computer science, who wants to make tomorrow's digital world better.",
         "contact_button": "Let's talk",
-        "download_cv": "Download CV"
+        "download_cv": "Download CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
     },
     "about": {
         "title": "ABOUT",

@@ -18,7 +18,7 @@
     "title": "J'<span class='colored-text-title'> étudie </span>les technologies <span class='colored-text-title'>d'aujourd'hui</span> pour préparer <span class='colored-text-title'>demain</span><br><i class='fa-solid fa-terminal'></i>",
     "subtitle": "Salut ! Je suis Esteban, un étudiant en ingénierie passionné par l'informatique, qui veut rendre le monde numérique de demain meilleur.",
     "contact_button": "Discutons",
-    "download_cv": "Télécharger CV"
+    "download_cv": "Télécharger CV <i class=\"fa-sharp fa-solid fa-circle-down\"></i>"
   },
   "about": {
     "title": "À PROPOS",
