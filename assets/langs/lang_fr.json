@@ -1,0 +1,156 @@
+{
+  "head": {
+    "title": "Esteban MAGNON",
+    "description": "Bonjour, je m'appelle Esteban, je suis un étudiant en ingénierie français !"
+  },
+  "loader": {
+    "title": "Veuillez patienter, je termine juste mon café...",
+    "subtitle": "Le site se charge, cela ne sera pas long je vous le promets !"
+  },
+  "navbar": {
+    "about": "À propos",
+    "education": "Éducation",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "values": "Valeurs"
+  },
+  "home": {
+    "title": "J'<span class='colored-text-title'> étudie </span>les technologies <span class='colored-text-title'>d'aujourd'hui</span> pour préparer <span class='colored-text-title'>demain</span><br><i class='fa-solid fa-terminal'></i>",
+    "subtitle": "Salut ! Je suis Esteban, un étudiant en ingénierie passionné par l'informatique, qui veut rendre le monde numérique de demain meilleur.",
+    "contact_button": "Discutons",
+    "download_cv": "Télécharger CV"
+  },
+  "about": {
+    "title": "À PROPOS",
+    "subtitle": "Laissez-moi me présenter !",
+    "text1": "Je m'appelle Esteban, j'ai 21 ans, et j'étudie actuellement l'informatique et l'ingénierie. Je suis étudiant à <a href='https://ece.fr'>ECE</a> Lyon-Paris, une école d'ingénieurs qui existe depuis plus de 100 ans !",
+    "text2": "Je suis passionné par les nouvelles technologies, et je suis toujours heureux d'apprendre de nouvelles choses ! En dehors de mes cours, j'ai commencé à multiplier les <a href='#education'>expériences professionnelles</a> pour découvrir davantage le monde de l'ingénierie.",
+    "text3": "Je suis très motivé pour développer mes compétences actuelles et en acquérir de nouvelles en réalisant un projet passionnant avec vous !"
+  },
+  "education": {
+    "title": "ÉDUCATION",
+    "subtitle": "Mon parcours éducatif",
+    "schools": [
+      {
+        "name": "ECE Paris",
+        "date": "2022 - 2025",
+        "description": "École d'ingénieurs basée à Lyon et Paris. Je prépare un diplôme d'ingénieur en informatique. École labellisée EduSecnum par l'ANSSI."
+      },
+      {
+        "name": "McGill",
+        "date": "2022",
+        "description": "École d'ingénieurs à Montréal, Canada. Études en programmation avancée, géopolitique et engagement civique."
+      },
+      {
+        "name": "Education First",
+        "date": "2019",
+        "description": "Échange linguistique à Los Angeles, sur le campus de l'UCLA. Passage d'une certification en anglais (niveau C1)."
+      }
+    ]
+  },
+  "projects": {
+    "title": "PROJETS",
+    "subtitle": "Quelques-uns de mes projets",
+    "items": [
+      {
+        "name": "ARECE",
+        "tech": "Web, Docker, Bash",
+        "link": "https://arece.eu/",
+        "description": "Voir projet"
+      },
+      {
+        "name": "SwiftChat",
+        "tech": "Java",
+        "link": "https://github.com/Whyiest/SwiftChat",
+        "description": "Voir projet"
+      },
+      {
+        "name": "WhoIs",
+        "tech": "C++",
+        "link": "https://github.com/Whyiest/CluedoGame",
+        "description": "Voir projet"
+      },
+      {
+        "name": "AirCore",
+        "tech": "C++",
+        "link": "https://github.com/Whyiest/AirControlSimulator",
+        "description": "Voir projet"
+      },
+      {
+        "name": "Saboteur",
+        "tech": "C",
+        "link": "https://www.github.com/Whyiest/SaboteurGame",
+        "description": "Voir projet"
+      }
+    ]
+  },
+  "experience": {
+    "title": "EXPÉRIENCES",
+    "subtitle": "Mon parcours professionnel",
+    "items": [
+      {
+        "company": "Capgemini",
+        "date": "2024 | 4 mois",
+        "description": "Pentesting interne et externe, évaluation des vulnérabilités et formation via la completion de GOAD et Juice-Shop."
+      },
+      {
+        "company": "Anaveo",
+        "date": "2023 | 2 mois",
+        "description": "Au sein de l'équipe CDS, identification et résolution des problèmes d'infrastructure client."
+      },
+      {
+        "company": "Capgemini",
+        "date": "2023 | 2 mois",
+        "description": "Au sein de l'équipe CloudSecOps, sécurisation des infrastructures Cloud publiques (AWS & Azure)."
+      },
+      {
+        "company": "Spash",
+        "date": "2022 | 2 mois",
+        "description": "Support client, préparation du matériel informatique, optimisation des images Windows, scripts PowerShell."
+      },
+      {
+        "company": "Fiverr",
+        "date": "2022 | 6 mois",
+        "description": "Développement de programmes en C et C++. Conception et réalisation de projets."
+      },
+      {
+        "company": "Purple",
+        "date": "2021 - 2022 | 1 an",
+        "description": "Responsable Marketing et Ventes. Gestion d'une équipe de 8 personnes et d'un budget de 20 000 euros."
+      },
+      {
+        "company": "INSA Lyon",
+        "date": "2018 | 1 mois",
+        "description": "Laboratoire de recherche et développement en iOT. Création d'une station météo Arduino (en utilisant C)."
+      },
+      {
+        "company": "SPIE ICS",
+        "date": "2016 | 1 mois",
+        "description": "Découverte du Big Data, du Cloud (AWS, Terraform, Kubernetes, Docker) et des réseaux."
+      }
+    ]
+  },
+  "values": {
+    "title": "VALEURS",
+    "subtitle": "Ce que vous pouvez attendre de moi",
+    "items": [
+      {
+        "name": "Adaptabilité",
+        "description": "Parce qu'un projet ne se déroule pas toujours comme prévu, il est nécessaire de pouvoir s'adapter à chaque étape."
+      },
+      {
+        "name": "Curiosité",
+        "description": "Les technologies évoluent rapidement, et apprendre de nouvelles choses permet d'aborder un projet sous différents angles."
+      },
+      {
+        "name": "Travail d'équipe",
+        "description": "Je crois fermement aux bénéfices du travail d'équipe, car communiquer permet de confronter les points de vue et de faire avancer un projet."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Prêt à faire quelque chose de cool ?",
+    "subtitle": "<span class=\"colored-text-footer\">Contactez-moi !</span>",
+    "email": "esteban.magnon@outlook.fr"
+  }
+}

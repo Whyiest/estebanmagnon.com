@@ -1,0 +1,156 @@
+{
+    "head": {
+        "title": "Esteban MAGNON",
+        "description": "Hello, my name is Esteban, I'm a French engineering student!"
+    },
+    "loader": {
+        "title": "Please wait, I'm just finishing my coffee...",
+        "subtitle": "Website is loading, it will not be long I promise!"
+    },
+    "navbar": {
+        "about": "About",
+        "education": "Education",
+        "projects": "Projects",
+        "experience": "Experience",
+        "values": "Values"
+    },
+    "home": {
+        "title": "I'm<span class='colored-text-title'> studying </span>technologies of <span class='colored-text-title'>today</span> to prepare <span class='colored-text-title'>tomorrow</span><br><i class='fa-solid fa-terminal'></i>",
+        "subtitle": "Hi! I'm Esteban, a French engineering student passionate about computer science, who wants to make tomorrow's digital world better.",
+        "contact_button": "Let's talk",
+        "download_cv": "Download CV"
+    },
+    "about": {
+        "title": "ABOUT",
+        "subtitle": "Let me introduce myself!",
+        "text1": "My name is Esteban, I'm 21 years old, and I'm currently studying computer science and engineering. I'm a student at <a href='https://ece.fr'>ECE</a> Lyon-Paris, an engineering school that has been around for over 100 years!",
+        "text2": "I'm passionate about new technologies, and I'm always happy to learn something new! Alongside my courses, I've started multiplying <a href='#education'>professional experiences</a> to discover more about the world of engineering.",
+        "text3": "I'm very motivated to develop my current skills and acquire new ones by working on an exciting project with you!"
+    },
+    "education": {
+        "title": "EDUCATION",
+        "subtitle": "My educational background",
+        "schools": [
+            {
+                "name": "ECE Paris",
+                "date": "2022 - 2025",
+                "description": "Engineering school based in Lyon and Paris. I'm preparing an engineering degree in computer science. School labeled EduSecnum by ANSSI."
+            },
+            {
+                "name": "McGill",
+                "date": "2022",
+                "description": "Engineering school in Montreal, Canada. Studied advanced programming, geopolitics, and civic engagement."
+            },
+            {
+                "name": "Education First",
+                "date": "2019",
+                "description": "Linguistic exchange in Los Angeles, at the UCLA campus. Passed an English certification (C1 level)."
+            }
+        ]
+    },
+    "projects": {
+        "title": "PROJECTS",
+        "subtitle": "Some of my projects",
+        "items": [
+            {
+                "name": "ARECE",
+                "tech": "Web, Docker, Bash",
+                "link": "https://arece.eu/",
+                "description": "View project"
+            },
+            {
+                "name": "SwiftChat",
+                "tech": "Java",
+                "link": "https://github.com/Whyiest/SwiftChat",
+                "description": "View project"
+            },
+            {
+                "name": "WhoIs",
+                "tech": "C++",
+                "link": "https://github.com/Whyiest/CluedoGame",
+                "description": "View project"
+            },
+            {
+                "name": "AirCore",
+                "tech": "C++",
+                "link": "https://github.com/Whyiest/AirControlSimulator",
+                "description": "View project"
+            },
+            {
+                "name": "Saboteur",
+                "tech": "C",
+                "link": "https://www.github.com/Whyiest/SaboteurGame",
+                "description": "View project"
+            }
+        ]
+    },
+    "experience": {
+        "title": "EXPERIENCE",
+        "subtitle": "My professional background",
+        "items": [
+            {
+                "company": "Capgemini",
+                "date": "2024 | 4 months",
+                "description": "Internal and external pentesting, vulnerability assessments and training by completion of GOAD and Juice-Shop."
+            },
+            {
+                "company": "Anaveo",
+                "date": "2023 | 2 months",
+                "description": "Within the CDS team, identifying issues with client infrastructure and fixing them."
+            },
+            {
+                "company": "Capgemini",
+                "date": "2023 | 2 months",
+                "description": "Within the CloudSecOps team of the Defense Cyber campus, securing public Cloud infrastructures (AWS & Azure)."
+            },
+            {
+                "company": "Spash",
+                "date": "2022 | 2 months",
+                "description": "Customer support, preparing computer hardware, optimizing Windows images, PowerShell scripts."
+            },
+            {
+                "company": "Fiverr",
+                "date": "2022 | 6 months",
+                "description": "Development of programs in C and C++. Design and implementation of projects."
+            },
+            {
+                "company": "Purple",
+                "date": "2021 - 2022 | 1 year",
+                "description": "Head of Marketing and Sales. Managing a team of 8 people and a 20k euros budget."
+            },
+            {
+                "company": "INSA Lyon",
+                "date": "2018 | 1 month",
+                "description": "IoT research and development laboratory. Creation of an Arduino weather station (using C)."
+            },
+            {
+                "company": "SPIE ICS",
+                "date": "2016 | 1 month",
+                "description": "Big Data, Cloud (AWS, Terraform, Kubernetes, Docker), and network discovery."
+            }
+        ]
+    },
+    "values": {
+        "title": "VALUES",
+        "subtitle": "What to expect from me",
+        "items": [
+            {
+                "name": "Adaptability",
+                "description": "Because a project doesn't always go as planned, it's necessary to adapt at every stage."
+            },
+            {
+                "name": "Curiosity",
+                "description": "Technologies evolve rapidly, and continually learning new things allows you to approach a project from different perspectives."
+            },
+            {
+                "name": "Team Working",
+                "description": "I firmly believe in the benefits of teamwork, as communication allows for the comparison of ideas and helps move a project forward."
+            }
+        ]
+    },
+    "footer": {
+        "title": "Ready to make something cool?",
+        "subtitle": "<span class=\"colored-text-footer\">Let's get on a call !</span>",
+        "email": "esteban.magnon@outlook.fr"
+    }
+}
