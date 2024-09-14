@@ -7,7 +7,7 @@ const languages = {
 // Langue par défaut
 let currentLang = 'en';  // Default language
 
-//
+
 document.addEventListener('DOMContentLoaded', function () {
     switchLang();  // Appelle la fonction quand le DOM est complètement chargé
 });
@@ -145,20 +145,22 @@ function updateContent(data) {
         experienceGrid.innerHTML = ''; // Clear previous content
         data.experience.items.forEach(experience => {
             experienceGrid.innerHTML += `
-                <div class="experience-element-grid animated-element">
-                    <div class="experience-element-image-container">
-                        <img class="experience-element-image" src="assets/images/experience-${experience.company.toLowerCase().replace(/\s+/g, '-')}.png" alt="Logo of ${experience.company}">
-                    </div>
-                    <div class="experience-element-text-container">
-                        <h4 class="experience-element-title"><span class="colored-text">${experience.company}</span></h4>
-                        <p class="experience-element-date">${experience.date}</p>
-                        <p class="experience-element-legend">${experience.description}</p>
-                    </div>
+            <div class="experience-element-grid animated-element">
+                <div class="experience-element-image-container">
+                    <img class="experience-element-image" src="assets/images/experience-${experience.company.toLowerCase().replace(/\s+/g, '-')}.png" alt="Logo of ${experience.company}">
                 </div>
-            `;
+                <div class="experience-element-text-container">
+                    <h4 class="experience-element-title"><span class="colored-text">${experience.company}</span></h4>
+                    <p class="experience-element-job-title">${experience.title}</p> 
+                    <p class="experience-element-date">${experience.date}</p>
+                    <p class="experience-element-legend">${experience.description}</p>
+                </div>
+            </div>
+        `;
         });
         console.log('Experience section updated');
     }
+
 
     if (data.values && data.values.items) {
         document.querySelector('.values-title').innerHTML = data.values.title || '';

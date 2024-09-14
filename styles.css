@@ -180,7 +180,6 @@ h3 {
     font-size: 1.7em;
 }
 
-
 .loader-container {
     display: -webkit-flex;
     display: flex;
@@ -734,7 +733,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 4fr;
     height: fit-content;
-    min-height: 4em;
+    min-height: 10em;
     background-color: black;
     border-radius: 50px;
     margin: 3%;
@@ -754,7 +753,13 @@ h3 {
     height: fit-content;
     justify-content: left;
     width: fit-content;
-    color: white;
+    color: #d5d4d4;
+}
+
+.experience-element-job-title {
+    color: #e0e0e0;
+    font-weight: bold;
+    font-family: Mulish, sans-serif;
 }
 
 .experience-element-date {

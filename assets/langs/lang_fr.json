@@ -5,13 +5,13 @@
   },
   "loader": {
     "title": "Veuillez patienter, je termine juste mon café...",
-    "subtitle": "Le site se charge, cela ne sera pas long je vous le promets !"
+    "subtitle": "Le site se charge, cela ne sera pas long, je vous le promets !"
   },
   "navbar": {
     "about": "À propos",
     "education": "Éducation",
     "projects": "Projets",
-    "experience": "Expérience",
+    "experience": "Expériences",
     "values": "Valeurs"
   },
   "home": {
@@ -23,7 +23,7 @@
   "about": {
     "title": "À PROPOS",
     "subtitle": "Laissez-moi me présenter !",
-    "text1": "Je m'appelle Esteban, j'ai 21 ans, et j'étudie actuellement l'informatique et l'ingénierie. Je suis étudiant à <a href='https://ece.fr'>ECE</a> Lyon-Paris, une école d'ingénieurs qui existe depuis plus de 100 ans !",
+    "text1": "Je m'appelle Esteban, j'ai 22 ans, et j'étudie actuellement l'informatique et l'ingénierie. Je suis étudiant à <a href='https://ece.fr'>ECE</a> Lyon-Paris, une école d'ingénieurs qui existe depuis plus de 100 ans !",
     "text2": "Je suis passionné par les nouvelles technologies, et je suis toujours heureux d'apprendre de nouvelles choses ! En dehors de mes cours, j'ai commencé à multiplier les <a href='#education'>expériences professionnelles</a> pour découvrir davantage le monde de l'ingénierie.",
     "text3": "Je suis très motivé pour développer mes compétences actuelles et en acquérir de nouvelles en réalisant un projet passionnant avec vous !"
   },
@@ -90,42 +90,50 @@
     "items": [
       {
         "company": "Capgemini",
-        "date": "2024 | 4 mois",
-        "description": "Pentesting interne et externe, évaluation des vulnérabilités et formation via la completion de GOAD et Juice-Shop."
+        "date": "2024 | 4 mois | Stage",
+        "title": "Consultant pentester",
+        "description": "Pentesting interne et externe, évaluation des vulnérabilités et formation via la complétion de GOAD et Juice-Shop."
       },
       {
         "company": "Anaveo",
-        "date": "2023 | 2 mois",
+        "date": "2023 | 2 mois | CDD",
+        "title": "Référent technique",
         "description": "Au sein de l'équipe CDS, identification et résolution des problèmes d'infrastructure client."
       },
       {
         "company": "Capgemini",
-        "date": "2023 | 2 mois",
+        "date": "2023 | 2 mois | Stage",
+        "title": "Consultant CloudSecOps",
         "description": "Au sein de l'équipe CloudSecOps, sécurisation des infrastructures Cloud publiques (AWS & Azure)."
       },
       {
         "company": "Spash",
-        "date": "2022 | 2 mois",
+        "date": "2022 | 2 mois | Stage",
+        "title": "Référent technique",
         "description": "Support client, préparation du matériel informatique, optimisation des images Windows, scripts PowerShell."
       },
       {
         "company": "Fiverr",
-        "date": "2022 | 6 mois",
+        "date": "2022 | 6 mois | Freelance",
+        "title": "Développeur freelance",
         "description": "Développement de programmes en C et C++. Conception et réalisation de projets."
       },
       {
         "company": "Purple",
-        "date": "2021 - 2022 | 1 an",
+        "date": "2021 - 2022 | 1 an | Associatif",
+        "title": "Responsable commercial",
         "description": "Responsable Marketing et Ventes. Gestion d'une équipe de 8 personnes et d'un budget de 20 000 euros."
       },
       {
         "company": "INSA Lyon",
-        "date": "2018 | 1 mois",
-        "description": "Laboratoire de recherche et développement en iOT. Création d'une station météo Arduino (en utilisant C)."
+        "date": "2018 | 1 mois | Stage",
+        "title": "Assistant chercheur",
+        "description": "Laboratoire de recherche et développement en IoT. Création d'une station météo Arduino (en utilisant C)."
       },
       {
         "company": "SPIE ICS",
-        "date": "2016 | 1 mois",
+        "date": "2016 | 1 mois | Stage",
+        "title": "Stagiaire",
         "description": "Découverte du Big Data, du Cloud (AWS, Terraform, Kubernetes, Docker) et des réseaux."
       }
     ]

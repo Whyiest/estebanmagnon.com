@@ -5,7 +5,7 @@
     },
     "loader": {
         "title": "Please wait, I'm just finishing my coffee...",
-        "subtitle": "Website is loading, it will not be long I promise!"
+        "subtitle": "Website is loading, it will not be long, I promise!"
     },
     "navbar": {
         "about": "About",
@@ -23,7 +23,7 @@
     "about": {
         "title": "ABOUT",
         "subtitle": "Let me introduce myself!",
-        "text1": "My name is Esteban, I'm 21 years old, and I'm currently studying computer science and engineering. I'm a student at <a href='https://ece.fr'>ECE</a> Lyon-Paris, an engineering school that has been around for over 100 years!",
+        "text1": "My name is Esteban, I'm 22 years old, and I'm currently studying computer science and engineering. I'm a student at <a href='https://ece.fr'>ECE</a> Lyon-Paris, an engineering school that has been around for over 100 years!",
         "text2": "I'm passionate about new technologies, and I'm always happy to learn something new! Alongside my courses, I've started multiplying <a href='#education'>professional experiences</a> to discover more about the world of engineering.",
         "text3": "I'm very motivated to develop my current skills and acquire new ones by working on an exciting project with you!"
     },
@@ -90,42 +90,50 @@
         "items": [
             {
                 "company": "Capgemini",
-                "date": "2024 | 4 months",
+                "date": "2024 | 4 months | Internship",
+                "title": "Penetration Tester",
                 "description": "Internal and external pentesting, vulnerability assessments and training by completion of GOAD and Juice-Shop."
             },
             {
                 "company": "Anaveo",
-                "date": "2023 | 2 months",
+                "date": "2023 | 2 months | FTC",
+                "title": "Technical Referent",
                 "description": "Within the CDS team, identifying issues with client infrastructure and fixing them."
             },
             {
                 "company": "Capgemini",
-                "date": "2023 | 2 months",
+                "date": "2023 | 2 months | Internship",
+                "title": "Consultant CloudSecOps",
                 "description": "Within the CloudSecOps team of the Defense Cyber campus, securing public Cloud infrastructures (AWS & Azure)."
             },
             {
                 "company": "Spash",
-                "date": "2022 | 2 months",
+                "date": "2022 | 2 months | Internship",
+                "title": "Technical Support",
                 "description": "Customer support, preparing computer hardware, optimizing Windows images, PowerShell scripts."
             },
             {
                 "company": "Fiverr",
-                "date": "2022 | 6 months",
+                "date": "2022 | 6 months | Freelance",
+                "title": "Developer",
                 "description": "Development of programs in C and C++. Design and implementation of projects."
             },
             {
                 "company": "Purple",
-                "date": "2021 - 2022 | 1 year",
+                "date": "2021 - 2022 | 1 year | Volunteer",
+                "title": "Head of Marketing and Digital",
                 "description": "Head of Marketing and Sales. Managing a team of 8 people and a 20k euros budget."
             },
             {
                 "company": "INSA Lyon",
-                "date": "2018 | 1 month",
+                "date": "2018 | 1 month | Internship",
+                "title": "Researcher",
                 "description": "IoT research and development laboratory. Creation of an Arduino weather station (using C)."
             },
             {
                 "company": "SPIE ICS",
-                "date": "2016 | 1 month",
+                "date": "2016 | 1 month | Internship",
+                "title": "IT Intern",
                 "description": "Big Data, Cloud (AWS, Terraform, Kubernetes, Docker), and network discovery."
             }
         ]
@@ -143,14 +151,14 @@
                 "description": "Technologies evolve rapidly, and continually learning new things allows you to approach a project from different perspectives."
             },
             {
-                "name": "Team Working",
+                "name": "Teamwork",
                 "description": "I firmly believe in the benefits of teamwork, as communication allows for the comparison of ideas and helps move a project forward."
             }
         ]
     },
     "footer": {
         "title": "Ready to make something cool?",
-        "subtitle": "<span class=\"colored-text-footer\">Let's get on a call !</span>",
+        "subtitle": "<span class=\"colored-text-footer\">Let's get on a call!</span>",
         "email": "esteban.magnon@outlook.fr"
     }
 }
