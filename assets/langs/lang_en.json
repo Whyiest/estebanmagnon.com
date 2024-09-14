@@ -146,14 +146,17 @@
         "items": [
             {
                 "name": "Adaptability",
+                "nameofimage": "adaptability",
                 "description": "Because a project doesn't always go as planned, it's necessary to adapt at every stage."
             },
             {
                 "name": "Curiosity",
+                "nameofimage": "curiosity",
                 "description": "Technologies evolve rapidly, and continually learning new things allows you to approach a project from different perspectives."
             },
             {
                 "name": "Teamwork",
+                "nameofimage": "teamwork",
                 "description": "I firmly believe in the benefits of teamwork, as communication allows for the comparison of ideas and helps move a project forward."
             }
         ]

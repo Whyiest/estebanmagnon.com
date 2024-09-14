@@ -170,7 +170,7 @@ function updateContent(data) {
             valuesGrid.innerHTML += `
                 <div class="values-container animated-element">
                     <div class="values-image-container">
-                        <img class="values-image" src="assets/images/values-${value.name.toLowerCase().replace(/\s+/g, '-')}.svg" alt="${value.name}">
+                        <img class="values-image" src="assets/images/values-${value.nameofimage}.svg" alt="${value.name}">
                     </div>
                     <p class="values-element-title">${value.name}</p>
                     <p class="values-element-legend">${value.description}</p>

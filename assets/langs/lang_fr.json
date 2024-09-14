@@ -146,14 +146,17 @@
     "items": [
       {
         "name": "Adaptabilité",
+        "nameofimage": "adaptability",
         "description": "Parce qu'un projet ne se déroule pas toujours comme prévu, il est nécessaire de pouvoir s'adapter à chaque étape."
       },
       {
         "name": "Curiosité",
+        "nameofimage": "curiosity",
         "description": "Les technologies évoluent rapidement, et apprendre de nouvelles choses permet d'aborder un projet sous différents angles."
       },
       {
         "name": "Travail d'équipe",
+        "nameofimage": "teamwork",
         "description": "Je crois fermement aux bénéfices du travail d'équipe, car communiquer permet de confronter les points de vue et de faire avancer un projet."
       }
     ]
