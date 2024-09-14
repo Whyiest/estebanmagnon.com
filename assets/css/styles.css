@@ -350,11 +350,11 @@ h3 {
 }
 
 
-.fa-earth-americas {
+.fa-language {
     color: white;
 }
 
-.fa-earth-americas:hover {
+.fa-language:hover {
     transition: ease 0.3s;
     scale: 120%;
     color: #7d3df8;
@@ -669,12 +669,16 @@ h3 {
 .education-element-grid {
     animation: 1s popRotate;
     border: 2px solid #c4abff;
-    border-radius: 25px;
+    border-radius: 30px;
     display: grid;
     grid-template-columns: 1fr 4fr;
     height: fit-content;
-    background-color: black;
+    background-color: #15181a;
     margin-top: 3%;
+}
+
+.education-element-grid:hover {
+    border: solid 2px #6306ef;
 }
 
 .education-element-text-container {
@@ -684,6 +688,7 @@ h3 {
 .education-element-title {
     display: flex;
     justify-content: left;
+    color: #c4abff;
 }
 
 .education-element-date {
@@ -734,13 +739,13 @@ h3 {
     grid-template-columns: 1fr 4fr;
     height: fit-content;
     min-height: 10em;
-    background-color: #2e353d;
-    border-radius: 50px;
+    background-color: #15181a;
+    border-radius: 20px;
     margin: 3%;
 }
 
 .experience-element-grid:hover {
-    border: solid 2px white;
+    border: solid 2px #6306ef;
 }
 
 .experience-element-text-container {
@@ -753,7 +758,7 @@ h3 {
     height: fit-content;
     justify-content: left;
     width: fit-content;
-    color: #d5d4d4;
+    color: #c4abff;
 }
 
 .experience-element-job-title {
@@ -833,7 +838,7 @@ h3 {
     align-content: center;
     height: auto;
     width: 70%;
-    background-color: #000000;
+    background-color: #070707;
     position: relative;
     overflow: hidden;
 }

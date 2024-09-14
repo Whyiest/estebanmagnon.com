@@ -98,7 +98,7 @@ function updateContent(data) {
                     </div>
                     <div class="education-element-text-container">
                         <div class="education-element-title">
-                            <h4><span class="colored-text">${school.name}</span></h4>
+                            <h4>${school.name}</h4>
                         </div>
                         <p class="education-element-date">${school.date}</p>
                         <p class="education-element-legend">${school.description}</p>
@@ -149,7 +149,7 @@ function updateContent(data) {
                     <img class="experience-element-image" src="assets/images/experience-${experience.company.toLowerCase().replace(/\s+/g, '-')}.png" alt="Logo of ${experience.company}">
                 </div>
                 <div class="experience-element-text-container">
-                    <h4 class="experience-element-title"><span class="colored-text">${experience.company}</span></h4>
+                    <h4 class="experience-element-title">${experience.company}</h4>
                     <p class="experience-element-job-title">${experience.title}</p> 
                     <p class="experience-element-date">${experience.date}</p>
                     <p class="experience-element-legend">${experience.description}</p>
