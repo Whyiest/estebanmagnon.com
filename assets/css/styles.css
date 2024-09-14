@@ -734,7 +734,7 @@ h3 {
     grid-template-columns: 1fr 4fr;
     height: fit-content;
     min-height: 10em;
-    background-color: black;
+    background-color: #2e353d;
     border-radius: 50px;
     margin: 3%;
 }
