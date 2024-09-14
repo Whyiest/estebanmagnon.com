@@ -114,7 +114,6 @@ a, a:hover {
 }
 
 .colored-text {
-    color: white;
     background-image: linear-gradient(to right, #c003b0, #6600ff);
     -webkit-background-clip: text;
     color: transparent;
@@ -127,7 +126,6 @@ a, a:hover {
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;;
 }
 
 .title-container {
@@ -145,7 +143,6 @@ a, a:hover {
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
 }
 
 h1 {
@@ -166,7 +163,6 @@ h2 {
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
     width: fit-content;
     text-align: center;
     margin: auto;
@@ -238,7 +234,7 @@ h3 {
 
     text-align: center;
     font-size: 1em;
-    font-family: Arial;
+    font-family: Arial, serif;
     color: grey;
 }
 .navbar-container {
@@ -322,7 +318,7 @@ h3 {
 }
 
 .loader-container {
-    top: 0%;
+    top: 0;
 }
 
 .fa-linkedin {

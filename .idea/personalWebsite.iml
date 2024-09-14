@@ -9,5 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="45280cb382" level="application" />
+    <orderEntry type="library" name="emailjs-com" level="application" />
+    <orderEntry type="library" name="@emailjs/browser" level="application" />
   </component>
 </module>
