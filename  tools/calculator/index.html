@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de Revenus - Agent Immobilier Indépendant</title>
+    <style>
+        /* Styles identiques à ceux précédemment définis */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[type="number"], select {
+            padding: 0.5em;
+            margin-bottom: 1em;
+            width: 100%;
+        }
+        button {
+            padding: 0.5em 1em;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 2em;
+        }
+        .step-title {
+            font-weight: bold;
+            margin-top: 1em;
+            font-size: 1.2em;
+        }
+        .explanation {
+            background-color: #e9ecef;
+            padding: 1em;
+            border-left: 4px solid #007BFF;
+            margin-bottom: 1em;
+        }
+        .formula {
+            color: #868a8f;
+        }
+        .calculation {
+            color: #4a6975;
+        }
+        .result {
+            color: #0a65c0;
+            font-weight: bold;
+        }
+        .line {
+            margin-bottom: 0.5em;
+        }
+        .alert {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Calculateur de Revenus - Agent Immobilier Indépendant</h1>
+<p>Veuillez entrer les informations suivantes pour estimer vos revenus en tant qu'agent immobilier indépendant.</p>
+
+<label for="statut">Statut de l'entreprise :</label>
+<select id="statut">
+    <option value="micro">Micro-entreprise</option>
+    <option value="sasu">SASU</option>
+</select>
+
+<label for="revenue">Chiffre d'affaires annuel (&euro;) :</label>
+<input type="number" id="revenue" value="70000" step="1000">
+
+<div id="micro-parameters">
+    <h3>Paramètres pour la Micro-entreprise</h3>
+    <label for="commissionRateMicro">Prélèvement du réseau (%) :</label>
+    <input type="number" id="commissionRateMicro" value="30" step="0.1">
+
+    <label for="socialChargesRateMicro">Taux de cotisations sociales (%) :</label>
+    <input type="number" id="socialChargesRateMicro" value="22" step="0.1">
+
+    <label for="abattementRateMicro">Abattement fiscal (%) :</label>
+    <input type="number" id="abattementRateMicro" value="50" step="0.1">
+
+    <label for="liberatoireRateMicro">Taux du prélèvement libératoire (%) :</label>
+    <input type="number" id="liberatoireRateMicro" value="1.7" step="0.1">
+
+    <label for="liberatoireMicro">Option pour le prélèvement libératoire :</label>
+    <select id="liberatoireMicro">
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+    </select>
+</div>
+
+<div id="sasu-parameters" style="display: none;">
+    <h3>Paramètres pour la SASU</h3>
+    <label for="commissionRateSasu">Prélèvement du réseau (%) :</label>
+    <input type="number" id="commissionRateSasu" value="30" step="0.1">
+
+    <label for="chargesRateSasu">Charges d'exploitation (%) :</label>
+    <input type="number" id="chargesRateSasu" value="70" step="0.1">
+
+    <label for="impotSocieteRate">Impôt sur les sociétés (%) :</label>
+    <input type="number" id="impotSocieteRate" value="15" step="0.1">
+</div>
+
+<button onclick="calculateRevenue()">Calculer</button>
+
+<h2>Résultats</h2>
+<div id="results"></div>
+
+<script>
+    document.getElementById('statut').addEventListener('change', function() {
+        const statut = this.value;
+        if (statut === 'micro') {
+            document.getElementById('micro-parameters').style.display = 'block';
+            document.getElementById('sasu-parameters').style.display = 'none';
+        } else {
+            document.getElementById('micro-parameters').style.display = 'none';
+            document.getElementById('sasu-parameters').style.display = 'block';
+        }
+    });
+
+    function calculateRevenue() {
+        // Input
+        let statut = document.getElementById('statut').value;
+
+        const revenueInput = document.getElementById('revenue').value.replace(',', '.');
+        let revenue = parseFloat(revenueInput);
+
+        // Plafond pour la micro-entreprise
+        const plafondMicro = 77700;
+
+        if (isNaN(revenue) || revenue <= 0) {
+            alert("Veuillez entrer un chiffre d'affaires annuel valide.");
+            return;
+        }
+
+        if (statut === 'micro' && revenue > plafondMicro) {
+            alert("Le chiffre d'affaires dépasse le plafond pour une micro-entreprise (" + plafondMicro + " €). Le calcul sera effectué avec le statut SASU.");
+            document.getElementById('statut').value = 'sasu';
+            document.getElementById('micro-parameters').style.display = 'none';
+            document.getElementById('sasu-parameters').style.display = 'block';
+            statut = 'sasu';
+        }
+
+        let resultsHTML = '';
+
+        if (statut === 'micro') {
+            // Récupération des paramètres pour la micro-entreprise
+            const commissionRateInput = document.getElementById('commissionRateMicro').value.replace(',', '.');
+            const commissionRate = parseFloat(commissionRateInput) / 100;
+
+            const socialChargesRateInput = document.getElementById('socialChargesRateMicro').value.replace(',', '.');
+            const socialChargesRate = parseFloat(socialChargesRateInput) / 100;
+
+            const abattementRateInput = document.getElementById('abattementRateMicro').value.replace(',', '.');
+            const abattementFiscalRate = parseFloat(abattementRateInput) / 100;
+
+            const liberatoireRateInput = document.getElementById('liberatoireRateMicro').value.replace(',', '.');
+            const liberatoireRate = parseFloat(liberatoireRateInput) / 100;
+
+            const liberatoire = document.getElementById('liberatoireMicro').value;
+
+            // Vérification des entrées
+            if (isNaN(commissionRate) || commissionRate < 0 || commissionRate > 1 ||
+                isNaN(socialChargesRate) || socialChargesRate < 0 || socialChargesRate > 1 ||
+                isNaN(abattementFiscalRate) || abattementFiscalRate < 0 || abattementFiscalRate > 1 ||
+                isNaN(liberatoireRate) || liberatoireRate < 0 || liberatoireRate > 1) {
+                alert("Veuillez vérifier les paramètres pour la micro-entreprise.");
+                return;
+            }
+
+            // Calculs pour la micro-entreprise (identiques aux précédents)
+            // Étape 1 : Prélèvement du réseau
+            const networkFee = revenue * commissionRate;
+            const netRevenue = revenue - networkFee;
+
+            const step1Explanation = `
+                <div class="step-title">Étape 1 : Calcul du chiffre d'affaires net après prélèvement du réseau (${(commissionRate * 100).toFixed(2)}%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Prélèvement du réseau = Chiffre d'affaires annuel × ${ (commissionRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="calculation">= ${ revenue.toFixed(2) } € × ${ (commissionRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="result">= ${ networkFee.toFixed(2) } €</span></div>
+                    <hr>
+                    <div class="line"><span class="formula">Chiffre d'affaires net = Chiffre d'affaires annuel - Prélèvement du réseau</span></div>
+                    <div class="line"><span class="calculation">= ${ revenue.toFixed(2) } € - ${ networkFee.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ netRevenue.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 2 : Calcul des cotisations sociales
+            const socialCharges = netRevenue * socialChargesRate;
+
+            const step2Explanation = `
+                <div class="step-title">Étape 2 : Calcul des cotisations sociales (${ (socialChargesRate * 100).toFixed(2) }%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Cotisations sociales = Chiffre d'affaires net × ${ (socialChargesRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € × ${ (socialChargesRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="result">= ${ socialCharges.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 3 : Calcul du revenu après cotisations sociales
+            const afterCharges = netRevenue - socialCharges;
+
+            const step3Explanation = `
+                <div class="step-title">Étape 3 : Calcul du revenu après cotisations sociales</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Revenu après cotisations sociales = Chiffre d'affaires net - Cotisations sociales</span></div>
+                    <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € - ${ socialCharges.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ afterCharges.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 4 : Calcul du revenu imposable
+            const taxableIncome = netRevenue * (1 - abattementFiscalRate);
+
+            const step4Explanation = `
+                <div class="step-title">Étape 4 : Calcul du revenu imposable (après abattement fiscal de ${ (abattementFiscalRate * 100).toFixed(2) }%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Revenu imposable = Chiffre d'affaires net × (1 - ${ (abattementFiscalRate * 100).toFixed(2) }%)</span></div>
+                    <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € × ${(1 - abattementFiscalRate).toFixed(2)} </span></div>
+                    <div class="line"><span class="result">= ${ taxableIncome.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 5 : Calcul de l'impôt sur le revenu (IR)
+            let incomeTax = 0;
+            let incomeTaxExplanation = '';
+
+            if (liberatoire === "oui") {
+                incomeTax = netRevenue * liberatoireRate;
+
+                // Explications pour le prélèvement libératoire
+                incomeTaxExplanation = `
+                    <div class="step-title">Étape 5 : Calcul de l'impôt sur le revenu (Prélèvement libératoire de ${ (liberatoireRate * 100).toFixed(2) }%)</div>
+                    <div class="explanation">
+                        <div class="line"><span class="formula">IR = Chiffre d'affaires net × ${ (liberatoireRate * 100).toFixed(2) }%</span></div>
+                        <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € × ${ (liberatoireRate * 100).toFixed(2) }%</span></div>
+                        <div class="line"><span class="result">= ${ incomeTax.toFixed(2) } €</span></div>
+                    </div>
+                `;
+            } else {
+                // Calcul de l'IR selon le barème progressif (2023)
+                let tax = 0;
+                let taxDetails = '';
+                incomeTaxExplanation = `
+                    <div class="step-title">Étape 5 : Calcul de l'impôt sur le revenu (Barème progressif 2023)</div>
+                    <div class="explanation">
+                `;
+
+                if (taxableIncome <= 10777) {
+                    incomeTax = 0;
+                    incomeTaxExplanation += `<p>Revenu imposable ≤ 10 777 € : IR = 0 €</p>`;
+                } else {
+                    if (taxableIncome > 10777) {
+                        const tranche1 = Math.min(taxableIncome, 27478) - 10777;
+                        tax += tranche1 * 0.11;
+                        taxDetails += `<div class="line"><span class="formula">Tranche 11% :</span></div>
+                                       <div class="line"><span class="calculation">(${Math.min(taxableIncome, 27478).toFixed(2)} € - 10 777 €) × 11% = ${(tranche1 * 0.11).toFixed(2)} €</span></div>`;
+                    }
+                    if (taxableIncome > 27478) {
+                        const tranche2 = Math.min(taxableIncome, 78570) - 27478;
+                        tax += tranche2 * 0.30;
+                        taxDetails += `<div class="line"><span class="formula">Tranche 30% :</span></div>
+                                       <div class="line"><span class="calculation">(${Math.min(taxableIncome, 78570).toFixed(2)} € - 27 478 €) × 30% = ${(tranche2 * 0.30).toFixed(2)} €</span></div>`;
+                    }
+                    if (taxableIncome > 78570) {
+                        const tranche3 = Math.min(taxableIncome, 168994) - 78570;
+                        tax += tranche3 * 0.41;
+                        taxDetails += `<div class="line"><span class="formula">Tranche 41% :</span></div>
+                                       <div class="line"><span class="calculation">(${Math.min(taxableIncome, 168994).toFixed(2)} € - 78 570 €) × 41% = ${(tranche3 * 0.41).toFixed(2)} €</span></div>`;
+                    }
+                    if (taxableIncome > 168994) {
+                        const tranche4 = taxableIncome - 168994;
+                        tax += tranche4 * 0.45;
+                        taxDetails += `<div class="line"><span class="formula">Tranche 45% :</span></div>
+                                       <div class="line"><span class="calculation">(${taxableIncome.toFixed(2)} € - 168 994 €) × 45% = ${(tranche4 * 0.45).toFixed(2)} €</span></div>`;
+                    }
+                    incomeTax = tax;
+                    incomeTaxExplanation += `${taxDetails}
+                        <hr>
+                        <div class="line"><span class="result">Total IR = ${incomeTax.toFixed(2)} €</span></div>
+                    `;
+                }
+
+                incomeTaxExplanation += `</div>`;
+            }
+
+            // Étape 6 : Calcul du revenu net annuel disponible
+            const netAnnualIncomeAvailable = afterCharges - incomeTax;
+
+            const step6Explanation = `
+                <div class="step-title">Étape 6 : Calcul du revenu net annuel disponible</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Revenu net annuel disponible = Revenu après cotisations sociales - Impôt sur le revenu</span></div>
+                    <div class="line"><span class="calculation">= ${ afterCharges.toFixed(2) } € - ${ incomeTax.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ netAnnualIncomeAvailable.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 7 : Calcul du revenu net mensuel disponible
+            const netMonthlyIncomeAvailable = netAnnualIncomeAvailable / 12;
+
+            const step7Explanation = `
+                <div class="step-title">Étape 7 : Calcul du revenu net mensuel disponible</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Revenu net mensuel disponible = Revenu net annuel disponible ÷ 12</span></div>
+                    <div class="line"><span class="calculation">= ${ netAnnualIncomeAvailable.toFixed(2) } € ÷ 12</span></div>
+                    <div class="line"><span class="result">= ${ netMonthlyIncomeAvailable.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Affichage des résultats pour la micro-entreprise
+            resultsHTML += `<h3>Résultats pour la Micro-entreprise</h3>`;
+            resultsHTML += step1Explanation + step2Explanation + step3Explanation + step4Explanation + incomeTaxExplanation + step6Explanation + step7Explanation;
+
+        } else if (statut === 'sasu') {
+            // Récupération des paramètres pour la SASU
+            const commissionRateInput = document.getElementById('commissionRateSasu').value.replace(',', '.');
+            const commissionRate = parseFloat(commissionRateInput) / 100;
+
+            const chargesRateInput = document.getElementById('chargesRateSasu').value.replace(',', '.');
+            const chargesRate = parseFloat(chargesRateInput) / 100;
+
+            const impotSocieteRateInput = document.getElementById('impotSocieteRate').value.replace(',', '.');
+            const impotSocieteRate = parseFloat(impotSocieteRateInput) / 100;
+
+            // Vérification des entrées
+            if (isNaN(commissionRate) || commissionRate < 0 || commissionRate > 1 ||
+                isNaN(chargesRate) || chargesRate < 0 || chargesRate > 1 ||
+                isNaN(impotSocieteRate) || impotSocieteRate < 0 || impotSocieteRate > 1) {
+                alert("Veuillez vérifier les paramètres pour la SASU.");
+                return;
+            }
+
+            // Calculs pour la SASU
+            // Étape 1 : Prélèvement du réseau
+            const networkFee = revenue * commissionRate;
+            const netRevenue = revenue - networkFee;
+
+            const step1Explanation = `
+                <div class="step-title">Étape 1 : Calcul du chiffre d'affaires net après prélèvement du réseau (${(commissionRate * 100).toFixed(2)}%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Prélèvement du réseau</span></div>
+                    <div class="line"><span class="formula">= Chiffre d'affaires annuel × ${ (commissionRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="calculation">= ${ revenue.toFixed(2) } € × ${ (commissionRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="result">= ${ networkFee.toFixed(2) } €</span></div>
+                    <hr>
+                    <div class="line"><span class="formula">Chiffre d'affaires net</span></div>
+                    <div class="line"><span class="formula">= Chiffre d'affaires annuel - Prélèvement du réseau</span></div>
+                    <div class="line"><span class="calculation">= ${ revenue.toFixed(2) } € - ${ networkFee.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ netRevenue.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 2 : Charges d'exploitation
+            const chargesExploitation = netRevenue * chargesRate;
+
+            const step2Explanation = `
+                <div class="step-title">Étape 2 : Calcul des charges d'exploitation (${ (chargesRate * 100).toFixed(2) }%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Charges d'exploitation</span></div>
+                    <div class="line"><span class="formula">= Chiffre d'affaires net × ${ (chargesRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € × ${ (chargesRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="result">= ${ chargesExploitation.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 3 : Résultat fiscal avant impôt
+            const resultatFiscal = netRevenue - chargesExploitation;
+
+            const step3Explanation = `
+                <div class="step-title">Étape 3 : Calcul du résultat fiscal avant impôt</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Résultat fiscal</span></div>
+                    <div class="line"><span class="formula">= Chiffre d'affaires net - Charges d'exploitation</span></div>
+                    <div class="line"><span class="calculation">= ${ netRevenue.toFixed(2) } € - ${ chargesExploitation.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ resultatFiscal.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 4 : Calcul de l'impôt sur les sociétés (IS)
+            const impotSociete = resultatFiscal * impotSocieteRate;
+
+            const step4Explanation = `
+                <div class="step-title">Étape 4 : Calcul de l'impôt sur les sociétés (${ (impotSocieteRate * 100).toFixed(2) }%)</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">IS</span></div>
+                    <div class="line"><span class="formula">= Résultat fiscal × ${ (impotSocieteRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="calculation">= ${ resultatFiscal.toFixed(2) } € × ${ (impotSocieteRate * 100).toFixed(2) }%</span></div>
+                    <div class="line"><span class="result">= ${ impotSociete.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 5 : Résultat net après impôt
+            const resultatNet = resultatFiscal - impotSociete;
+
+            const step5Explanation = `
+                <div class="step-title">Étape 5 : Résultat net après impôt</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Résultat net</span></div>
+                    <div class="line"><span class="formula">= Résultat fiscal - IS</span></div>
+                    <div class="line"><span class="calculation">= ${ resultatFiscal.toFixed(2) } € - ${ impotSociete.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ resultatNet.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 6 : Calcul du revenu net annuel disponible (dividendes)
+            // En SASU, les dividendes perçus sont soumis aux prélèvements sociaux (17.2%) et au prélèvement forfaitaire unique (12.8%)
+            const prelevementsSociaux = resultatNet * 0.172;
+            const impotsDividendes = resultatNet * 0.128;
+            const netAnnualIncomeAvailable = resultatNet - prelevementsSociaux - impotsDividendes;
+
+            const step6Explanation = `
+                <div class="step-title">Étape 6 : Calcul du revenu net annuel disponible</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Prélèvements sociaux (17.2%) = Résultat net × 17.2%</span></div>
+                    <div class="line"><span class="calculation">= ${ resultatNet.toFixed(2) } € × 17.2% = ${ prelevementsSociaux.toFixed(2) } €</span></div>
+                    <hr>
+                    <div class="line"><span class="formula">Impôt sur les dividendes (12.8%) = Résultat net × 12.8%</span></div>
+                    <div class="line"><span class="calculation">= ${ resultatNet.toFixed(2) } € × 12.8% = ${ impotsDividendes.toFixed(2) } €</span></div>
+                    <hr>
+                    <div class="line"><span class="formula">Revenu net annuel disponible = Résultat net - Prélèvements sociaux - Impôt sur les dividendes</span></div>
+                    <div class="line"><span class="calculation">= ${ resultatNet.toFixed(2) } € - ${ prelevementsSociaux.toFixed(2) } € - ${ impotsDividendes.toFixed(2) } €</span></div>
+                    <div class="line"><span class="result">= ${ netAnnualIncomeAvailable.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Étape 7 : Calcul du revenu net mensuel disponible
+            const netMonthlyIncomeAvailable = netAnnualIncomeAvailable / 12;
+
+            const step7Explanation = `
+                <div class="step-title">Étape 7 : Calcul du revenu net mensuel disponible</div>
+                <div class="explanation">
+                    <div class="line"><span class="formula">Revenu net mensuel disponible = Revenu net annuel disponible ÷ 12</span></div>
+                    <div class="line"><span class="calculation">= ${ netAnnualIncomeAvailable.toFixed(2) } € ÷ 12</span></div>
+                    <div class="line"><span class="result">= ${ netMonthlyIncomeAvailable.toFixed(2) } €</span></div>
+                </div>
+            `;
+
+            // Affichage des résultats pour la SASU
+            resultsHTML += `<h3>Résultats pour la SASU</h3>`;
+            resultsHTML += step1Explanation + step2Explanation + step3Explanation + step4Explanation + step5Explanation + step6Explanation + step7Explanation;
+        }
+
+        document.getElementById('results').innerHTML = resultsHTML;
+    }
+</script>
+</body>
+</html>
